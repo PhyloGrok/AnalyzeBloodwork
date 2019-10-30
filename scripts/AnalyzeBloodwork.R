@@ -7,7 +7,9 @@ install.packages("scatterplot3d")
 library(scatterplot3d)
 
 ## Read data
-IBS1 <- read.csv("RobinsonEtAl_Sup1.csv", header = TRUE)
+IBS1 <- read.csv("data/RobinsonEtAl_Sup1.csv", header = TRUE)
+head(IBS1)
+write.csv(IBS1, "data_output/output.csv")
 
 ##  Single Regressions for BMI vs. each blood data variable
 ##  Data was obtained from Robinson, et al. 2019 (doi: https://doi.org/10.1101/608208)
