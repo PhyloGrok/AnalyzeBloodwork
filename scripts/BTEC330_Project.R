@@ -20,6 +20,12 @@ write.csv(IBS, "data_output/LDH.csv")
 LDH.regression <- lm(BMI ~ LDH, data = IBS)
 summary(LDH.regression)
 
+## Output the results to a file
+## http://www.cookbook-r.com/Data_input_and_output/Writing_text_and_output_from_analyses_to_a_file/
+sink('LDH_regression.txt', append = TRUE)
+print(LDH.regression)
+sink()
+
 ## Scatterplots
 ## https://www.statmethods.net/graphs/scatterplot.html
 
