@@ -29,7 +29,7 @@ sink()
 ## Scatterplots
 ## https://www.statmethods.net/graphs/scatterplot.html
 
-ggplot(IBS1, aes(x = BMI, y = LDH)) +
+ggplot(IBS, aes(x = BMI, y = LDH)) +
   geom_point() +    
   geom_smooth(method = lm) 
 
