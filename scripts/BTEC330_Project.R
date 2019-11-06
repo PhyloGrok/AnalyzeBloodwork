@@ -39,5 +39,10 @@ boxplot(LDH ~ IBS.subtype, data = IBS, main="LDH by IBS subtype",
        )
 
 ## Print .png files of images into "Fig_output" projects directory.
-##http://www.sthda.com/english/wiki/ggsave-save-a-ggplot-r-software-and-data-visualization
-
+## http://www.sthda.com/english/wiki/ggsave-save-a-ggplot-r-software-and-data-visualization
+png("LDH_boxplot.png")
+LDH_boxplot <- boxplot(LDH ~ IBS.subtype, data = IBS, main="LDH by IBS subtype", 
+       xlab = "IBS.subtype", ylab = "LDH"
+       )
+print(fig_output/LDH_boxplot)
+dev.off()
