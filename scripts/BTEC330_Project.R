@@ -48,12 +48,16 @@ png("fig_output/LDH_scatterplot.png")
 LDH_scatterplot <- ggplot(IBS, aes(x = BMI, y = LDH)) +
   geom_point() +    
   geom_smooth(method = lm) 
-       )
+       
 print(LDH_scatterplot)
 dev.off()
 
 ## Box plots
 ## https://www.statmethods.net/graphs/boxplot.html
+
+boxplot(LDH ~ IBS.subtype, data = IBS, main="LDH by IBS subtype", 
+                       xlab = "IBS.subtype", ylab = "LDH"
+)
 
 png("fig_output/LDH_boxplot.png")
 LDH_boxplot <- boxplot(LDH ~ IBS.subtype, data = IBS, main="LDH by IBS subtype", 
@@ -61,6 +65,8 @@ LDH_boxplot <- boxplot(LDH ~ IBS.subtype, data = IBS, main="LDH by IBS subtype",
        )
 print(LDH_boxplot)
 dev.off()
+
+
 
 
 
