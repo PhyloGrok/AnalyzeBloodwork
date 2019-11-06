@@ -17,24 +17,26 @@ write.csv(IBS, "data_output/LDH.csv")
 ##  http://r-statistics.co/Linear-Regression.html
 
 ## Single Regression Test, BMI vs. Bloodwork parameter
-LDH.regression <- lm(BMI ~ LDH, data=IBS)
+LDH.regression <- lm(BMI ~ LDH, data = IBS)
 summary(LDH.regression)
 
 ## Scatterplots
 ## https://www.statmethods.net/graphs/scatterplot.html
 
-ggplot(IBS1, aes(x=BMI, y=LDH)) +
+ggplot(IBS1, aes(x = BMI, y = LDH)) +
   geom_point() +    
-  geom_smooth(method=lm) 
+  geom_smooth(method = lm) 
 
 ## ANOVA Tests IBS-subtypes vs. Bloodwork parameter
 ## http://www.sthda.com/english/wiki/one-way-anova-test-in-r
 LDH.aov <- aov(LDH ~ IBS.subtype, data = IBS)
 summary(LDH.aov)
 
-
-
-##
+## Box plots
+## https://www.statmethods.net/graphs/boxplot.html
+boxplot(LDH ~ IBS.subtype, data = IBS, main="LDH by IBS subtype", 
+       xlab = "IBS.subtype", ylab = "LDH"
+       )
 
 ## Print .png files of images into "Fig_output" projects directory.
 ##http://www.sthda.com/english/wiki/ggsave-save-a-ggplot-r-software-and-data-visualization
