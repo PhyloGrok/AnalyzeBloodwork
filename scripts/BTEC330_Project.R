@@ -27,7 +27,7 @@ ggplot(IBS1, aes(x = BMI, y = LDH)) +
   geom_point() +    
   geom_smooth(method = lm) 
 
-## ANOVA Tests IBS-subtypes vs. Bloodwork parameter
+## ANOVA: IBS-subtype vs. Bloodwork parameter
 ## http://www.sthda.com/english/wiki/one-way-anova-test-in-r
 LDH.aov <- aov(LDH ~ IBS.subtype, data = IBS)
 summary(LDH.aov)
