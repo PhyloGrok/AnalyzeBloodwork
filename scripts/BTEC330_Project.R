@@ -8,6 +8,17 @@ library(ggplot2)
 ## Read data
 IBS <- read.csv("data/RobinsonEtAl_Sup1.csv", header = TRUE)
 head(IBS)
+
+IBS$LDH_result <- "NA"
+
+## Assign "HIGH", "NORMAL", or "LOW" based on clinical range to the LDH_result parameter
+
+IBS$LDH_result[IBS$LDH > 200] <- "HIGH"
+
+IBS$LDH_result[IBS$LDH <= 200 & IBS$LDH >= 100] <- "NORMAL"
+
+IBS$LDH_result[IBS$LDH < 100] <- "LOW"
+
 write.csv(IBS, "data_output/LDH.csv")
 
 ##  Single Regressions 
