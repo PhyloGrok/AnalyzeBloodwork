@@ -54,12 +54,12 @@ ggplot(IBS, aes(x = BMI, y = Lymphocytes_PCT)) +
   geom_point() +    
   geom_smooth(method = lm) 
 
-png("fig_output/LDH_scatterplot.png")
+png("fig_output/Lymphocytes_scatterplot.png")
 Lymphocytes_scatterplot <- ggplot(IBS, aes(x = BMI, y = Lymphocytes_PCT)) +
   geom_point() +    
   geom_smooth(method = lm) 
 
-print(LDH_scatterplot)
+print(Lymphocytes_scatterplot)
 dev.off()
 
 ## Box plots
