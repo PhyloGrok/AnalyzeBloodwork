@@ -4,8 +4,7 @@
 ### The R code and dataset are used in the UMBC courses BTEC330 and BTEC395 for training students in R coding, GitHub practices, and analysis of clinical and molecular expression data.  Each student has forked this repository and modified for analysis of a single parameter from the Complete Blood Count w/ Differential (CBC-D) panel.
 ([AnalyzeBloodwork.R](../master/AnalyzeBloodwork.R)) will allow you to load a comma-delimited .csv with various datapoints, perform single and multiple regressions of Body Mass Index (BMI) vs. variables from the Complete Blood Count with Differential (CBC-D) results, and produce 2-D and 3-D scatterplots for the results.  The data provided is from an NIH Clinical Research Center study investigating molecular and physiological biomarkers associated with obesity, chronic abdominal pain, and inflammation.  
 
-#### Data from this repository is publicly available from the following sources: 
-
+### Data from this repository is publicly available from the following sources: 
 Robinson, JM. et al. 2019. Complete blood count with differential: An effective diagnostic for IBS subtype in the context of BMI? BioRxiv. doi: https://doi.org/10.1101/608208.
 
 ImmunoGC custom Nanostring probe panel. 2019.  https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL25996. 
