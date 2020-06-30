@@ -1,7 +1,16 @@
-## AnalyzeBloodwork
+<h1 align="center">
+AnalyzeBloodwork</h1>
+<h2 align="center">
+with base R</h2>
 ![doi](../master/Images/zenodo.3373938.svg?sanitize=true)
-### Single and multiple regressions, and scatterplots for clinical bloodwork and gene expression data.
-#### The R code and dataset are used in the UMBC courses BTEC330 and BTEC395 for training students in R coding, GitHub practices, and analysis of clinical and molecular expression data.  Each student has forked this repository and modified for analysis of a single parameter from the Complete Blood Count w/ Differential (CBC-D) panel.
+
+Dr. Jeffrey Robinson, course developer and instructor for UMBC BTEC330, Software Applications in the Life Sciences, and BTEC395, Translational Bioinformatics
+
+UMBC Translational Life Science Technology Program
+
+
+### Single and multiple regressions, and scatterplots for analysis of clinical bloodwork and gene expression data.
+#### The R code and dataset are used in UMBC courses BTEC330 and BTEC395 for training students in R coding, GitHub practices, and analysis of clinical and molecular expression data.  Each student has forked this repository and modified for analysis of a single parameter from the Complete Blood Count w/ Differential (CBC-D) panel.
 ([AnalyzeBloodwork.R](../master/AnalyzeBloodwork.R)) will allow you to load a comma-delimited .csv with various datapoints, perform single and multiple regressions of Body Mass Index (BMI) vs. variables from the Complete Blood Count with Differential (CBC-D) results, and produce 2-D and 3-D scatterplots for the results.  The data provided is from an NIH Clinical Research Center study investigating molecular and physiological biomarkers associated with obesity, chronic abdominal pain, and inflammation.  
 
 ### Data from this repository is publicly available from the following sources: 
