@@ -2,11 +2,12 @@
 AnalyzeBloodwork</h1>
 <h2 align="center">
 with base R</h2>
+
 ![doi](../master/Images/zenodo.3373938.svg?sanitize=true)
 
-Dr. Jeffrey Robinson, course developer and instructor for UMBC BTEC330, Software Applications in the Life Sciences, and BTEC395, Translational Bioinformatics
+Dr. Jeffrey Robinson, 
 
-UMBC Translational Life Science Technology Program
+course developer and instructor for UMBC BTEC330, Software Applications in the Life Sciences, and BTEC395, Translational Bioinformatics, UMBC Translational Life Science Technology Bachelor of Science Program.
 
 
 ### Single and multiple regressions, and scatterplots for analysis of clinical bloodwork and gene expression data.
