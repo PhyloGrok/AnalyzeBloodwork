@@ -1,22 +1,46 @@
-## Install necessary packages
+## Install packages
+if (!require("ggplot2")) {
+  install.packages("ggplot2", dependencies = TRUE)
+  library(rstudioapi)
+}
 
-install.packages("ggplot2")
-library(ggplot2)
+if (!require("dplyr")) {
+  install.packages("dplyr", dependencies = TRUE)
+  library(rstudioapi)
+}
 
-install.packages("scatterplot3d")
-library(scatterplot3d)
+if (!require("scatterplot3d")) {
+  install.packages("scatterplot3d", dependencies = TRUE)
+  library(rstudioapi)
+}
 
-## Read data
+## Read and write data
 IBS1 <- read.csv("data/RobinsonEtAl_Sup1.csv", header = TRUE)
-head(IBS1)
+CBC <- read.csv("data/WBCsubset.csv", header = TRUE)
+summary(IBS1)
+summary(CBC)
 write.csv(IBS1, "data_output/output.csv")
 
+## Recursively generate histograms for every parameter
+## Contribution - https://stackoverflow.com/questions/49889403/loop-through-dataframe-column-names-r
+## Contribution - https://statisticsglobe.com/loop-through-data-frame-columns-rows-in-r/
+## Final solution - https://stackoverflow.com/questions/35372365/how-do-i-generate-a-histogram-for-each-column-of-my-table/35373419
+
+for (col in 2:ncol(CBC)) {
+  hist(CBC[,col], freq=FALSE, main = (colnames(CBC[col])), xlab = (colnames(CBC[col])), breaks=20, col = "lightgreen")
+  curve(dnorm(x, mean=mean(CBC[,col], na.rm=TRUE), sd=sd(CBC[,col], na.rm=TRUE)), add=TRUE, col="blue", lwd=2)
+}
+
+## Multiple Regression for White Blood Cells
+## https://www.statmethods.net/stats/regression.html
+fit <- lm(BMI ~ Monocytes + Lymphocytes + Neutrophils + Basophils + Eosinophils, data=CBC)
+summary(fit) # show results
+
 ##  Single Regressions for BMI vs. each blood data variable
-##  Data was obtained from Robinson, et al. 2019 (doi: https://doi.org/10.1101/608208)
+##  Data from Robinson, et al. 2019 (doi: https://doi.org/10.1101/608208)
 ##  https://statquest.org/2017/10/30/statquest-multiple-regression-in-r/
 ##  http://www.sthda.com/english/articles/40-regression-analysis/167-simple-linear-regression-in-r/
 ##  http://r-statistics.co/Linear-Regression.html
-
 
 single.regression <- lm(BMI ~ SerumCortisol, data=IBS1)
 summary(single.regression)
@@ -36,7 +60,7 @@ summary(single.regression)
 single.regression <- lm(BMI ~ Lymphocytes, data=IBS1)
 summary(single.regression)
 
-## Multiple Regressions
+## Multiple Regression
 
 multiple.regression <- lm(BMI ~ SerumCortisol + CRP, data=IBS1)
 summary(multiple.regression)
