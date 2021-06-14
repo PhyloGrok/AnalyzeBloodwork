@@ -21,15 +21,19 @@ summary(IBS1)
 summary(CBC)
 write.csv(IBS1, "data_output/output.csv")
 
-## Recursively generate histograms for every parameter
+## Recursively generate histograms for each CBC parameter
 ## Contribution - https://stackoverflow.com/questions/49889403/loop-through-dataframe-column-names-r
 ## Contribution - https://statisticsglobe.com/loop-through-data-frame-columns-rows-in-r/
-## Final solution - https://stackoverflow.com/questions/35372365/how-do-i-generate-a-histogram-for-each-column-of-my-table/35373419
-
+## Solution for iterative histogram generation - https://stackoverflow.com/questions/35372365/how-do-i-generate-a-histogram-for-each-column-of-my-table/35373419
+## Solution for iterative readout for image files - https://www.r-bloggers.com/2011/04/automatically-save-your-plots-to-a-folder/
 for (col in 2:ncol(CBC)) {
-  hist(CBC[,col], freq=FALSE, main = (colnames(CBC[col])), xlab = (colnames(CBC[col])), breaks=20, col = "lightgreen")
+  mypath <- file.path("fig_output",paste(colnames(CBC[col]),".png",sep = ""))
+  png(file=mypath)
+  H1 <- hist(CBC[,col], freq=FALSE, main = (colnames(CBC[col])), xlab = (colnames(CBC[col])), breaks=20, col = "lightgreen")
   curve(dnorm(x, mean=mean(CBC[,col], na.rm=TRUE), sd=sd(CBC[,col], na.rm=TRUE)), add=TRUE, col="blue", lwd=2)
-}
+  print(H1)
+  dev.off()
+  }
 
 ## Multiple Regression for White Blood Cells
 ## https://www.statmethods.net/stats/regression.html
