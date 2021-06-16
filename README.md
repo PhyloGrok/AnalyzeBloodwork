@@ -32,7 +32,7 @@ Additional data in the context of obesity, inflammation, and gastrointestinal di
  
 
 ## A. Results of modeling Body Mass Index (BMI) and stress/inflammation markers Serum Cortisol and C-Reactive Protein
-### Single linear regression: (BMI ~ Serum Cortisol), with scatterplot
+### Single linear regression: (BMI ~ Serum Cortisol), with scatterplot.
 ```
 > BMI.Cortisol <- lm(BMI ~ SerumCortisol, data=IBS1)
 > summary(BMI.Cortisol)
