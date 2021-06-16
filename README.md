@@ -21,15 +21,16 @@ The <em>standard CBC parameters</em> provide point-of-care physicians with power
 2) Red blood cell and hemoglobin parameters (RBC count, Hematocrit (HCT), Mean Corpuscular Hemoglobin (MCH), Erythrocyte Sedimentation Rate (ESR)), 
 3) Platelet parameters (Platelet Counts, Mean Platelet Volume (MPV))
 
-Furthermore, the sample dataset was collected during an NIH natural history clinical study of the relationship between obesity, inflammation, stress, and gastrointestinal disorders.  An associated 250-gene panel of Nanostring RNA expression data from white blood cells is also available (links in citations below).
+Furthermore, the sample dataset was collected during an NIH natural history clinical study of the relationship between obesity, inflammation, stress, and gastrointestinal disorders.  
 
 Additional data in the context of obesity, inflammation, and gastrointestinal disorders include:
 1) Body Mass Index (BMI), 
 2) Stress hormones: Cortisol and ACTH,
 3) Inflammation markers: C-Reactive Protein (CRP), sCD14, LPB,
 4) Clinical diagnoses of subtypes of Irritable Bowel Syndrome (IBS)
+5) Nanostring White Blood Cell RNA expression data: an associated 250-gene panel of Nanostring RNA expression data (links in citations below).
  
-### Results of single regression, BMI ~ Serum Cortisol
+### Single linear regression: BMI ~ Serum Cortisol, with scatterplot
 ```
 > BMI.Cortisol <- lm(BMI ~ SerumCortisol, data=IBS1)
 > summary(BMI.Cortisol)
@@ -55,8 +56,7 @@ ggplot(IBS1, aes(x=BMI, y=SerumCortisol)) +
 ![BMI_Cortisol](../master/Images/CORTxBMI.png?sanitize=true)
 ##
 
-### Results of multiple regression: BMI ~ Serum Cortisol + C-Reactive Protein (CRP)
-### with 3d-scatterplot 
+### Multivariate linear regression: BMI ~ Serum Cortisol + C-Reactive Protein (CRP), with 3d-scatterplot. 
 ```
 > fit1 <- lm(BMI ~ SerumCortisol + CRP, data=IBS1)
 > summary(fit1)
