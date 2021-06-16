@@ -31,15 +31,21 @@ Additional data in the context of obesity, inflammation, and gastrointestinal di
  
 ### Results of single regression, BMI x Serum Cortisol
 ```
-> single.regression <- lm(BMI ~ SerumCortisol, data=IBS1)
-> print(single.regression)
+> BMI.Cortisol <- lm(BMI ~ SerumCortisol, data=IBS1)
+> summary(BMI.Cortisol)
 
 Call:
 lm(formula = BMI ~ SerumCortisol, data = IBS1)
 
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-10.043  -4.043  -1.440   3.008  19.658 
+
 Coefficients:
-  (Intercept)  SerumCortisol  
-      31.9454        -0.5004  
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    31.9454     1.4736  21.679  < 2e-16 ***
+SerumCortisol  -0.5004     0.1312  -3.814 0.000229 ***
+---
 ```
 ```
 ggplot(IBS1, aes(x=BMI, y=SerumCortisol)) +
