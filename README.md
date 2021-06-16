@@ -15,7 +15,7 @@ The long-term research goal of this project is the automation of Machine Learnin
 
 ([AnalyzeBloodwork.R](../master/AnalyzeBloodwork.R)) automatically loads required libraries, imports the sample .csv with patient data, generates histograms for each parameter, and performs single and multiple regressions.
 
-The standard CBC parameters provide point-of-care physicians with powerful diagnostic capabilities using: 
+The <u>standard CBC parameters</u> provide point-of-care physicians with powerful diagnostic capabilities using: 
 
 1) White Blood Cell counts (absolute and relative counts for Monocytes, Lymphocytes, Neutrophils, Basophils, and Eosinophils), 
 2) Red blood cell and hemoglobin parameters (RBC count, Hematocrit (HCT), Mean Corpuscular Hemoglobin (MCH), Erythrocyte Sedimentation Rate (ESR)), 
