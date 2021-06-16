@@ -145,6 +145,6 @@ ggplot(IBS1, aes(x=BMI, y=CRP)) +
 ## 3D scatterplot for the most significant 3-variable multiple regression model
 ## http://www.sthda.com/english/wiki/scatterplot3d-3d-graphics-r-software-and-data-visualization
 
-s3d <- scatterplot3d(IBS$BMI, IBS$SerumCortisol, IBS$CRP,  pch=16, color="steelblue", box="TRUE", highlight.3d=FALSE, type="h", main="BMI x Cortisol x CRP")
+s3d <- scatterplot3d(IBS$BMI, IBS$SerumCortisol, IBS$CRP,  pch=16, color="steelblue", box=TRUE, highlight.3d=FALSE, type="h", main="BMI, Cortisol, CRP")
 fit <- lm(SerumCortisol ~ BMI + CRP, data=IBS)
 s3d$plane3d(fit)
