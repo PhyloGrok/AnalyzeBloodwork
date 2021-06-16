@@ -23,16 +23,12 @@ The standard CBC parameters provide point-of-care physicians with powerful diagn
 
 Furthermore, the sample dataset was collected during an NIH natural history clinical study of the relationship between obesity, inflammation, stress, and gastrointestinal disorders.  An associated 250-gene panel of Nanostring RNA expression data from white blood cells is also available (links in citations below).
 
-of Body Mass Index (BMI) vs. variables from the Complete Blood Count with Differential (CBC-D) test results, and produce 2-D and 3-D scatterplots for the results.  The data provided is from an NIH Clinical Research Center study investigating molecular and physiological biomarkers in white blood cells associated with obesity, chronic abdominal pain, and inflammation.  
-
-
-
-
-
-
-
-
-##
+Additional data in the context of obesity, inflammation, and gastrointestinal disorders include:
+1) Body Mass Index (BMI), 
+2) Stress hormones: Cortisol and ACTH,
+3) Infmammation markers: C-Reactive Protein (CRP), sCD14, LPB,
+4) Clinical diagnoses of subtypes of Irritable Bowel Syndrome (IBS)
+ 
 ### Results of single regression, BMI x Serum Cortisol
 ```
 > single.regression <- lm(BMI ~ SerumCortisol, data=IBS1)
