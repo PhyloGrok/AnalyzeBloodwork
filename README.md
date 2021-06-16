@@ -26,7 +26,7 @@ Furthermore, the sample dataset was collected during an NIH natural history clin
 Additional data in the context of obesity, inflammation, and gastrointestinal disorders include:
 1) Body Mass Index (BMI), 
 2) Stress hormones: Cortisol and ACTH,
-3) Infmammation markers: C-Reactive Protein (CRP), sCD14, LPB,
+3) Inflammation markers: C-Reactive Protein (CRP), sCD14, LPB,
 4) Clinical diagnoses of subtypes of Irritable Bowel Syndrome (IBS)
  
 ### Results of single regression, BMI x Serum Cortisol
