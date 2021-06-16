@@ -82,8 +82,8 @@ Multiple R-squared:  0.232,	Adjusted R-squared:  0.2175
 F-statistic: 16.01 on 2 and 106 DF,  p-value: 8.388e-07
 ```
 ```
-> s3d <- scatterplot3d(IBS$BMI, IBS$SerumCortisol, IBS$CRP,  pch=16, color="steelblue", box="TRUE", highlight.3d=FALSE, type="h", main="BMI x Cortisol x CRP")
-> fit <- lm(SerumCortisol ~ BMI + CRP, data=IBS)
+> s3d <- scatterplot3d(IBS1$BMI, IBS1$SerumCortisol, IBS$CRP,  pch=16, color="steelblue", box="TRUE", highlight.3d=FALSE, type="h", main="BMI x Cortisol x CRP")
+> fit <- lm(SerumCortisol ~ BMI + CRP, data=IBS1)
 > s3d$plane3d(fit)
 ```
 ![BMI_Cortisol_CRP_3d-scatterplot](../master/Images/MultipleRegression_3way.png?sanitize=true)
