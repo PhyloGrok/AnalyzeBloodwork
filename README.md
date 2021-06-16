@@ -29,7 +29,7 @@ Additional data in the context of obesity, inflammation, and gastrointestinal di
 3) Inflammation markers: C-Reactive Protein (CRP), sCD14, LPB,
 4) Clinical diagnoses of subtypes of Irritable Bowel Syndrome (IBS)
  
-### Results of single regression, BMI x Serum Cortisol
+### Results of single regression, BMI ~ Serum Cortisol
 ```
 > BMI.Cortisol <- lm(BMI ~ SerumCortisol, data=IBS1)
 > summary(BMI.Cortisol)
