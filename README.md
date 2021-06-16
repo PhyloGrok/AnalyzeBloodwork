@@ -5,7 +5,7 @@ with base R</h2>
 
 ![doi](../master/Images/zenodo.3373938.svg?sanitize=true)
 
-Dr. Jeffrey Robinson, course developer and instructor for UMBC BTEC330 Software Applications in the Life Sciences, and BTEC395 Translational Bioinformatics, UMBC Translational Life Science Technology Bachelor of Science Program.
+This repository is maintained by Dr. Jeffrey Robinson, course developer and instructor for the courses BTEC330 "Software Applications in the Life Sciences", and BTEC350 "Biostatistics, in the UMBC Translational Life Science Technology Bachelor of Science Program.  The analyses are based upon published and publicly available data 
 
 
 ### Single and multiple regressions, and scatterplots for analysis of clinical bloodwork and gene expression data.
