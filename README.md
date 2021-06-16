@@ -11,15 +11,17 @@ For these classes, students train in R programming language, GitHub practices, a
 
 The long-term research goal of this project is the automation of Machine Learning and regression models for biomarker discovery from CBC and gene-expression data. The repository is under continuous development, versions will be incremented with each new functional feature. 
 
-### Current functionality: Performs single and multiple regressions, and generates histograms and scatterplots for Complete Blood Count (CBC-D).
+#### Current functionality: The included R-script performs single and multiple regressions, and generates histograms and scatterplots for Complete Blood Count (CBC-D).
 
 ([AnalyzeBloodwork.R](../master/AnalyzeBloodwork.R)) automatically loads required libraries, imports the sample .csv with patient data, generates histograms for each parameter, and performs single and multiple regressions.
 
 The standard CBC parameters provide point-of-care physicians with powerful diagnostic capabilities using: 
 
-1) White Blood Cell counts (monocytes, lymphocytes, neutrophils, basophils, and eosinophils), 
-2) Red blood cell and hemoglobin parameters (RBC count, Hematocrit (HCT), Mean Corpuscular Hemoglobin (MCH), Erythrocyte Sedimentation Rate (ESR), 
-3) Platelet parameters (Platelet Counts, Mean Platelet Volume (MPV)
+1) White Blood Cell counts (absolute and relative counts for Monocytes, Lymphocytes, Neutrophils, Basophils, and Eosinophils), 
+2) Red blood cell and hemoglobin parameters (RBC count, Hematocrit (HCT), Mean Corpuscular Hemoglobin (MCH), Erythrocyte Sedimentation Rate (ESR)), 
+3) Platelet parameters (Platelet Counts, Mean Platelet Volume (MPV))
+
+Furthermore, the sample dataset was collected during an NIH natural history clinical study of the relationship between obesity, inflammation, stress, and gastrointestinal disorders.  An associated 250-gene panel of Nanostring RNA expression data from white blood cells is also available.
 
 of Body Mass Index (BMI) vs. variables from the Complete Blood Count with Differential (CBC-D) test results, and produce 2-D and 3-D scatterplots for the results.  The data provided is from an NIH Clinical Research Center study investigating molecular and physiological biomarkers in white blood cells associated with obesity, chronic abdominal pain, and inflammation.  
 
