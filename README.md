@@ -5,11 +5,14 @@ with base R</h2>
 
 ![doi](../master/Images/zenodo.3373938.svg?sanitize=true)
 
-This repository is maintained by Dr. Jeffrey Robinson, course developer and instructor for the courses BTEC330 "Software Applications in the Life Sciences", and BTEC350 "Biostatistics", in the UMBC Translational Life Science Technology (TLST) Bachelor of Science Program.  The analyses are based upon published and publicly available data from the pre-prints and database accessions cited below. Students train in R programming language, GitHub practices, and analysis of clinical and molecular expression data by forking this repository and modifying it according to their skill level and assignment specifics.
+This repository is maintained by Dr. Jeffrey Robinson, course developer and instructor for the courses BTEC330 "Software Applications in the Life Sciences", and BTEC350 "Biostatistics", in the UMBC Translational Life Science Technology (TLST) Bachelor of Science Program.  The analyses are based upon published and publicly available data from the pre-prints and database accessions cited below. 
 
+For these classes, students train in R programming language, GitHub practices, and analysis of clinical and molecular expression data by forking this repository and modifying it according to their skill level and assignment specifics.
 
-### Single and multiple regressions, and scatterplots for analysis of clinical bloodwork and gene expression data.
-#### The R code and dataset are used in UMBC courses BTEC330 and BTEC395 for training students in R coding, GitHub practices, and analysis of clinical and molecular expression data.  Each student forks the repository and modifies for analysis of a single parameter from the Complete Blood Count w/ Differential (CBC-D) panel.
+The long-term research goal of this project is the automation of Machine Learning and regression models for biomarker discovery from CBC and gene-expression data. The repository is under continuous development, versions will be incremented with each new functional feature. 
+
+### Current functionality performs single and multiple regressions, and generates histograms and scatterplots for clinical bloodwork parameters.
+
 ([AnalyzeBloodwork.R](../master/AnalyzeBloodwork.R)) will allow you to load .csv with patient data, and perform single and multiple regressions of Body Mass Index (BMI) vs. variables from the Complete Blood Count with Differential (CBC-D) test results, and produce 2-D and 3-D scatterplots for the results.  The data provided is from an NIH Clinical Research Center study investigating molecular and physiological biomarkers in white blood cells associated with obesity, chronic abdominal pain, and inflammation.  
 
 ### Data from this repository is publicly available from the following sources: 
