@@ -30,7 +30,7 @@ Additional data in the context of obesity, inflammation, and gastrointestinal di
 4) Clinical diagnoses of subtypes of Irritable Bowel Syndrome (IBS)
 5) Nanostring White Blood Cell RNA expression data: an associated 250-gene panel of Nanostring RNA expression data (links in citations below).
  
-### Single linear regression: BMI ~ Serum Cortisol, with scatterplot
+### Single linear regression: (BMI ~ Serum Cortisol), with scatterplot
 ```
 > BMI.Cortisol <- lm(BMI ~ SerumCortisol, data=IBS1)
 > summary(BMI.Cortisol)
