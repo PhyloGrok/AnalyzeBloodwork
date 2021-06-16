@@ -31,7 +31,7 @@ Additional data in the context of obesity, inflammation, and gastrointestinal di
 5) Nanostring White Blood Cell RNA expression data: an associated 250-gene panel of Nanostring RNA expression data (links in citations below).
  
 
-## A. Results of modeling Body Mass Index (BMI) and stress/inflammation markers Serum Cortisol and C-Reactive Protein
+## A. Results of modeling Body Mass Index (BMI) and stress/inflammation markers Serum Cortisol and C-Reactive Protein (CRP).
 ### Single linear regression: (BMI ~ Serum Cortisol), with scatterplot.
 ```
 > BMI.Cortisol <- lm(BMI ~ SerumCortisol, data=IBS1)
