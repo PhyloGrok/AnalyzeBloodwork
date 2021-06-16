@@ -5,7 +5,7 @@ with base R</h2>
 
 ![doi](../master/Images/zenodo.3373938.svg?sanitize=true)
 
-This repository is maintained by Dr. Jeffrey Robinson, course developer and instructor for the courses BTEC330 "Software Applications in the Life Sciences", and BTEC350 "Biostatistics, in the UMBC Translational Life Science Technology Bachelor of Science Program.  The analyses are based upon published and publicly available data 
+This repository is maintained by Dr. Jeffrey Robinson, course developer and instructor for the courses BTEC330 "Software Applications in the Life Sciences", and BTEC350 "Biostatistics", in the UMBC Translational Life Science Technology (TLST) Bachelor of Science Program.  The analyses are based upon published and publicly available data from the pre-prints and database accessions cited below. Students train in R programming language, GitHub practices, and analysis of clinical and molecular expression data by forking this repository and modifying it according to their skill level and assignment specifics.
 
 
 ### Single and multiple regressions, and scatterplots for analysis of clinical bloodwork and gene expression data.
