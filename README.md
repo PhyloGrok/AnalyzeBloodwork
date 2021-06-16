@@ -54,23 +54,7 @@ ggplot(IBS1, aes(x=BMI, y=SerumCortisol)) +
 ```
 ![BMI_Cortisol](../master/Images/CORTxBMI.png?sanitize=true)
 ##
-### Results of single regression, BMI x C-Reactive Protein (CRP)
-```
-> single.regression <- lm(BMI ~ CRP, data=IBS1)
-> print(single.regression)
 
-Call:
-lm(formula = BMI ~ SerumCortisol + CRP, data = IBS1)
-
-Coefficients:
-  (Intercept)  SerumCortisol            CRP  
-      30.7936        -0.5231         0.6042  
-
-```
-
-![BMI_CRP](../master/Images/BMIxCRP.png?sanitize=true)
-##
-##
 ### Results of multiple regression, BMI x Serum Cortisol + C-Reactive Protein (CRP)
 ```
 > fit1 <- lm(BMI ~ SerumCortisol + CRP, data=IBS1)
