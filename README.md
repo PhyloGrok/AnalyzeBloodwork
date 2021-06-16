@@ -55,7 +55,8 @@ ggplot(IBS1, aes(x=BMI, y=SerumCortisol)) +
 ![BMI_Cortisol](../master/Images/CORTxBMI.png?sanitize=true)
 ##
 
-### Results of multiple regression, BMI x Serum Cortisol + C-Reactive Protein (CRP)
+### Results of multiple regression: BMI ~ Serum Cortisol + C-Reactive Protein (CRP)
+### with 3d-scatterplot 
 ```
 > fit1 <- lm(BMI ~ SerumCortisol + CRP, data=IBS1)
 > summary(fit1)
@@ -81,9 +82,9 @@ Multiple R-squared:  0.232,	Adjusted R-squared:  0.2175
 F-statistic: 16.01 on 2 and 106 DF,  p-value: 8.388e-07
 ```
 ```
-s3d <- scatterplot3d(IBS$BMI, IBS$SerumCortisol, IBS$CRP,  pch=16, color="steelblue", box="TRUE", highlight.3d=FALSE, type="h", main="BMI x Cortisol x CRP")
-fit <- lm(SerumCortisol ~ BMI + CRP, data=IBS)
-s3d$plane3d(fit)
+> s3d <- scatterplot3d(IBS$BMI, IBS$SerumCortisol, IBS$CRP,  pch=16, color="steelblue", box="TRUE", highlight.3d=FALSE, type="h", main="BMI x Cortisol x CRP")
+> fit <- lm(SerumCortisol ~ BMI + CRP, data=IBS)
+> s3d$plane3d(fit)
 ```
 ![BMI_Cortisol_CRP_3d-scatterplot](../master/Images/MultipleRegression_3way.png?sanitize=true)
 
