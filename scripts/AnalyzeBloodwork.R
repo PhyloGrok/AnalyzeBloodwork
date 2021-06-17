@@ -23,6 +23,9 @@ if (!require("scatterplot3d")) {
 setwd(dirname(getActiveDocumentContext()$path))
 
 ## Subset lists by category (future)
+WBClist <- c("Monocytes", "Lymphocytes", "Neutrophils", "Basophils", "Eosinophils")
+RBClist <- c("RBC", "ESR", "MCH", "HCT")
+PlateletList <- c("PlateletCount", "MPV")
 
 ## Read data
 IBS1 <- read.csv("../data/RobinsonEtAl_Sup1.csv", header = TRUE)
