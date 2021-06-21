@@ -6,17 +6,17 @@ if (!require("rstudioapi")) {
 
 if (!require("dplyr")) {
   install.packages("dplyr", dependencies = TRUE)
-  library(rstudioapi)
+  library(dplyr)
 }
 
 if (!require("ggplot2")) {
   install.packages("ggplot2", dependencies = TRUE)
-  library(rstudioapi)
+  library(ggplot2)
 }
 
 if (!require("scatterplot3d")) {
   install.packages("scatterplot3d", dependencies = TRUE)
-  library(rstudioapi)
+  library(scatterplot3d)
 }
 
 ## set working directory
