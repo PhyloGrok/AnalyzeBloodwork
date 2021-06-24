@@ -5,12 +5,7 @@ with Machine Learning</h2>
 
 ![doi](../master/Images/zenodo.3373938.svg?sanitize=true)
 
-
-
-
-#### Current functionality: The included R-script performs single and multiple regressions, and generates histograms and scatterplots for Complete Blood Count (CBC-D).
-
-([AnalyzeBloodwork.R](../master/AnalyzeBloodwork.R)) loads required packages, imports properly formatted sample .csv with clinical data and nanostring RNA expression results, performs single and multiple regressions, and categorization with Machine Learing methodology.
+#### Current functionality: ([AnalyzeBloodwork.R](../master/AnalyzeBloodwork.R)) loads required packages and sample data, generates linear models and diagnostic plots for single and multiple regressions for variables including BMI, Complete Blood Count (CBC), and other blood-based biomarkers.
 
 The <em>standard CBC parameters</em> provide point-of-care physicians with powerful diagnostic capabilities using: 
 
@@ -18,12 +13,13 @@ The <em>standard CBC parameters</em> provide point-of-care physicians with power
 2) Red blood cell and hemoglobin parameters (RBC count, Hematocrit (HCT), Mean Corpuscular Hemoglobin (MCH), Erythrocyte Sedimentation Rate (ESR)), 
 3) Platelet parameters (Platelet Counts, Mean Platelet Volume (MPV))
 
-Furthermore, the sample dataset was collected during an NIH natural history clinical study of the relationship between obesity, inflammation, stress, and gastrointestinal disorders.  
+#### Sample Dataset:
+Data from the sample dataset was collected during an NIH natural history clinical study of the relationship between obesity, inflammation, stress, and gastrointestinal disorders and is fully open-sourced.  
 
-Additional data in the context of obesity, inflammation, and gastrointestinal disorders include:
+Additional data in the context of obesity, inflammation, and gastrointestinal disorders includes:
 1) Body Mass Index (BMI), 
 2) Stress hormones: Cortisol and ACTH,
-3) Inflammation markers: C-Reactive Protein (CRP), sCD14, LPB,
+3) Inflammation markers: C-Reactive Protein (CRP), sCD14, Lipopolysaccharide Binding Protgin (LBP),
 4) Clinical diagnoses of subtypes of Irritable Bowel Syndrome (IBS)
 5) Nanostring White Blood Cell RNA expression data: an associated 250-gene panel of Nanostring RNA expression data (links in citations below).
  
