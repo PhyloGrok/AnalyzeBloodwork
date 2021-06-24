@@ -4,7 +4,7 @@ AnalyzeBloodwork</h1>
 with Machine Learning</h2>
 
 ![doi](../master/Images/zenodo.3373938.svg?sanitize=true)
-#### Current functionality: ([AnalyzeBloodwork.R](../master/AnalyzeBloodwork.R)) loads required packages and sample data, generates linear models and diagnostic plots for single and multiple regressions for variables including BMI, Complete Blood Count (CBC), and other blood-based biomarkers.
+#### Current functionality: ([AnalyzeBloodwork.R](../master/AnalyzeBloodwork.R)) loads required packages and sample data, generates linear models and diagnostic plots for single and multiple regressions for variables including BMI, Complete Blood Count (CBC), and other blood-based biomarkers of inflammation.
 
 #### Sample Dataset:
 Data from the sample dataset was collected during an NIH natural history clinical study of the relationship between obesity, inflammation, stress, and gastrointestinal disorders and is fully open-sourced (citations and links below).  
