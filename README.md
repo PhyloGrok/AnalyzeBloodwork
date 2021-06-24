@@ -53,7 +53,7 @@ ggplot(IBS1, aes(x=BMI, y=SerumCortisol)) +
 ![BMI_Cortisol](../master/Images/CORTxBMI.png?sanitize=true)
 ##
 
-### Multivariate linear regression: (BMI ~ Serum Cortisol + C-Reactive Protein), with 3d-scatterplot. 
+### Multiple linear regression: (BMI ~ Serum Cortisol + C-Reactive Protein), with 3d-scatterplot. 
 ```
 > fit1 <- lm(BMI ~ SerumCortisol + CRP, data=IBS1)
 > summary(fit1)
