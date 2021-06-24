@@ -5,15 +5,12 @@ with Machine Learning</h2>
 
 ![doi](../master/Images/zenodo.3373938.svg?sanitize=true)
 
-This repository is actively maintained and updated by Dr. Jeffrey Robinson, course developer and instructor for the courses BTEC330 "Software Applications in the Life Sciences", and BTEC350 "Biostatistics", in the UMBC Translational Life Science Technology (TLST) Bachelor of Science Program.  The analyses are based upon published and publicly available data from the pre-prints and database accessions cited below. 
 
-For these classes, students train in R programming language, GitHub practices, and analysis of clinical and molecular expression data by forking this repository and modifying it according to their skill level and assignment specifics.
 
-The long-term research goal of this project is the automation of Machine Learning and regression models for biomarker discovery from CBC and gene-expression data. The repository is under continuous development, versions will be incremented with each new functional feature. 
 
 #### Current functionality: The included R-script performs single and multiple regressions, and generates histograms and scatterplots for Complete Blood Count (CBC-D).
 
-([AnalyzeBloodwork.R](../master/AnalyzeBloodwork.R)) automatically loads required libraries, imports the sample .csv with patient data, generates histograms for each parameter, and performs single and multiple regressions.
+([AnalyzeBloodwork.R](../master/AnalyzeBloodwork.R)) loads required packages, imports properly formatted sample .csv with clinical data and nanostring RNA expression results, performs single and multiple regressions, and categorization with Machine Learing methodology.
 
 The <em>standard CBC parameters</em> provide point-of-care physicians with powerful diagnostic capabilities using: 
 
@@ -30,6 +27,12 @@ Additional data in the context of obesity, inflammation, and gastrointestinal di
 4) Clinical diagnoses of subtypes of Irritable Bowel Syndrome (IBS)
 5) Nanostring White Blood Cell RNA expression data: an associated 250-gene panel of Nanostring RNA expression data (links in citations below).
  
+This repository is actively maintained and updated by Dr. Jeffrey Robinson, course developer and instructor for the courses BTEC330 "Software Applications in the Life Sciences", and BTEC350 "Biostatistics", in the UMBC Translational Life Science Technology (TLST) Bachelor of Science Program.  The analyses are based upon published and publicly available data from the pre-prints and database accessions cited below. 
+
+For these classes, students train in R programming language, GitHub practices, and analysis of clinical and molecular expression data by forking this repository and modifying it according to their skill level and assignment specifics.
+
+The long-term research goal of this project is the automation of Machine Learning and regression models for biomarker discovery from CBC and gene-expression data. The repository is under continuous development, versions will be incremented with each new functional feature. 
+
 
 ## A. Results of modeling Body Mass Index (BMI) and stress/inflammation markers Serum Cortisol and C-Reactive Protein (CRP).
 ### Single linear regression: (BMI ~ Serum Cortisol), with scatterplot.
