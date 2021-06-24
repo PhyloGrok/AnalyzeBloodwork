@@ -14,16 +14,14 @@ The <em>standard CBC parameters</em> provide point-of-care physicians with power
 3) Platelet parameters (Platelet Counts, Mean Platelet Volume (MPV))
 
 #### Sample Dataset:
-Data from the sample dataset was collected during an NIH natural history clinical study of the relationship between obesity, inflammation, stress, and gastrointestinal disorders and is fully open-sourced.  
+Data from the sample dataset was collected during an NIH natural history clinical study of the relationship between obesity, inflammation, stress, and gastrointestinal disorders and is fully open-sourced (citations and links below).  
 
-Additional data in the context of obesity, inflammation, and gastrointestinal disorders includes:
+Sample data in the context of obesity, inflammation, and gastrointestinal disorders includes:
 1) Body Mass Index (BMI), 
 2) Stress hormones: Cortisol and ACTH,
 3) Inflammation markers: C-Reactive Protein (CRP), sCD14, Lipopolysaccharide Binding Protgin (LBP),
 4) Clinical diagnoses of subtypes of Irritable Bowel Syndrome (IBS)
 5) Nanostring White Blood Cell RNA expression data: an associated 250-gene panel of Nanostring RNA expression data (links in citations below).
- 
-This repository is actively maintained and updated by Dr. Jeffrey Robinson, course developer and instructor for the courses BTEC330 "Software Applications in the Life Sciences", and BTEC350 "Biostatistics", in the UMBC Translational Life Science Technology (TLST) Bachelor of Science Program.  The analyses are based upon published and publicly available data from the pre-prints and database accessions cited below. 
 
 For these classes, students train in R programming language, GitHub practices, and analysis of clinical and molecular expression data by forking this repository and modifying it according to their skill level and assignment specifics.
 
