@@ -1,7 +1,7 @@
 <h1 align="center">
 AnalyzeBloodwork</h1>
 <h2 align="center">
-with base R</h2>
+with Machine Learning</h2>
 
 ![doi](../master/Images/zenodo.3373938.svg?sanitize=true)
 
