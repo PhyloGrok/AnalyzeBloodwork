@@ -1,4 +1,14 @@
-## Install  packages
+## Install required packages
+if (!require("groupdata2")) {
+  install.packages("groupdata2", dependencies = TRUE)
+  library(groupdata2)
+}
+
+if (!require("shiny")) {
+  install.packages("shiny", dependencies = TRUE)
+  library(shiny)
+}
+
 if (!require("rstudioapi")) {
   install.packages("rstudioapi", dependencies = TRUE)
   library(rstudioapi)
@@ -7,6 +17,26 @@ if (!require("rstudioapi")) {
 if (!require("dplyr")) {
   install.packages("dplyr", dependencies = TRUE)
   library(dplyr)
+}
+
+if (!require("tidyr")) {
+  install.packages("tidyr", dependencies = TRUE)
+  library(tidyr)
+}
+
+if (!require("knitr")) {
+  install.packages("knitr", dependencies = TRUE)
+  library(knitr)
+}
+
+if (!require("caret")) {
+  install.packages("caret", dependencies=c("Depends", "Suggests"))
+  library(caret)
+}
+
+if (!require("ellipse")) {
+  install.packages("ellipse", dependencies = TRUE)
+  library(ellipse)
 }
 
 if (!require("ggplot2")) {
@@ -19,10 +49,11 @@ if (!require("scatterplot3d")) {
   library(scatterplot3d)
 }
 
+
 ## set working directory
 setwd(dirname(getActiveDocumentContext()$path))
 
-## Subset lists by category (future)
+## Subset lists by category (for dashboard)
 WBClist <- c("Monocytes", "Lymphocytes", "Neutrophils", "Basophils", "Eosinophils")
 RBClist <- c("RBC", "ESR", "MCH", "HCT")
 PlateletList <- c("PlateletCount", "MPV")
@@ -30,9 +61,9 @@ PlateletList <- c("PlateletCount", "MPV")
 ## Read data
 IBS1 <- read.csv("../data/RobinsonEtAl_Sup1.csv", header = TRUE)
 CBC <- read.csv("../data/WBCsubset.csv", header = TRUE)
-BMIs <- read.csv("../data/BMI.csv", header = TRUE)
 
-## Recursively generate histograms for every parameter
+## Recursively generate histograms for every CBC parameter
+
 ## Resource - https://stackoverflow.com/questions/49889403/loop-through-dataframe-column-names-r
 ## Resource - https://statisticsglobe.com/loop-through-data-frame-columns-rows-in-r/
 ## Resource - https://stackoverflow.com/questions/35372365/how-do-i-generate-a-histogram-for-each-column-of-my-table/35373419
@@ -49,7 +80,7 @@ for (col in 2:ncol(CBC)) {
 
 ## Multiple Regression
 ## https://www.statmethods.net/stats/regression.html
-## Fit WBC's to BMI readouts
+## Fit WBC's to BMI 
 fit <- lm(BMI ~ Monocytes + Lymphocytes + Neutrophils + Basophils + Eosinophils, data=CBC)
 summary(fit) # show results
 
