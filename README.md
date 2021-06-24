@@ -21,10 +21,9 @@ Additional sample data in the context of obesity, inflammation, and gastrointest
 4) Clinical diagnoses of subtypes of Irritable Bowel Syndrome (IBS)
 5) Nanostring White Blood Cell RNA expression data: an associated 250-gene panel of Nanostring RNA expression data (links in citations below).
 
-For these classes, students train in R programming language, GitHub practices, and analysis of clinical and molecular expression data by forking this repository and modifying it according to their skill level and assignment specifics.
+This dataset and analyses are used by Robinson in teaching for UMBC's BTEC330 (Software Applications) and BTEC350 (Biostatistics) classes, students are trained in R programming language, GitHub practices, and analysis of clinical and molecular expression data by forking this repository and modifying it according to their skill level and assignment specifics.
 
 The long-term research goal of this project is the automation of Machine Learning and regression models for biomarker discovery from CBC and gene-expression data. The repository is under continuous development, versions will be incremented with each new functional feature. 
-
 
 ## A. Linear model for Body Mass Index (BMI) vs. stress/inflammation markers Serum Cortisol and C-Reactive Protein (CRP).
 ### Single linear regression: (BMI ~ Serum Cortisol), with scatterplot.
