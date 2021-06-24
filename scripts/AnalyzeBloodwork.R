@@ -49,7 +49,6 @@ if (!require("scatterplot3d")) {
   library(scatterplot3d)
 }
 
-
 ## set working directory
 setwd(dirname(getActiveDocumentContext()$path))
 
@@ -61,6 +60,7 @@ PlateletList <- c("PlateletCount", "MPV")
 ## Read data
 IBS1 <- read.csv("../data/RobinsonEtAl_Sup1.csv", header = TRUE)
 CBC <- read.csv("../data/WBCsubset.csv", header = TRUE)
+IBSblood <- read.csv("../data/CBC_NAomit.csv", header = TRUE)
 
 ## Recursively generate histograms for every CBC parameter
 
@@ -116,3 +116,23 @@ summary(fit1)
 s3d <- scatterplot3d(IBS1$BMI, IBS1$SerumCortisol, IBS1$CRP,  pch=16, color="steelblue", box=TRUE, highlight.3d=FALSE, type="h", main="BMI x Cortisol x CRP")
 fit <- lm(SerumCortisol ~ BMI + CRP, data=IBS1)
 s3d$plane3d(fit)
+
+## Machine Learning to find the best predictive categorization
+
+## Deal with missing (NA) values - impute missing values from IBSblood using sample mean
+## Resource - https://www.guru99.com/r-replace-missing-values.html
+
+## Generate list of columns with NA values
+list_na <- colnames(IBSblood)[ apply(IBSblood, 2, anyNA) ]
+list_na
+
+# generate mean
+## debug - https://stackoverflow.com/questions/28423275/dimx-must-have-a-positive-length-when-applying-function-in-data-frame/28423503
+average_missing <- apply(as.matrix(IBSblood[,colnames(IBSblood) %in% list_na]), 
+                         2, 
+                         mean, 
+                         na.rm=TRUE)
+average_missing
+
+
+
