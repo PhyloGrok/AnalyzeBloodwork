@@ -4,19 +4,17 @@ AnalyzeBloodwork</h1>
 with Machine Learning</h2>
 
 ![doi](../master/Images/zenodo.3373938.svg?sanitize=true)
-
 #### Current functionality: ([AnalyzeBloodwork.R](../master/AnalyzeBloodwork.R)) loads required packages and sample data, generates linear models and diagnostic plots for single and multiple regressions for variables including BMI, Complete Blood Count (CBC), and other blood-based biomarkers.
-
-The <em>standard CBC parameters</em> provide point-of-care physicians with powerful diagnostic capabilities using: 
-
-1) White Blood Cell counts (absolute and relative counts for Monocytes, Lymphocytes, Neutrophils, Basophils, and Eosinophils), 
-2) Red blood cell and hemoglobin parameters (RBC count, Hematocrit (HCT), Mean Corpuscular Hemoglobin (MCH), Erythrocyte Sedimentation Rate (ESR)), 
-3) Platelet parameters (Platelet Counts, Mean Platelet Volume (MPV))
 
 #### Sample Dataset:
 Data from the sample dataset was collected during an NIH natural history clinical study of the relationship between obesity, inflammation, stress, and gastrointestinal disorders and is fully open-sourced (citations and links below).  
 
-Sample data in the context of obesity, inflammation, and gastrointestinal disorders includes:
+The <em>standard CBC parameters</em> provide point-of-care physicians with powerful diagnostic capabilities using: 
+1) White Blood Cell counts (absolute and relative counts for Monocytes, Lymphocytes, Neutrophils, Basophils, and Eosinophils), 
+2) Red blood cell and hemoglobin parameters (RBC count, Hematocrit (HCT), Mean Corpuscular Hemoglobin (MCH), Erythrocyte Sedimentation Rate (ESR)), 
+3) Platelet parameters (Platelet Counts, Mean Platelet Volume (MPV))
+
+Additional sample data in the context of obesity, inflammation, and gastrointestinal disorders includes:
 1) Body Mass Index (BMI), 
 2) Stress hormones: Cortisol and ACTH,
 3) Inflammation markers: C-Reactive Protein (CRP), sCD14, Lipopolysaccharide Binding Protgin (LBP),
