@@ -84,6 +84,35 @@ F-statistic: 16.01 on 2 and 106 DF,  p-value: 8.388e-07
 ```
 ![BMI_Cortisol_CRP_3d-scatterplot](../master/Images/MultipleRegression_3way.png?sanitize=true)
 
+### Multiple linear regression: (BMI ~ Monocytes + Lymphocytes + Neutrophils + Basophils + Eosinophils). 
+
+```
+> fit <- lm(BMI ~ Monocytes + Lymphocytes + Neutrophils + Basophils + Eosinophils, data=CBC)
+> summary(fit) # show results
+
+Call:
+lm(formula = BMI ~ Monocytes + Lymphocytes + Neutrophils + Basophils + 
+    Eosinophils, data = CBC)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-8.780 -4.037 -1.732  4.062 18.030 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  22.4000     2.7445   8.162 1.02e-12 ***
+Monocytes    -3.0891     4.1140  -0.751   0.4545    
+Lymphocytes   2.7465     1.2745   2.155   0.0336 *  
+Neutrophils   0.1459     0.4141   0.352   0.7254    
+Basophils   -21.1991    41.1140  -0.516   0.6073    
+Eosinophils   1.8739     5.4544   0.344   0.7319
+
+> layout(matrix(c(1,2,3,4),2,2))
+> plot(fit)
+```
+
+![BMI_vs White Blood Cells model fitting diagnostic plots](../master/fig_output/BMI_CBC_fit.png?sanitize=true)
+
 ### Literature Citations
 Robinson, JM. et al. 2019. Complete blood count with differential: An effective diagnostic for IBS subtype in the context of BMI? BioRxiv. doi: https://doi.org/10.1101/608208.
 
