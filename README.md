@@ -104,4 +104,8 @@ Human buffy coat gene expression, custom 250-plex Nanostring panel. GSE124549. 2
 
 [Quick R by DataCamp (StatMethods.net): Scatterplots](https://www.statmethods.net/graphs/scatterplot.html)
 
-[MachineLearningMastery.com: Machine Learning in R Step-by-Step(https://machinelearningmastery.com/machine-learning-in-r-step-by-step/)
+[MachineLearningMastery.com: Machine Learning in R Step-by-Step](https://machinelearningmastery.com/machine-learning-in-r-step-by-step/)
+
+[R-Bloggers.com: Regression analysis essentials for machine learning](https://www.r-bloggers.com/2018/03/regression-analysis-essentials-for-machine-learning/)
+
+
