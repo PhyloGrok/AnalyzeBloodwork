@@ -25,7 +25,7 @@ This dataset and analyses are used by Robinson in teaching for UMBC's BTEC330 (S
 
 The long-term research goal of this project is the automation of Machine Learning and regression models for biomarker discovery from CBC and gene-expression data. The repository is under continuous development, versions will be incremented with each new functional feature. 
 
-## A. Linear model for Body Mass Index (BMI) vs. stress/inflammation markers Serum Cortisol and C-Reactive Protein (CRP).
+## A. Linear model for Body Mass Index (BMI) vs. stress & inflammation biomarkers Serum Cortisol and C-Reactive Protein (CRP).
 ### Single linear regression: (BMI ~ Serum Cortisol), with scatterplot.
 ```
 > BMI.Cortisol <- lm(BMI ~ SerumCortisol, data=IBS1)
