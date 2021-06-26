@@ -35,7 +35,7 @@ Regressions follow the canonical form:
 ![BMI_Cortisol](../master/Images/linearmodel.png?sanitize=true)
 
 In R language this is expressed as:
-lm(y ~ x1 + x2 + xn, data=dataframe)
+<em>lm(y ~ x1 + x2 + xn, data=dataframe)</em>
 
 ### 1. Single linear regression: (BMI ~ Serum Cortisol), with scatterplot.
 ```
