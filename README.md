@@ -113,7 +113,7 @@ Eosinophils   1.8739     5.4544   0.344   0.7319
 
 ![BMI_vs White Blood Cells model fitting diagnostic plots](../master/fig_output/BMI_CBC_fit.png?sanitize=true)
 
-### Method selection for predictive classification with machine learning
+## B. Method selection for predictive classification with machine learning
 #### 1. Balance unequal groups by up-sampling using the groupdata2 package 
 
 Pre-balancing, groups "Normal" "IBSC" and "IBSD" are unequal numbers:
