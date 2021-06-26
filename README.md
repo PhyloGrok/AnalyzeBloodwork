@@ -153,16 +153,21 @@ Post-balancing with up-sampling to 100 rows for each group:
 [1] "Monocytes"
 ```
 ```
-# determine the mean of columns with missing NAs
-average_missing <- apply(as.matrix(IBSblood[,colnames(IBSblood) %in% list_na]), 
-                         2, 
-                         mean, 
-                         na.rm=TRUE)
-
-average_missing
+> # determine the mean of columns with missing NAs
+> average_missing <- apply(as.matrix(IBSblood[,colnames(IBSblood) %in% list_na]), 
++                          2, 
++                          mean, 
++                          na.rm=TRUE)
+> average_missing
+[1] 0.4462963
 ```
-
-
+```
+> # Create a new imputed dataframe by replacing NAs with column means
+> IBSblood.replacement <- IBSblood %>%
++   mutate(Monocytes = ifelse(is.na(Monocytes), average_missing[1], Monocytes))
+> sum(is.na(IBSblood.replacement$Monocytes))
+[1] 0
+```
 
 ### Literature Citations
 Robinson, JM. et al. 2019. Complete blood count with differential: An effective diagnostic for IBS subtype in the context of BMI? BioRxiv. doi: https://doi.org/10.1101/608208.
