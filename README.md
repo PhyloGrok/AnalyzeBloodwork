@@ -4,9 +4,11 @@ AnalyzeBloodwork</h1>
 with Machine Learning</h2>
 
 ![doi](../master/Images/zenodo.3373938.svg?sanitize=true)
+
+## A. Usage
 #### Current functionality: ([AnalyzeBloodwork.R](scripts/AnalyzeBloodwork.R)) loads required packages and sample data, generates linear models and diagnostic plots for single and multiple regressions for variables including BMI, Complete Blood Count (CBC), and other blood-based biomarkers of inflammation.  Imputes data for columns with missing (NA) values, balances unequally-sized sample groups.
 
-#### Sample Dataset:
+## B. Description of the Sample Dataset:
 Data from the sample dataset was collected during an NIH natural history clinical study of the relationship between obesity, inflammation, stress, and gastrointestinal disorders and is fully open-sourced (citations and links below).  
 
 The <em>standard CBC parameters</em> provide point-of-care physicians with powerful diagnostic capabilities using: 
@@ -25,8 +27,11 @@ This dataset and analyses are used by Robinson in teaching for UMBC's BTEC330 (S
 
 The long-term research goal of this project is the automation of Machine Learning and regression models for biomarker discovery from CBC and gene-expression data. The repository is under continuous development, versions will be incremented with each new functional feature. 
 
-## A. Linear regression model for Body Mass Index (BMI) vs. Serum Cortisol and C-Reactive Protein (CRP) (stress & inflammation biomarkers).
-### Single linear regression: (BMI ~ Serum Cortisol), with scatterplot.
+## C. Linear regressions examples: 
+### a. Linear model with Body Mass Index (BMI), Serum Cortisol and C-Reactive Protein (CRP) (stress & inflammation biomarkers).
+### b. Linear model with BMI and White Blood Cells (absolute counts WBCs, Neutrophils, Monocytes, Lymphocytes, Eosinophils, Basophils)
+
+### 1. Single linear regression: (BMI ~ Serum Cortisol), with scatterplot.
 ```
 > BMI.Cortisol <- lm(BMI ~ SerumCortisol, data=IBS1)
 > summary(BMI.Cortisol)
@@ -52,7 +57,7 @@ ggplot(IBS1, aes(x=BMI, y=SerumCortisol)) +
 ![BMI_Cortisol](../master/Images/CORTxBMI.png?sanitize=true)
 ##
 
-### Multiple linear regression: (BMI ~ Serum Cortisol + C-Reactive Protein), with 3d-scatterplot. 
+### 2. Multiple linear regression: (BMI ~ Serum Cortisol + C-Reactive Protein), with 3d-scatterplot. 
 ```
 > fit1 <- lm(BMI ~ SerumCortisol + CRP, data=IBS1)
 > summary(fit1)
@@ -84,7 +89,8 @@ F-statistic: 16.01 on 2 and 106 DF,  p-value: 8.388e-07
 ```
 ![BMI_Cortisol_CRP_3d-scatterplot](../master/Images/MultipleRegression_3way.png?sanitize=true)
 
-### Multiple linear regression: (BMI ~ Monocytes + Lymphocytes + Neutrophils + Basophils + Eosinophils). 
+### 3. Multiple linear regression for BMI and White Blood Cells (WBCs): 
+#### (BMI ~ Monocytes + Lymphocytes + Neutrophils + Basophils + Eosinophils). 
 
 ```
 > fit <- lm(BMI ~ Monocytes + Lymphocytes + Neutrophils + Basophils + Eosinophils, data=CBC)
