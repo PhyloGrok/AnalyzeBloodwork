@@ -171,27 +171,35 @@ Post-balancing with up-sampling to 100 rows for each group:
 ```
 
 #### 3. Generate fit models for 5 classification algorithms, with 10-fold cross-validation: 
-1) Linear Discriminant Analysis (LDA), 
-2) Classification and Regression Trees (CART), 
-3) k-Nearest Neighbors (kNN), 
-4) Support Vector Machines (SVM) with a linear kernel, 
-5) Random Forest (RF) 
+
 ```
 > # Run algorithms using 10-fold cross validation
 > control <- trainControl(method="cv", number=10)
 > metric <- "Accuracy"
+```
+1) Linear Discriminant Analysis (LDA) 
+```
 > set.seed(7)
 > fit.lda <- train(IBS.subtype~., data=df_balanced, method="lda", metric=metric, trControl=control)
-> # CART
+```
+2) Classification and Regression Trees (CART) 
+```
 > set.seed(7)
 > fit.cart <- train(IBS.subtype~., data=df_balanced, method="rpart", metric=metric, trControl=control)
+```
+3) k-Nearest Neighbors (kNN)
+```
 > # kNN
 > set.seed(7)
 > fit.knn <- train(IBS.subtype~., data=df_balanced, method="knn", metric=metric, trControl=control)
-> # SVM
+```
+4) Support Vector Machines (SVM) with a linear kernel 
+```
 > set.seed(7)
 > fit.svm <- train(IBS.subtype~., data=df_balanced, method="svmRadial", metric=metric, trControl=control)
-> # Random Forest
+```
+5) Random Forest (RF) 
+```
 > set.seed(7)
 > fit.rf <- train(IBS.subtype~., data=df_balanced, method="rf", metric=metric, trControl=control)
 ```
