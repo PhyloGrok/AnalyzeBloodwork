@@ -144,6 +144,7 @@ Post-balancing with up-sampling to 100 rows for each group:
 |    IBSD     | 100 |
 |    NORM     | 100 |
 ```
+#### 2. Impute missing values by replacing 'NA' with column mean. 
 
 
 
