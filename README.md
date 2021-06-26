@@ -113,6 +113,40 @@ Eosinophils   1.8739     5.4544   0.344   0.7319
 
 ![BMI_vs White Blood Cells model fitting diagnostic plots](../master/fig_output/BMI_CBC_fit.png?sanitize=true)
 
+### Method selection for predictive classification with machine learning
+#### 1. Balance unequal groups by up-sampling using the groupdata2 package 
+
+Pre-balancing, groups "Normal" "IBSC" and "IBSD" are unequal numbers:
+
+```
+> IBSblood %>%
++   count(IBS.subtype) %>%
++   kable(align = 'c')
+
+
+| IBS.subtype | n  |
+|:-----------:|:--:|
+|    IBSC     | 19 |
+|    IBSD     | 14 |
+|    NORM     | 77 |
+
+```
+Post-balancing with up-sampling to 100 rows for each group:
+```
+> df_balanced %>%
++   count(IBS.subtype) %>%
++   kable(align = 'c')
+
+
+| IBS.subtype |  n  |
+|:-----------:|:---:|
+|    IBSC     | 100 |
+|    IBSD     | 100 |
+|    NORM     | 100 |
+```
+
+
+
 ### Literature Citations
 Robinson, JM. et al. 2019. Complete blood count with differential: An effective diagnostic for IBS subtype in the context of BMI? BioRxiv. doi: https://doi.org/10.1101/608208.
 
