@@ -189,7 +189,6 @@ Post-balancing with up-sampling to 100 rows for each group:
 ```
 3) k-Nearest Neighbors (kNN)
 ```
-> # kNN
 > set.seed(7)
 > fit.knn <- train(IBS.subtype~., data=df_balanced, method="knn", metric=metric, trControl=control)
 ```
