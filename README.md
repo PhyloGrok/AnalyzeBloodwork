@@ -183,24 +183,24 @@ Post-balancing with up-sampling to 100 rows for each group:
 > control <- trainControl(method="cv", number=10)
 > metric <- "Accuracy"
 ```
-1) Linear Discriminant Analysis (LDA) 
+##### 1) Linear Discriminant Analysis (LDA) 
 ```
 > set.seed(7) ## Seeds are set to 7 for all subsequent algorithms
 > fit.lda <- train(IBS.subtype~., data=df_balanced, method="lda", metric=metric, trControl=control)
 ```
-2) Classification and Regression Trees (CART) 
+##### 2) Classification and Regression Trees (CART) 
 ```
 > fit.cart <- train(IBS.subtype~., data=df_balanced, method="rpart", metric=metric, trControl=control)
 ```
-3) k-Nearest Neighbors (kNN)
+##### 3) k-Nearest Neighbors (kNN)
 ```
 > fit.knn <- train(IBS.subtype~., data=df_balanced, method="knn", metric=metric, trControl=control)
 ```
-4) Support Vector Machines (SVM) with a linear kernel 
+##### 4) Support Vector Machines (SVM) with a linear kernel 
 ```
 > fit.svm <- train(IBS.subtype~., data=df_balanced, method="svmRadial", metric=metric, trControl=control)
 ```
-5) Random Forest (RF) 
+##### 5) Random Forest (RF) 
 ```
 > fit.rf <- train(IBS.subtype~., data=df_balanced, method="rf", metric=metric, trControl=control)
 ```
