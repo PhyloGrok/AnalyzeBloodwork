@@ -146,6 +146,22 @@ Post-balancing with up-sampling to 100 rows for each group:
 ```
 #### 2. Impute missing values by replacing 'NA' with column mean. 
 
+```
+> ## Generate list of columns with NA values
+> list_na <- colnames(IBSblood)[ apply(IBSblood, 2, anyNA) ]
+> list_na
+[1] "Monocytes"
+```
+```
+# determine the mean of columns with missing NAs
+average_missing <- apply(as.matrix(IBSblood[,colnames(IBSblood) %in% list_na]), 
+                         2, 
+                         mean, 
+                         na.rm=TRUE)
+
+average_missing
+```
+
 
 
 ### Literature Citations
