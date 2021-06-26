@@ -185,27 +185,23 @@ Post-balancing with up-sampling to 100 rows for each group:
 ```
 1) Linear Discriminant Analysis (LDA) 
 ```
-> set.seed(7)
+> set.seed(7) ## Seeds are set to 7 for all subsequent algorithms
 > fit.lda <- train(IBS.subtype~., data=df_balanced, method="lda", metric=metric, trControl=control)
 ```
 2) Classification and Regression Trees (CART) 
 ```
-> set.seed(7)
 > fit.cart <- train(IBS.subtype~., data=df_balanced, method="rpart", metric=metric, trControl=control)
 ```
 3) k-Nearest Neighbors (kNN)
 ```
-> set.seed(7)
 > fit.knn <- train(IBS.subtype~., data=df_balanced, method="knn", metric=metric, trControl=control)
 ```
 4) Support Vector Machines (SVM) with a linear kernel 
 ```
-> set.seed(7)
 > fit.svm <- train(IBS.subtype~., data=df_balanced, method="svmRadial", metric=metric, trControl=control)
 ```
 5) Random Forest (RF) 
 ```
-> set.seed(7)
 > fit.rf <- train(IBS.subtype~., data=df_balanced, method="rf", metric=metric, trControl=control)
 ```
 
