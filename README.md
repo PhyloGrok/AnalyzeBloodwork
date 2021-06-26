@@ -210,7 +210,7 @@ Post-balancing with up-sampling to 100 rows for each group:
 > # compare accuracy of models
 > dotplot(results)
 ```
-![Dotplot_ClassificationAccuracy](../master/fig_output/BMI_CBC_fit.png?sanitize=true)
+![Dotplot_ClassificationAccuracy](../master/fig_output/ClassificationSelection.png?sanitize=true)
 
 ### Literature Citations
 Robinson, JM. et al. 2019. Complete blood count with differential: An effective diagnostic for IBS subtype in the context of BMI? BioRxiv. doi: https://doi.org/10.1101/608208.
