@@ -114,7 +114,32 @@ Eosinophils   1.8739     5.4544   0.344   0.7319
 ![BMI_vs White Blood Cells model fitting diagnostic plots](../master/fig_output/BMI_CBC_fit.png?sanitize=true)
 
 ## B. Method selection for predictive classification with machine learning
-#### 1. Balance unequal groups by up-sampling using the groupdata2 package 
+
+#### 1. Impute missing values by replacing 'NA' with column mean. 
+```
+> ## Generate list of columns with NA values
+> list_na <- colnames(IBSblood)[ apply(IBSblood, 2, anyNA) ]
+> list_na
+[1] "Monocytes"
+```
+```
+> # determine the mean of columns with missing NAs
+> average_missing <- apply(as.matrix(IBSblood[,colnames(IBSblood) %in% list_na]), 
++                          2, 
++                          mean, 
++                          na.rm=TRUE)
+> average_missing
+[1] 0.4462963
+```
+```
+> # Create a new imputed dataframe by replacing NAs with column means
+> IBSblood.replacement <- IBSblood %>%
++   mutate(Monocytes = ifelse(is.na(Monocytes), average_missing[1], Monocytes))
+> sum(is.na(IBSblood.replacement$Monocytes))
+[1] 0
+```
+
+#### 2. Balance unequal groups by up-sampling using the groupdata2 package 
 
 Pre-balancing, groups "Normal" "IBSC" and "IBSD" are unequal numbers:
 
@@ -143,30 +168,6 @@ Post-balancing with up-sampling to 100 rows for each group:
 |    IBSC     | 100 |
 |    IBSD     | 100 |
 |    NORM     | 100 |
-```
-#### 2. Impute missing values by replacing 'NA' with column mean. 
-
-```
-> ## Generate list of columns with NA values
-> list_na <- colnames(IBSblood)[ apply(IBSblood, 2, anyNA) ]
-> list_na
-[1] "Monocytes"
-```
-```
-> # determine the mean of columns with missing NAs
-> average_missing <- apply(as.matrix(IBSblood[,colnames(IBSblood) %in% list_na]), 
-+                          2, 
-+                          mean, 
-+                          na.rm=TRUE)
-> average_missing
-[1] 0.4462963
-```
-```
-> # Create a new imputed dataframe by replacing NAs with column means
-> IBSblood.replacement <- IBSblood %>%
-+   mutate(Monocytes = ifelse(is.na(Monocytes), average_missing[1], Monocytes))
-> sum(is.na(IBSblood.replacement$Monocytes))
-[1] 0
 ```
 
 ### Literature Citations
