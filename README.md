@@ -31,6 +31,12 @@ The long-term research goal of this project is the automation of Machine Learnin
 #### a. Linear model with Body Mass Index (BMI), Serum Cortisol and C-Reactive Protein (CRP) (stress & inflammation biomarkers).
 #### b. Linear model with BMI and White Blood Cells (absolute counts WBCs, Neutrophils, Monocytes, Lymphocytes, Eosinophils, Basophils)
 
+Regressions follow the canonical form:
+![BMI_Cortisol](../master/Images/linearmodel.png?sanitize=true)
+
+In R language this is expressed as:
+lm(y ~ x1 + x2 + xn, data=dataframe)
+
 ### 1. Single linear regression: (BMI ~ Serum Cortisol), with scatterplot.
 ```
 > BMI.Cortisol <- lm(BMI ~ SerumCortisol, data=IBS1)
