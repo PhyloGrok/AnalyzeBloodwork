@@ -132,7 +132,7 @@ Eosinophils   1.8739     5.4544   0.344   0.7319
 
 ![BMI_vs White Blood Cells model fitting diagnostic plots](../master/fig_output/BMI_CBC_fit.png?sanitize=true)
 
-## B. Method selection for predictive classification with machine learning
+## D. Algorithm selection for predictive classification (machine learning)
 
 #### 1. Impute missing values by replacing 'NA' with column mean. 
 ```
