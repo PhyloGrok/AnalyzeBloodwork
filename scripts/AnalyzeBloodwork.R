@@ -1,72 +1,27 @@
-if (!require("mime")) {
-  install.packages("mime", dependencies = TRUE)
-  library(mime)
-}
+## AnalyzeBloodwork.R
+
+## Set working directory and load packages
 
 if (!require("rstudioapi")) {
   install.packages("rstudioapi", dependencies = TRUE)
   library(rstudioapi)
 }
 
-if (!require("groupdata2")) {
-  install.packages("groupdata2", dependencies = TRUE)
-  library(groupdata2)
-}
-
-if (!require("shiny")) {
-  install.packages("shiny", dependencies = TRUE)
-  library(shiny)
-}
-
-if (!require("dplyr")) {
-  install.packages("dplyr", dependencies = TRUE)
-  library(dplyr)
-}
-
-if (!require("tidyr")) {
-  install.packages("tidyr", dependencies = TRUE)
-  library(tidyr)
-}
-
-if (!require("knitr")) {
-  install.packages("knitr", dependencies = TRUE)
-  library(knitr)
-}
-
-if (!require("caret")) {
-  install.packages("caret", dependencies=c("Depends", "Suggests"))
-  library(caret)
-}
-
-#if (!require("ggsn")) {
-#  install.packages("ggsn", dependencies = TRUE)
-#  library(ggsn)
-#}
-
-#install.packages("units")
-
-if (!require("ellipse")) {
-  install.packages("ellipse", dependencies = TRUE)
-  library(ellipse)
-}
-
-if (!require("ggplot2")) {
-  install.packages("ggplot2", dependencies = TRUE)
-  library(ggplot2)
-}
-
-if (!require("scatterplot3d")) {
-  install.packages("scatterplot3d", dependencies = TRUE)
-  library(scatterplot3d)
-}
-
-if (!require("ggvis")) {
-  install.packages("ggvis", dependencies = TRUE)
-  library(ggvis)
-}
-
 ## set working directory
 setwd(dirname(getActiveDocumentContext()$path))
+
+# Package Install
+#packagelist <- read.csv("Packages.csv", header = FALSE)
+#packagelist
+
+packagelist <- c("mime", "groupdata2","shiny", "rstudioapi", "dplyr", "tidyr", "knitr", "caret", "ellipse", "ggplot2", "scatterplot3d", "ggvis")
+not_installed <- packagelist[!(packagelist %in% installed.packages()[ , "Package"])]    # Extract not installed packages
+if(length(not_installed)) install.packages(not_installed)       
+
+# Load packages
+invisible(lapply(packagelist, library, character.only = TRUE))
+
+## Load data and subset lists
 
 ## Subset lists by category (for dashboard)
 WBClist <- c("Monocytes", "Lymphocytes", "Neutrophils", "Basophils", "Eosinophils")
@@ -129,12 +84,12 @@ summary(fit1)
 ## 3D scatterplot for the most significant 3-variable multiple regression model
 ## http://www.sthda.com/english/wiki/scatterplot3d-3d-graphics-r-software-and-data-visualization
 
-## needs work
+## needs work on export step
 s3d <- scatterplot3d(IBS1$BMI, IBS1$SerumCortisol, IBS1$CRP,  pch=16, color="steelblue", box=TRUE, highlight.3d=FALSE, type="h", main="BMI x Cortisol x CRP")
 fit <- lm(SerumCortisol ~ BMI + CRP, data=IBS1)
 s3d$plane3d(fit)
 
-## Machine Learning to find the best predictive categorization
+## Machine Learning: validate the best predictive classification algorithm
 
 ## Deal with missing (NA) values - impute missing values from IBSblood using sample mean
 ## Resource - https://www.guru99.com/r-replace-missing-values.html
