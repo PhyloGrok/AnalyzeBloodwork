@@ -6,7 +6,14 @@ with Machine Learning</h2>
 ![doi](../master/Images/zenodo.3373938.svg?sanitize=true)
 
 ## A. Usage
-#### Current functionality: ([AnalyzeBloodwork.R](scripts/AnalyzeBloodwork.R)) loads required packages and sample data, generates linear models and diagnostic plots for single and multiple regressions for variables including BMI, Complete Blood Count (CBC), and other blood-based biomarkers of inflammation.  Imputes data for columns with missing (NA) values, balances unequally-sized sample groups.
+#### Current functionality: ([AnalyzeBloodwork.R](scripts/AnalyzeBloodwork.R)) 
+1) Loads required packages and sample data,
+2) Generates histograms for all variables. 
+3) Generates linear models and diagnostic plots for single and multiple regressions for BMI, Complete Blood Count (CBC), and inflammation markers,  
+4) Imputes data for columns with missing (NA) values, 
+5) Balances unequally-sized sample groups, 
+6) Generates box-and-whisker and scatterplot-matrix plots for WBC distributions.
+7) Tests the performance of machine learning classification algorithms for IBS diagnosis using CBC-WBC count data.
 
 ## B. Description of the Sample Dataset:
 Data from the sample dataset was collected during an NIH natural history clinical study of the relationship between obesity, inflammation, stress, and gastrointestinal disorders and is fully open-sourced (citations and links below).  
