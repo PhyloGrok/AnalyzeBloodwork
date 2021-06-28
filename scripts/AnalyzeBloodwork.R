@@ -160,4 +160,58 @@ df_balanced %>%
   count(IBS.subtype) %>%
   kable(align = 'c')
 
+## Print out descriptive plots for CBC parameters
 
+# summarize the distributions by class
+percentage <- prop.table(table(df_balanced$IBS.subtype)) * 100
+cbind(freq=table(df_balanced$IBS.subtype), percentage=percentage)
+
+# summarize attribute distributions
+summary(df_balanced)
+
+# split input and output
+x <- df_balanced[,3:8]
+y <- df_balanced[,2]
+
+# Generate box-and-whiskers for each attribute on one image
+par(mfrow=c(1,6))
+for(i in 1:6) {
+  boxplot(x[,i], main=names(x)[i])
+}
+# Export a scatterplot matrix  
+png("../fig_output/ScatterplotMatrix.png")
+H1 <- featurePlot(x=x, y=y, plot="ellipse")
+print(H1)
+dev.off()
+
+# Run algorithms using 10-fold cross validation
+control <- trainControl(method="cv", number=10)
+metric <- "Accuracy"
+
+# a) linear algorithms
+set.seed(7)
+fit.lda <- train(IBS.subtype~., data=df_balanced, method="lda", metric=metric, trControl=control)
+# b) nonlinear algorithms
+# CART
+set.seed(7)
+fit.cart <- train(IBS.subtype~., data=df_balanced, method="rpart", metric=metric, trControl=control)
+# kNN
+set.seed(7)
+fit.knn <- train(IBS.subtype~., data=df_balanced, method="knn", metric=metric, trControl=control)
+# c) advanced algorithms
+# SVM
+set.seed(7)
+fit.svm <- train(IBS.subtype~., data=df_balanced, method="svmRadial", metric=metric, trControl=control)
+# Random Forest
+set.seed(7)
+fit.rf <- train(IBS.subtype~., data=df_balanced, method="rf", metric=metric, trControl=control)
+
+# summarize accuracy of models
+results <- resamples(list(lda=fit.lda, cart=fit.cart, knn=fit.knn, svm=fit.svm, rf=fit.rf))
+summary(results)
+
+# compare accuracy of models with an exported boxplot
+png("../fig_output/ClassificationSelection.png")
+H1 <- dotplot(results)
+print(H1)
+dev.off()
