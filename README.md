@@ -9,10 +9,10 @@ with Machine Learning</h2>
 #### Current functionality: ([AnalyzeBloodwork.R](scripts/AnalyzeBloodwork.R)) 
 1) Loads required packages and sample data,
 2) Generates histograms for all variables, 
-3) Generates linear models and diagnostic plots for single and multiple regressions for BMI, Complete Blood Count (CBC), and inflammation markers,  
+3) Generates linear regression models and diagnostic plots for single and multiple regressions for BMI, Complete Blood Count (CBC), and inflammation markers,  
 4) Imputes data for columns with missing (NA) values, 
 5) Balances unequally-sized sample groups, 
-6) Generates box-and-whisker and scatterplot-matrix plots for WBC distributions.
+6) Generates box-and-whisker and scatterplot-matrix plots for WBC distributions,
 7) Tests the performance of machine learning classification algorithms for IBS diagnosis using CBC-WBC count data.
 
 ## B. Description of the Sample Dataset:
