@@ -8,7 +8,7 @@ with Machine Learning</h2>
 ## A. Usage
 #### Current functionality: ([AnalyzeBloodwork.R](scripts/AnalyzeBloodwork.R)) 
 1) Loads required packages and sample data,
-2) Generates histograms for all variables. 
+2) Generates histograms for all variables, 
 3) Generates linear models and diagnostic plots for single and multiple regressions for BMI, Complete Blood Count (CBC), and inflammation markers,  
 4) Imputes data for columns with missing (NA) values, 
 5) Balances unequally-sized sample groups, 
