@@ -1,4 +1,13 @@
-## Install required packages
+if (!require("mime")) {
+  install.packages("mime", dependencies = TRUE)
+  library(mime)
+}
+
+if (!require("rstudioapi")) {
+  install.packages("rstudioapi", dependencies = TRUE)
+  library(rstudioapi)
+}
+
 if (!require("groupdata2")) {
   install.packages("groupdata2", dependencies = TRUE)
   library(groupdata2)
@@ -7,11 +16,6 @@ if (!require("groupdata2")) {
 if (!require("shiny")) {
   install.packages("shiny", dependencies = TRUE)
   library(shiny)
-}
-
-if (!require("rstudioapi")) {
-  install.packages("rstudioapi", dependencies = TRUE)
-  library(rstudioapi)
 }
 
 if (!require("dplyr")) {
@@ -34,6 +38,13 @@ if (!require("caret")) {
   library(caret)
 }
 
+#if (!require("ggsn")) {
+#  install.packages("ggsn", dependencies = TRUE)
+#  library(ggsn)
+#}
+
+#install.packages("units")
+
 if (!require("ellipse")) {
   install.packages("ellipse", dependencies = TRUE)
   library(ellipse)
@@ -47,6 +58,11 @@ if (!require("ggplot2")) {
 if (!require("scatterplot3d")) {
   install.packages("scatterplot3d", dependencies = TRUE)
   library(scatterplot3d)
+}
+
+if (!require("ggvis")) {
+  install.packages("ggvis", dependencies = TRUE)
+  library(ggvis)
 }
 
 ## set working directory
@@ -76,7 +92,7 @@ for (col in 2:ncol(CBC)) {
   curve(dnorm(x, mean=mean(CBC[,col], na.rm=TRUE), sd=sd(CBC[,col], na.rm=TRUE)), add=TRUE, col="blue", lwd=2)
   print(H1)
   dev.off()
-  }
+}
 
 ## Multiple Regression
 ## https://www.statmethods.net/stats/regression.html
@@ -88,8 +104,8 @@ summary(fit) # show results
 ## https://www.statmethods.net/graphs/scatterplot.html
 png("../fig_output/BMI_Lymphocytes.png")
 H1 <- ggplot(CBC, aes(x=Lymphocytes, y=BMI)) +
-        geom_point() +    
-        geom_smooth(method=lm)
+  geom_point() +    
+  geom_smooth(method=lm)
 print(H1)
 dev.off()
 
@@ -113,6 +129,7 @@ summary(fit1)
 ## 3D scatterplot for the most significant 3-variable multiple regression model
 ## http://www.sthda.com/english/wiki/scatterplot3d-3d-graphics-r-software-and-data-visualization
 
+## needs work
 s3d <- scatterplot3d(IBS1$BMI, IBS1$SerumCortisol, IBS1$CRP,  pch=16, color="steelblue", box=TRUE, highlight.3d=FALSE, type="h", main="BMI x Cortisol x CRP")
 fit <- lm(SerumCortisol ~ BMI + CRP, data=IBS1)
 s3d$plane3d(fit)
@@ -152,7 +169,7 @@ IBSblood %>%
   kable(align = 'c')
 
 ## Balance by making each group have 100 rows
-df_balanced <- balance(IBSblood, 100, cat_col = "IBS.subtype") %>% 
+df_balanced <- balance(IBSblood.replacement, 100, cat_col = "IBS.subtype") %>% 
   arrange(IBS.subtype, ID)
 
 ## Data after balancing
@@ -179,10 +196,14 @@ for(i in 1:6) {
   boxplot(x[,i], main=names(x)[i])
 }
 # Export a scatterplot matrix  
+## needs work
+featurePlot(x=x, y=y, plot="ellipse")
 png("../fig_output/ScatterplotMatrix.png")
 H1 <- featurePlot(x=x, y=y, plot="ellipse")
 print(H1)
 dev.off()
+
+featurePlot(x=x, y=y, plot="ellipse")
 
 # Run algorithms using 10-fold cross validation
 control <- trainControl(method="cv", number=10)
