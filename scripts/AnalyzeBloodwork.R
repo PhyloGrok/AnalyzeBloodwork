@@ -1,40 +1,35 @@
 ## AnalyzeBloodwork.R
 
-## Set working directory and load packages
-
+## SET WORKING DIRECTORY
 if (!require("rstudioapi")) {
   install.packages("rstudioapi", dependencies = TRUE)
   library(rstudioapi)
 }
 
-## set working directory
 setwd(dirname(getActiveDocumentContext()$path))
 
-# Package Install
-#packagelist <- read.csv("Packages.csv", header = FALSE)
-#packagelist
+# INSTALL PACKAGES
+## packagelist <- read.csv("Packages.csv", header = FALSE) ?? how to import as a list?.
+## resource -  https://statsandr.com/blog/an-efficient-way-to-install-and-load-r-packages/
 
 packagelist <- c("mime", "groupdata2","shiny", "rstudioapi", "dplyr", "tidyr", "knitr", "caret", "ellipse", "ggplot2", "scatterplot3d", "ggvis")
 not_installed <- packagelist[!(packagelist %in% installed.packages()[ , "Package"])]    # Extract not installed packages
 if(length(not_installed)) install.packages(not_installed)       
 
-# Load packages
+# LOAD PACKAGES
 invisible(lapply(packagelist, library, character.only = TRUE))
 
-## Load data and subset lists
-
-## Subset lists by category (for dashboard)
+## READ SUBSET LISTS (for dashboard)
 WBClist <- c("Monocytes", "Lymphocytes", "Neutrophils", "Basophils", "Eosinophils")
 RBClist <- c("RBC", "ESR", "MCH", "HCT")
 PlateletList <- c("PlateletCount", "MPV")
 
-## Read data
+## READ DATASETS
 IBS1 <- read.csv("../data/RobinsonEtAl_Sup1.csv", header = TRUE)
 CBC <- read.csv("../data/WBCsubset.csv", header = TRUE)
 IBSblood <- read.csv("../data/CBC_NAomit.csv", header = TRUE)
 
-## Recursively generate histograms for every CBC parameter
-
+## EXPORT HISTOGRAMS FOR ALL PARAMETERS
 ## Resource - https://stackoverflow.com/questions/49889403/loop-through-dataframe-column-names-r
 ## Resource - https://statisticsglobe.com/loop-through-data-frame-columns-rows-in-r/
 ## Resource - https://stackoverflow.com/questions/35372365/how-do-i-generate-a-histogram-for-each-column-of-my-table/35373419
@@ -49,13 +44,13 @@ for (col in 2:ncol(CBC)) {
   dev.off()
 }
 
-## Multiple Regression
+## FIT MULTIPLE REGRESSION for BMI~WBCs
 ## https://www.statmethods.net/stats/regression.html
 ## Fit WBC's to BMI 
 fit <- lm(BMI ~ Monocytes + Lymphocytes + Neutrophils + Basophils + Eosinophils, data=CBC)
 summary(fit) # show results
 
-## Generate Scatterplot for BMI-Lymphocytes
+## EXPORT SCATTERPLOTS for BMI~Lymphocytes
 ## https://www.statmethods.net/graphs/scatterplot.html
 png("../fig_output/BMI_Lymphocytes.png")
 H1 <- ggplot(CBC, aes(x=Lymphocytes, y=BMI)) +
@@ -64,14 +59,14 @@ H1 <- ggplot(CBC, aes(x=Lymphocytes, y=BMI)) +
 print(H1)
 dev.off()
 
-## Display the model fitting results
+## EXPORT FIT METRICS PLOTS
 png("../fig_output/BMI_CBC_fit.png")
 layout(matrix(c(1,2,3,4),2,2))
 H1 <- plot(fit)
 print(H1)
 dev.off()
 
-##  Multiple Regressions using selected parameters
+##  MULTIPLE LINEAR REGRESSIONS with BMI~inflammatory biomarkers
 ##  https://statquest.org/2017/10/30/statquest-multiple-regression-in-r/
 ##  http://www.sthda.com/english/articles/40-regression-analysis/167-simple-linear-regression-in-r/
 ##  http://r-statistics.co/Linear-Regression.html
@@ -81,24 +76,24 @@ dev.off()
 fit1 <- lm(BMI ~ SerumCortisol + CRP + ESR + PlateletCount + Lymphocytes , data=IBS1)
 summary(fit1)
 
-## 3D scatterplot for the most significant 3-variable multiple regression model
+## EXPORT 3D-SCATTERPLOT for (BMI ~ Cortisol + CRP)
 ## http://www.sthda.com/english/wiki/scatterplot3d-3d-graphics-r-software-and-data-visualization
 
-## needs work on export step
+## Export of this parameter is giving an iss
 s3d <- scatterplot3d(IBS1$BMI, IBS1$SerumCortisol, IBS1$CRP,  pch=16, color="steelblue", box=TRUE, highlight.3d=FALSE, type="h", main="BMI x Cortisol x CRP")
 fit <- lm(SerumCortisol ~ BMI + CRP, data=IBS1)
 s3d$plane3d(fit)
 
-## Machine Learning: validate the best predictive classification algorithm
+## IDENFITY THE BEST-PERFORMING PREDICTIVE CLASSIFICATION ALGORITHM (MACHINE LEARNING)
 
-## Deal with missing (NA) values - impute missing values from IBSblood using sample mean
+## IMPUTE MISSING VALUES USING SAMPLE MEAN
 ## Resource - https://www.guru99.com/r-replace-missing-values.html
 
-## Generate list of columns with NA values
+## List columns with NA values
 list_na <- colnames(IBSblood)[ apply(IBSblood, 2, anyNA) ]
 list_na
 
-# generate mean
+## CALCULATE MEAN
 ## debug - https://stackoverflow.com/questions/28423275/dimx-must-have-a-positive-length-when-applying-function-in-data-frame/28423503
 average_missing <- apply(as.matrix(IBSblood[,colnames(IBSblood) %in% list_na]), 
                          2, 
@@ -106,7 +101,7 @@ average_missing <- apply(as.matrix(IBSblood[,colnames(IBSblood) %in% list_na]),
                          na.rm=TRUE)
 average_missing
 
-# Replace NA values with the calculated mean
+## REPLACE NA VALUES with the calculated mean
 average_missing[1]
 
 IBSblood.replacement <- IBSblood %>%
@@ -114,9 +109,9 @@ IBSblood.replacement <- IBSblood %>%
 
 sum(is.na(IBSblood.replacement$Monocytes))
 
-## IBS.subtype levels are unequal and therefore susceptible to inaccurate testing results
-## Balance dataset using groupdata2 package (ie. New rows are generated by random resampling)
+## BALANCE CLASSES (ie. "groups" or "levels") using groupdata2 package (ie. New rows are generated by random resampling)
 ## https://cran.r-project.org/web/packages/groupdata2/vignettes/description_of_groupdata2.html#balance-1
+## In the sample data, IBS.subtype levels are unequal and therefore susceptible to inaccurate testing results
 
 ## Data as-is
 IBSblood %>%
@@ -132,13 +127,13 @@ df_balanced %>%
   count(IBS.subtype) %>%
   kable(align = 'c')
 
-## Print out descriptive plots for CBC parameters
+## Print out box-whisters and scatterplot matrix plots for all CBC parameters
 
-# summarize the distributions by class
+# Summarize group proportions
 percentage <- prop.table(table(df_balanced$IBS.subtype)) * 100
 cbind(freq=table(df_balanced$IBS.subtype), percentage=percentage)
 
-# summarize attribute distributions
+# Summarize attribute distributions
 summary(df_balanced)
 
 # split input and output
@@ -150,17 +145,16 @@ par(mfrow=c(1,6))
 for(i in 1:6) {
   boxplot(x[,i], main=names(x)[i])
 }
+
 # Export a scatterplot matrix  
-## needs work
 featurePlot(x=x, y=y, plot="ellipse")
+
 png("../fig_output/ScatterplotMatrix.png")
 H1 <- featurePlot(x=x, y=y, plot="ellipse")
 print(H1)
 dev.off()
 
-featurePlot(x=x, y=y, plot="ellipse")
-
-# Run algorithms using 10-fold cross validation
+# Run ML classification algorithms using 10-fold cross validation
 control <- trainControl(method="cv", number=10)
 metric <- "Accuracy"
 
@@ -182,11 +176,11 @@ fit.svm <- train(IBS.subtype~., data=df_balanced, method="svmRadial", metric=met
 set.seed(7)
 fit.rf <- train(IBS.subtype~., data=df_balanced, method="rf", metric=metric, trControl=control)
 
-# summarize accuracy of models
+# Summarize predictive accuracy of models
 results <- resamples(list(lda=fit.lda, cart=fit.cart, knn=fit.knn, svm=fit.svm, rf=fit.rf))
 summary(results)
 
-# compare accuracy of models with an exported boxplot
+# Export dotplot with model validation
 png("../fig_output/ClassificationSelection.png")
 H1 <- dotplot(results)
 print(H1)
