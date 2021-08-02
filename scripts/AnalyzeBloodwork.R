@@ -1,6 +1,8 @@
 ## AnalyzeBloodwork.R
 
-## SET WORKING DIRECTORY
+## A. SETUP ENVIRONMENT
+
+## A1. SET WORKING DIRECTORY
 if (!require("rstudioapi")) {
   install.packages("rstudioapi", dependencies = TRUE)
   library(rstudioapi)
@@ -8,190 +10,336 @@ if (!require("rstudioapi")) {
 
 setwd(dirname(getActiveDocumentContext()$path))
 
-# INSTALL PACKAGES
+## A2. INSTALL AND LOAD PACKAGES
 ## packagelist <- read.csv("Packages.csv", header = FALSE) ?? how to import as a list?.
 ## resource -  https://statsandr.com/blog/an-efficient-way-to-install-and-load-r-packages/
-## resource - https://statisticsglobe.com/r-install-missing-packages-automatically
-packagelist <- c("mime", "groupdata2","shiny", "rstudioapi", "dplyr", "tidyr", "knitr", "caret", "ellipse", "ggplot2", "scatterplot3d", "ggvis")
+
+packagelist <- c("mime", "groupdata2","shiny", "rstudioapi", "dplyr", "tidyr", "knitr", "caret", "e1071", "ellipse", "ggplot2", "scatterplot3d", "ggvis")
 not_installed <- packagelist[!(packagelist %in% installed.packages()[ , "Package"])]    # Extract not installed packages
 if(length(not_installed)) install.packages(not_installed)       
 
-# LOAD PACKAGES
+## LOAD PACKAGES
 invisible(lapply(packagelist, library, character.only = TRUE))
 
-## READ SUBSET LISTS (for dashboard)
-WBClist <- c("Monocytes", "Lymphocytes", "Neutrophils", "Basophils", "Eosinophils")
-RBClist <- c("RBC", "ESR", "MCH", "HCT")
-PlateletList <- c("PlateletCount", "MPV")
+## B. INGEST DATA
 
-## READ DATASETS
+## B1. Read in sample dataset
 IBS1 <- read.csv("../data/RobinsonEtAl_Sup1.csv", header = TRUE)
-CBC <- read.csv("../data/WBCsubset.csv", header = TRUE)
-IBSblood <- read.csv("../data/CBC_NAomit.csv", header = TRUE)
 
-## DATA PREPARATION - Impute missing values and balance uneven classes (ie. "groups" or "levels") 
+## B2. Generate subset categories
+WBClist <- c("IBS.subtype","BMI", "Monocytes", "Lymphocytes", "Neutrophils", "Basophils", "Eosinophils")
+RBClist <- c("IBS.subtype", "BMI", "RBC", "ESR", "MCH", "HCT")
+PlateletList <- c("IBS.subtype", "BMI", "PlateletCount", "MPV")
+BMPlist <- c("IBS.subtype", "BMI", "Calcium", "Sodium", "Potassium", "Chloride", "CO2.HCO3", "Blood.Urea.Nitrogen", "Creatine", "Glucose")
 
-## IMPUTE MISSING VALUES USING SAMPLE MEAN
-## Resource - https://www.guru99.com/r-replace-missing-values.html
+## Subset data by category
+WBC <- IBS1[,WBClist]
+RBC <- IBS1[,RBClist]
+PL <- IBS1[,PlateletList]
 
-## List columns with NA values
-list_na <- colnames(IBSblood)[ apply(IBSblood, 2, anyNA) ]
+## B3. IMPUTE MISSING VALUES USING CALCULATED SAMPLE MEANS
+## See https://www.guru99.com/r-replace-missing-values.html
+
+## B3a. White Blood Cells
+## Generate a list of columns containing NA values
+list_na <- colnames(WBC)[ apply(WBC, 2, anyNA) ]
 list_na
 
-## CALCULATE MEAN
+for (j in list_na){
+  print(j)
+}
+
+## CALCULATE MEANS
 ## debug - https://stackoverflow.com/questions/28423275/dimx-must-have-a-positive-length-when-applying-function-in-data-frame/28423503
-average_missing <- apply(as.matrix(IBSblood[,colnames(IBSblood) %in% list_na]), 
+average_missing <- apply(as.matrix(WBC[,colnames(WBC) %in% list_na]), 
+                         2, 
+                         mean, 
+                         na.rm=TRUE)
+average_missing
+#average_missing[3]
+#average_missing <- unname(average_missing)
+
+for (i in average_missing){
+  print(i)
+}
+
+for (j in list_na){
+  print(j)
+    }
+
+## REPLACE NA VALUES with the calculated means, for each subset
+WBC.replacement <- WBC
+
+sum(is.na(WBC.replacement$i))
+
+WBC.replacement <- WBC.replacement %>%
+  mutate(
+    BMI = ifelse(is.na(BMI), average_missing[1], BMI),
+    Monocytes = ifelse(is.na(Monocytes), average_missing[2], Monocytes),
+    Lymphocytes = ifelse(is.na(Lymphocytes), average_missing[3], Lymphocytes),
+    Neutrophils = ifelse(is.na(Neutrophils), average_missing[4], Neutrophils),
+    Basophils = ifelse(is.na(Basophils), average_missing[5], Basophils),
+    Eosinophils = ifelse(is.na(Eosinophils), average_missing[6], Eosinophils)
+    )
+
+## B3b. RBCs
+list_na <- colnames(RBC)[ apply(RBC, 2, anyNA) ]
+list_na
+
+average_missing <- apply(as.matrix(RBC[,colnames(RBC) %in% list_na]), 
                          2, 
                          mean, 
                          na.rm=TRUE)
 average_missing
 
 ## REPLACE NA VALUES with the calculated mean
-average_missing[1]
 
-IBSblood.replacement <- IBSblood %>%
-  mutate(Monocytes = ifelse(is.na(Monocytes), average_missing[1], Monocytes))
+RBC.replacement <- RBC
+  
+RBC.replacement <- RBC.replacement %>%
+  mutate(
+  BMI = ifelse(is.na(BMI), average_missing[1], BMI),
+  RBC = ifelse(is.na(RBC), average_missing[2], RBC),
+  ESR = ifelse(is.na(ESR), average_missing[3], ESR),
+  MCH = ifelse(is.na(MCH), average_missing[4], MCH),
+  HCT = ifelse(is.na(HCT), average_missing[5], HCT)
+  )
 
-sum(is.na(IBSblood.replacement$Monocytes))
+## B3c. Platelets
+list_na <- colnames(PL)[ apply(PL, 2, anyNA) ]
+list_na
 
-## BALANCE CLASSES  using groupdata2 package (ie. New rows are generated by random resampling)
+## CALCULATE MEANS
+average_missing <- apply(as.matrix(PL[,colnames(PL) %in% list_na]), 
+                         2, 
+                         mean, 
+                         na.rm=TRUE)
+average_missing
+
+## REPLACE NA VALUES with the calculated mean
+PL.replacement <- PL
+
+PL.replacement <- PL.replacement %>%
+    mutate(
+    BMI = ifelse(is.na(BMI), average_missing[1], BMI),
+    PlateletCount = ifelse(is.na(PlateletCount), average_missing[2], PlateletCount),
+    MPV = ifelse(is.na(MPV), average_missing[3], MPV)
+    )
+
+sum(is.na(PL.replacement$MPV))
+
+## B4. BALANCING - Balance IBS groups to have 100/group by re-sampling
+## BALANCE CLASSES (ie. "groups" or "levels") using groupdata2 package (ie. New rows are generated by random resampling)
 ## https://cran.r-project.org/web/packages/groupdata2/vignettes/description_of_groupdata2.html#balance-1
 ## In the sample data, IBS.subtype levels are unequal and therefore susceptible to inaccurate testing results
 
-## Data as-is
-IBSblood %>%
+## Unbalanced group sizes
+WBC.replacement %>%
   count(IBS.subtype) %>%
   kable(align = 'c')
 
 ## Balance by making each group have 100 rows
-df_balanced <- balance(IBSblood.replacement, 100, cat_col = "IBS.subtype") %>% 
-  arrange(IBS.subtype, ID)
+WBC_balanced <- balance(WBC.replacement, 100, cat_col = "IBS.subtype") %>% 
+  arrange(IBS.subtype)
 
-## Data after balancing
-df_balanced %>%
+## Post-balancing
+WBC_balanced %>%
   count(IBS.subtype) %>%
   kable(align = 'c')
 
-## Print out box-whiskers and scatterplot matrix plots for all CBC parameters
+## Balance RBCs
+RBC.replacement %>%
+  count(IBS.subtype) %>%
+  kable(align = 'c')
 
-# Summarize group proportions
-percentage <- prop.table(table(df_balanced$IBS.subtype)) * 100
-cbind(freq=table(df_balanced$IBS.subtype), percentage=percentage)
+## Balance by making each group have 100 rows
+RBC_balanced <- balance(RBC.replacement, 100, cat_col = "IBS.subtype") %>% 
+  arrange(IBS.subtype)
 
+## Data after balancing
+RBC_balanced %>%
+  count(IBS.subtype) %>%
+  kable(align = 'c')
 
-# split input and output
-x <- df_balanced[,3:8]
-y <- df_balanced[,2]
+## Platelets balancing
+PL.replacement %>%
+  count(IBS.subtype) %>%
+  kable(align = 'c')
 
-## Generate box-and-whiskers for each attribute on one image
-## how to export?
-par(mfrow=c(1,6)) 
-for(i in 1:6) {
-          boxplot(x[,i], main=names(x)[i])
-}
+## Balance by making each group have 100 rows
+PL_balanced <- balance(PL.replacement, 100, cat_col = "IBS.subtype") %>% 
+  arrange(IBS.subtype)
 
-# Export a scatterplot matrix  
-## may need an additional package
-featurePlot(x=x, y=y, plot="ellipse")
+## Data after balancing
+PL_balanced %>%
+  count(IBS.subtype) %>%
+  kable(align = 'c')
 
-png("../fig_output/ScatterplotMatrix.png")
-H1 <- featurePlot(x=x, y=y, plot="ellipse")
-print(H1)
-dev.off()
+# B5. Summarize group proportions
 
+##B5a. WBCs
+percentage <- prop.table(table(WBC_balanced$IBS.subtype)) * 100
+cbind(freq=table(WBC_balanced$IBS.subtype), percentage=percentage)
 
-## EXPORT HISTOGRAMS FOR ALL PARAMETERS
+##B5b. RBCs
+percentage <- prop.table(table(RBC_balanced$IBS.subtype)) * 100
+cbind(freq=table(RBC_balanced$IBS.subtype), percentage=percentage)
+
+##B5a. Platelets
+percentage <- prop.table(table(PL_balanced$IBS.subtype)) * 100
+cbind(freq=table(PL_balanced$IBS.subtype), percentage=percentage)
+
+# Summarize attribute distributions
+summary(WBC_balanced)
+summary(RBC_balanced)
+summary(PL_balanced)
+
+## C. DESCRIPTIVE STATISTICS
+
+## C1. EXPORT HISTOGRAMS
 ## Resource - https://stackoverflow.com/questions/49889403/loop-through-dataframe-column-names-r
 ## Resource - https://statisticsglobe.com/loop-through-data-frame-columns-rows-in-r/
 ## Resource - https://stackoverflow.com/questions/35372365/how-do-i-generate-a-histogram-for-each-column-of-my-table/35373419
 ## Resource - https://www.r-bloggers.com/2011/04/automatically-save-your-plots-to-a-folder/
 
-for (col in 2:ncol(CBC)) {
-  mypath <- file.path("../fig_output",paste(colnames(CBC[col]),".png",sep = ""))
+for (col in 2:ncol(WBC.replacement)) {
+  mypath <- file.path("../fig_output",paste(colnames(WBC.replacement[col]),".png",sep = ""))
   png(file=mypath)
-  H1 <- hist(CBC[,col], freq=FALSE, main = (colnames(CBC[col])), xlab = (colnames(CBC[col])), breaks=20, col = "lightgreen")
-  curve(dnorm(x, mean=mean(CBC[,col], na.rm=TRUE), sd=sd(CBC[,col], na.rm=TRUE)), add=TRUE, col="blue", lwd=2)
+  H1 <- hist(WBC.replacement[,col], freq=FALSE, main = (colnames(WBC.replacement[col])), xlab = (colnames(WBC.replacement[col])), breaks=20, col = "lightgreen")
+  curve(dnorm(x, mean=mean(WBC.replacement[,col], na.rm=TRUE), sd=sd(WBC.replacement[,col], na.rm=TRUE)), add=TRUE, col="blue", lwd=2)
   print(H1)
   dev.off()
 }
 
-## FIT MULTIPLE REGRESSION for BMI~WBCs
-## https://www.statmethods.net/stats/regression.html
-## Fit WBC's to BMI 
-fit <- lm(BMI ~ Monocytes + Lymphocytes + Neutrophils + Basophils + Eosinophils, data=CBC)
-summary(fit) # show results
+for (col in 2:ncol(RBC.replacement)) {
+  mypath <- file.path("../fig_output",paste(colnames(RBC.replacement[col]),".png",sep = ""))
+  png(file=mypath)
+  H1 <- hist(RBC.replacement[,col], freq=FALSE, main = (colnames(RBC.replacement[col])), xlab = (colnames(RBC.replacement[col])), breaks=20, col = "lightgreen")
+  curve(dnorm(x, mean=mean(RBC.replacement[,col], na.rm=TRUE), sd=sd(RBC.replacement[,col], na.rm=TRUE)), add=TRUE, col="blue", lwd=2)
+  print(H1)
+  dev.off()
+}
 
-## EXPORT SCATTERPLOTS for BMI~Lymphocytes
+for (col in 2:ncol(PL.replacement)) {
+  mypath <- file.path("../fig_output",paste(colnames(PL.replacement[col]),".png",sep = ""))
+  png(file=mypath)
+  H1 <- hist(PL.replacement[,col], freq=FALSE, main = (colnames(PL.replacement[col])), xlab = (colnames(PL.replacement[col])), breaks=20, col = "lightgreen")
+  curve(dnorm(x, mean=mean(PL.replacement[,col], na.rm=TRUE), sd=sd(PL.replacement[,col], na.rm=TRUE)), add=TRUE, col="blue", lwd=2)
+  print(H1)
+  dev.off()
+}
+
+## C2. Plot Box-whisker and scatterplot matrices 
+
+# split input and output
+x <- WBC_balanced[,2:7]
+y <- WBC_balanced[,1]
+
+par(mfrow=c(1,6))
+for(i in 1:6) {
+  boxplot(x[,i], main=names(x)[i])
+}
+
+## Export a scatterplot matrix  
+## featurePlot(x=x, y=y, plot="ellipse")
+
+## png("../fig_output/ScatterplotMatrix.png")
+## H1 <- featurePlot(x=x, y=y, plot="ellipse")
+## print(H1)
+## dev.off()
+
+## D. LINEAR REGRESSION MODELS AND SCATTERPLOTS
+
+## D1. FIT MULTIPLE REGRESSION MODELS for CBC subsets
+## Resource - https://www.statmethods.net/stats/regression.html
+
+fit.WBC <- lm(BMI ~ Monocytes + Lymphocytes + Neutrophils + Basophils + Eosinophils, data=WBC.replacement)
+summary(fit.WBC) # show results
+
+fit.RBC <- lm(BMI ~ RBC + ESR + MCH + HCT, data=RBC.replacement)
+summary(fit.RBC) # show results
+
+fit.PL <- lm(BMI ~ PlateletCount + MPV, data=PL.replacement)
+summary(fit.PL) # show results
+
+## D2. EXPORT SCATTERPLOTS for BMI~Lymphocytes
 ## https://www.statmethods.net/graphs/scatterplot.html
 png("../fig_output/BMI_Lymphocytes.png")
-H1 <- ggplot(CBC, aes(x=Lymphocytes, y=BMI)) +
+H1 <- ggplot(WBC.replacement, aes(x=Lymphocytes, y=BMI)) +
   geom_point() +    
   geom_smooth(method=lm)
 print(H1)
 dev.off()
 
-## EXPORT FIT METRICS PLOTS
+## D3. EXPORT FIT METRICS PLOTS
 png("../fig_output/BMI_CBC_fit.png")
 layout(matrix(c(1,2,3,4),2,2))
-H1 <- plot(fit)
+H1 <- plot(fit.WBC)
 print(H1)
 dev.off()
 
-##  MULTIPLE LINEAR REGRESSIONS with BMI~inflammatory biomarkers
+##  D4. MULTIPLE LINEAR REGRESSIONS and 3D scatterplot with BMI~inflammatory biomarkers
+
 ##  https://statquest.org/2017/10/30/statquest-multiple-regression-in-r/
 ##  http://www.sthda.com/english/articles/40-regression-analysis/167-simple-linear-regression-in-r/
 ##  http://r-statistics.co/Linear-Regression.html
 ##  https://www.statmethods.net/stats/regression.html
 
-##  Fit BMI ~ Cortisol, CRP, ESR, PlateletCount, Lymphocyte count.
+##  D4a. Generate the multiple linear regression model 
 fit1 <- lm(BMI ~ SerumCortisol + CRP + ESR + PlateletCount + Lymphocytes , data=IBS1)
 summary(fit1)
 
-## EXPORT 3D-SCATTERPLOT for (BMI ~ Cortisol + CRP)
+## D4b. EXPORT 3D-SCATTERPLOT for (BMI ~ Cortisol + CRP)
 ## http://www.sthda.com/english/wiki/scatterplot3d-3d-graphics-r-software-and-data-visualization
 
-## Export of this parameter is giving an iss
+## D4c. Print a 3D scatterplot for variables BMI, Cortisol, CRP
+layout(matrix(c(1)))
+layout.show()
 s3d <- scatterplot3d(IBS1$BMI, IBS1$SerumCortisol, IBS1$CRP,  pch=16, color="steelblue", box=TRUE, highlight.3d=FALSE, type="h", main="BMI x Cortisol x CRP")
 fit <- lm(SerumCortisol ~ BMI + CRP, data=IBS1)
 s3d$plane3d(fit)
 
 
-## IDENFITY THE BEST-PERFORMING PREDICTIVE CLASSIFICATION METHOD (MACHINE LEARNING)
+## E. GENERATE PREDICTIVE CLASSIFICATION MODEL FOR IBS-SUBTYPES 
 ## Resource - https://machinelearningmastery.com/machine-learning-in-r-step-by-step/
-  
-# Run ML classification algorithms using 10-fold cross validation
+
+## E1. IDENFITY THE BEST-PERFORMING PREDICTIVE CLASSIFICATION ALGORITHM 
+
+## E1a. Set valiation parameters
 control <- trainControl(method="cv", number=10)
 metric <- "Accuracy"
 
+## E1b. Generate models from a selection of classification algorithms.
 # a) linear algorithms
 set.seed(7)
-fit.lda <- train(IBS.subtype~., data=df_balanced, method="lda", metric=metric, trControl=control)
+fit.lda <- train(IBS.subtype~., data=WBC_balanced, method="lda", metric=metric, trControl=control)
 # b) nonlinear algorithms
 # CART
 set.seed(7)
-fit.cart <- train(IBS.subtype~., data=df_balanced, method="rpart", metric=metric, trControl=control)
+fit.cart <- train(IBS.subtype~., data=WBC_balanced, method="rpart", metric=metric, trControl=control)
 # kNN
 set.seed(7)
-fit.knn <- train(IBS.subtype~., data=df_balanced, method="knn", metric=metric, trControl=control)
+fit.knn <- train(IBS.subtype~., data=WBC_balanced, method="knn", metric=metric, trControl=control)
 # c) advanced algorithms
 # SVM
 set.seed(7)
-fit.svm <- train(IBS.subtype~., data=df_balanced, method="svmRadial", metric=metric, trControl=control)
+fit.svm <- train(IBS.subtype~., data=WBC_balanced, method="svmRadial", metric=metric, trControl=control)
 # Random Forest
 set.seed(7)
-fit.rf <- train(IBS.subtype~., data=df_balanced, method="rf", metric=metric, trControl=control)
+fit.rf <- train(IBS.subtype~., data=WBC_balanced, method="rf", metric=metric, trControl=control)
 
-# Summarize predictive accuracy of models
+## E2. IDENTIFY THE BEST-PERFORMING PREDICTIVE CLASSIFICATION ALGORITHM
 results <- resamples(list(lda=fit.lda, cart=fit.cart, knn=fit.knn, svm=fit.svm, rf=fit.rf))
 summary(results)
 
-# Export dotplot with model validation
+dotplot(results)
+
+# Export dotplot with model validation results
 png("../fig_output/ClassificationSelection.png")
 H1 <- dotplot(results)
 print(H1)
 dev.off()
 
-# estimate skill of LDA on the validation dataset
-predictions <- predict(fit.rf, df_balanced)
-confusionMatrix(predictions, df_balanced$IBS.subtype)
-
+# Estimate 'skill' of Random Forest with confusion matrix
+predictions <- predict(fit.rf, WBC_balanced)
+confusionMatrix(predictions, as.factor(WBC_balanced$IBS.subtype))
