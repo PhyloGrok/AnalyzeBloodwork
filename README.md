@@ -5,6 +5,9 @@ with Machine Learning</h2>
 
 ![doi](../master/Images/zenodo.3373938.svg?sanitize=true)
 
+## 0. Intro
+The project is an continuing development of automated statistical analyses for the CBC (Complete Blood Count) test.  The research leg of this project develops and applies machine learning methods to generate predictive diagnostics, and the educational leg of this project serves to provide a framework for undergraduate students learning beginner-level R programming.  The project was developed and is run by Dr. Jeffrey Robinson at University of Maryland, Baltimore County (UMBC), for the courses BTEC330 (Software Applications in Translational Science) and BTEC395 (Bioinformatics).  Work is supported through NSF grant number ACI-1548562 through an educational allocation  awarded to Robinson: “Bioinformatics Training for Applications in Translational and Molecular Biosciences”. 
+
 ## A. Usage
 #### Current functionality: ([AnalyzeBloodwork.R](scripts/AnalyzeBloodwork.R)) 
 1) Loads required packages and sample data,
