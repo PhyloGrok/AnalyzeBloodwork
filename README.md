@@ -3,7 +3,7 @@ AnalyzeBloodwork</h1>
 <h2 align="center">
 with Machine Learning</h2>
 
-![doi](../master/Images/zenodo.3373938.svg?sanitize=true)
+[![DOI](https://zenodo.org/badge/203414088.svg)](https://zenodo.org/badge/latestdoi/203414088)
 
 ## 0. Intro
 The project is an continuing development of automated statistical analyses for the CBC (Complete Blood Count) test.  The research leg of this project develops and applies machine learning methods to generate predictive diagnostics, and the educational leg of this project provides a framework for undergraduate students learning beginner-level R programming.  The project was developed and is run by Dr. Jeffrey Robinson at University of Maryland, Baltimore County (UMBC), and used for the courses BTEC330 (Software Applications in Translational Science) and BTEC395 (Bioinformatics).  Work is supported by NSF Extreme Science and Engineering Discovery Environment (XSEDE) through an educational allocation awarded to Robinson: “Bioinformatics Training for Applications in Translational and Molecular Biosciences”, under NSF grant number ACI-1548562.  BTEC495 Independent research interns include Daniel Gidron (Summer 2021). 
