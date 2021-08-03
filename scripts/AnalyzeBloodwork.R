@@ -68,6 +68,7 @@ for (j in list_na){
     }
 
 ## REPLACE NA VALUES with the calculated means, for each subset
+## Try this - https://stackoverflow.com/questions/55940655/how-to-mutate-for-loop-in-dplyr
 WBC.replacement <- WBC
 
 sum(is.na(WBC.replacement$i))
