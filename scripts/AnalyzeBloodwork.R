@@ -340,6 +340,8 @@ H1 <- dotplot(results)
 print(H1)
 dev.off()
 
-# Estimate 'skill' of Random Forest with confusion matrix
+## E3. Estimate 'skill' of Random Forest with confusion matrix
+## Debug - https://stackoverflow.com/questions/30002013/error-in-confusion-matrix-the-data-and-reference-factors-must-have-the-same-nu
+## Background - https://machinelearningmastery.com/confusion-matrix-machine-learning/
 predictions <- predict(fit.rf, WBC_balanced)
 confusionMatrix(predictions, as.factor(WBC_balanced$IBS.subtype))
