@@ -1,7 +1,7 @@
 <h1 align="center">
 AnalyzeBloodwork</h1>
 <h2 align="center">
-Detecting biomarkers and predictive models from CBC and RNA expression data with Machine Learning</h2>
+Detecting biomarkers and predictive diagnostics from CBC and RNA expression data with Machine Learning</h2>
 
 [![DOI](https://zenodo.org/badge/203414088.svg)](https://zenodo.org/badge/latestdoi/203414088)
 
