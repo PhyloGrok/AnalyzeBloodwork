@@ -29,7 +29,7 @@ The <em>standard CBC parameters</em> provide point-of-care physicians with power
 Additional sample data in the context of obesity, inflammation, and gastrointestinal disorders includes:
 1) Body Mass Index (BMI), 
 2) Stress hormones: Cortisol and ACTH,
-3) Inflammation markers: C-Reactive Protein (CRP), sCD14, Lipopolysaccharide Binding Protgin (LBP),
+3) Inflammation markers: C-Reactive Protein (CRP), sCD14, Lipopolysaccharide Binding Protein (LBP),
 4) Clinical diagnoses of subtypes of Irritable Bowel Syndrome (IBS)
 5) Nanostring White Blood Cell RNA expression data: an associated 250-gene panel of Nanostring RNA expression data (links in citations below).
 
