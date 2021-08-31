@@ -1,9 +1,0 @@
-cff-version: 1.1.0
-message: "If you use this software, please cite it as below."
-authors:
-  - family-names: Jeffrey
-    given-names: Robinson
-    orcid: https://orcid.org/0000-0002-1456-2851
-title: PhyloGrok/AnalyzeBloodwork: AnalyzeBloodwork1.1
-version: v1.2
-date-released: 2021-08-31
