@@ -1,5 +1,5 @@
 <h1 align="center">
-AnalyzeBloodwork '1.2'</h1>
+AnalyzeBloodwork '1.5'</h1>
 <h2 align="center">
 Detecting biomarkers and predictive diagnostics from CBC and RNA expression data with Machine Learning</h2>
 
