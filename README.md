@@ -259,4 +259,4 @@ Foundation grant number ACI-1548562.
 
 [R-Bloggers.com: Regression analysis essentials for machine learning](https://www.r-bloggers.com/2018/03/regression-analysis-essentials-for-machine-learning/)
 
-
+[R-Pubs: Redsiduals Analysis](https://rpubs.com/iabrady/residual-analysis)
