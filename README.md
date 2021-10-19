@@ -232,6 +232,8 @@ Post-balancing with up-sampling to 100 rows for each group:
 ![Dotplot_ClassificationAccuracy](../master/fig_output/ClassificationSelection.png?sanitize=true)
 
 ### Literature Citations
+Robinson, J. 2021. Predictive Classification of IBS-subtype: Performance of a 250-gene RNA expression panel vs. Complete Blood Count (CBC) profiles under a Random Forest model. medRxiv. doi: https://doi.org/10.1101/2021.08.31.21262766. 
+
 Robinson, JM. et al. 2019. Complete blood count with differential: An effective diagnostic for IBS subtype in the context of BMI? BioRxiv. doi: https://doi.org/10.1101/608208.
 
 Robinson, J. Differential Gene Expression Associated with BMI, Gender, and IBS-subtype in Human White Blood Cells: Results from a Custom 250-plex Nanostring Probe Panel. Preprints 2019, 2019120180 (doi: 10.20944/preprints201912.0180.v1).
