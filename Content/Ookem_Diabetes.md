@@ -16,7 +16,7 @@ O'otham land started to be encroached on by Euro-American settlers after the Civ
 
 
 O'otham territory in 1700:
-![Oothamterritory1700](../master/Images/Oothamterritory1700.jpg?sanitize=true)
+![Oothamterritory1700](../Images/Oothamterritory1700.jpg?sanitize=true)
 
 
 Current O'otham territory in 2022:
@@ -24,39 +24,39 @@ Current O'otham territory in 2022:
 
 
 Portrait of an O'otham man from 1900:
-![Oothamman1900](../master/Images/Oothamman1900.jpg?sanitize=true)
+![Oothamman1900](../Images/Oothamman1900.jpg?sanitize=true)
 
 
 Portrait of an O'otham woman:
-![Oothamwoman](../master/Images/Oothamwoman.jpg?sanitize=true)
+![Oothamwoman](../Images/Oothamwoman.jpg?sanitize=true)
 
 
 Photograph of O'otham men:
-![Ootham](../master/Images/Ootham.png?sanitize=true)
+![Ootham](../Images/Ootham.png?sanitize=true)
 
 
 O'otham bowls and baskets:
-![Oothambaskets](../master/Images/Oothambaskets.jpg?sanitize=true)
+![Oothambaskets](../Images/Oothambaskets.jpg?sanitize=true)
 
 
 Traditional O'otham house:
-![Oothamhouse](../master/Images/Oothamhouse.jpg?sanitize=true)
+![Oothamhouse](../Images/Oothamhouse.jpg?sanitize=true)
 
 
 Another example of a traditional O'otham house with some bowls shown:
-![Oothamhouse2](../master/Images/Oothamhouse2.jpg?sanitize=true)
+![Oothamhouse2](../Images/Oothamhouse2.jpg?sanitize=true)
 
 
 Overall parameters of the data set:
-![Akimel_Dataset](../master/Images/data_set.png?sanitize=true)
+![Akimel_Dataset](../Images/data_set.png?sanitize=true)
 
 
 Scatter plot matrix showing each data points relation to eachother:
-![Scatterplot_Matrix](../master/Images/scatterplot_matrix.png?sanitize=true)
+![Scatterplot_Matrix](../Images/scatterplot_matrix.png?sanitize=true)
 
 
 Graph showcasing the linear relationship between BMI and tricep fold thickness levels with a line of best fit:
-![BMITrifoldFitted](../master/Images/bmitrifoldfitted.png?sanitize=true) </h2>
+![BMITrifoldFitted](../Images/bmitrifoldfitted.png?sanitize=true) </h2>
   
 
 <h2> 
