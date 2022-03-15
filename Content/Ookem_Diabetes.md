@@ -68,6 +68,9 @@ Waldman, C. (2006). Akimel O'odham (Pima). In Encyclopedia of Native American tr
   
 Gila River Indian Community. (n.d.). History. Gila River Indian Community. Retrieved March 12, 2022, from https://www.gilariver.org/index.php/about/history#0
   
+
+<h2> Further reading: </h2>
+
 Nabhan, G. P. (1985). Gathering the Desert. University of Arizona Press. 
   
 DeJong, D. H. (2011). Forced to Abandon Our Fields: The 1914 Clay Southworth Gila River Pima Interviews. University of Utah Press. 
