@@ -47,6 +47,13 @@ Another example of a traditional O'otham house with some bowls shown:
 ![Oothamhouse2](../Images/Oothamhouse2.jpg?sanitize=true)
 (Gila River Indian Community, 2015)
 
+```
+%matplotlib inline
+import seaborn as sns; sns.set()
+sns.pairplot(iris, hue='species', size=1.5);
+
+```
+
 Overall parameters of the data set:
 ![Akimel_Dataset](../Images/data_set.png?sanitize=true)
 
