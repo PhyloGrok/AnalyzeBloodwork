@@ -33,6 +33,8 @@ Portrait of an O'otham woman:
 Photograph of O'otham men:
 ![Ootham](../Images/Ootham.png?sanitize=true)
 
+http://www.historyadventuring.com/2015/06/indian-wars-in-phoenix-arizona.html
+
 O'otham bowls and baskets:
 ![Oothambaskets](../Images/Oothambaskets.jpg?sanitize=true)
 (Curtis E.S., Pima Baskets 1907)
