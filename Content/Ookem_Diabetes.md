@@ -18,15 +18,9 @@ Using this data set we tested and trained various machine learning algorithms. U
 
 | O'otham territory in 1700: |  Current O'otham territory: |  
 | --- | --- |
-| ![Oothamterritory1700](../Images/Oothamterritory1700.jpg?sanitize=true) | ![CurrentOothamreservation](../Images/GRIC.png?sanitize=true) |
+| ![Oothamterritory1700](../Images/Oothamterritory1700.jpg?sanitize=true) | ![CurrentOothamreservation](../Images/GRIC.PNG?sanitize=true) |
+|  (Trapido-Lurie & Minnis, 1996) | (Williams, 2015) |
 
-O'otham territory in 1700:
-![Oothamterritory1700](../Images/Oothamterritory1700.jpg?sanitize=true)
-(Trapido-Lurie & Minnis, 1996)
-
-Current O'otham territory:
-![CurrentOothamreservation](../Images/GRIC.png?sanitize=true)
-(Williams, 2015)
 
 Portrait of an O'otham man from 1900:
 ![Oothamman1900](../Images/Oothamman1900.jpg?sanitize=true)
