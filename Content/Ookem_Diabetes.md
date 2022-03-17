@@ -15,6 +15,11 @@ O'otham land started to be encroached on by Euro-American settlers after the Civ
   
 Using this data set we tested and trained various machine learning algorithms. Using linear regression, which is a supervised method we fitted BMI and trifold thickness data to a scatter plot. We then used Principal Component Analysis which is an unsupervised method to visualize the differences between people with a diabetes diagnosis and people without the diabetes diagnosis. Finally, we used Gausian Mixture Modeling an unsupervised method and imported the PCA data to cluster it to have a better understanding of the breakdown of people with diabetes vs without diabetes. 
 
+
+| O'otham territory in 1700: |  Current O'otham territory: |  
+| --- | --- |
+| ![Oothamterritory1700](../Images/Oothamterritory1700.jpg?sanitize=true) | ![CurrentOothamreservation](../Images/GRIC.png?sanitize=true) |
+
 O'otham territory in 1700:
 ![Oothamterritory1700](../Images/Oothamterritory1700.jpg?sanitize=true)
 (Trapido-Lurie & Minnis, 1996)
