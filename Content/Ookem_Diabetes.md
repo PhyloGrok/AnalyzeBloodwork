@@ -13,39 +13,38 @@ This data set is from a study of Akimel O'otham people on the Gila River Indian 
 
 O'otham land started to be encroached on by Euro-American settlers after the Civil War which lead to the Gila River water being dammed and diverted for the settlers benefit and drying up the O'otham farmland which lead to mass famine and starvation. The US government then came in and gave out canned and processed foods and forced them from their ancestral lands to what is now the Gila River Indian Reservation just south of Phoenix, where today around 20,000 O'otham live. However, this is a mere sliver of thier original land which encompassed all of modern Phoenix and extended down to near what is now Tucson. This encroachment and forcible removal to reservation lead to their lives being dramatically altered and their diets and lifestyles changing dramatically from fresh crops to high-calorie processed foods and from hunting and gathering and active lifestyles to sedentary isolated lifestyles on the reservation. All of this lead to the O'otham developing extremely high type-2 diabetes and obesity levels. When compared to O'otham in Mexico for example, the Mexican O'otham only have slightly higher type-2 diabetes levels compared to non-O'otham in Mexico. This in stark contrast with the O'otham in America who have much higher levels compared to non-O'otham.
   
-
+Using this data set we tested and trained various machine learning algorithms. Using linear regression, which is a supervised method we fitted BMI and trifold thickness data to a scatter plot. We then used Principal Component Analysis which is an unsupervised method to visualize the differences between people with a diabetes diagnosis and people without the diabetes diagnosis. Finally, we used Gausian Mixture Modeling an unsupervised method and imported the PCA data to cluster it to have a better understanding of the breakdown of people with diabetes vs without diabetes. 
 
 O'otham territory in 1700:
 ![Oothamterritory1700](../Images/Oothamterritory1700.jpg?sanitize=true)
+(Trapido-Lurie & Minnis, 1996)
 
-
-Current O'otham territory in 2022:
-![CurrentOothamreservation](../master/Images/CurrentOothamreservation.jpg?sanitize=true)
-
+Current O'otham territory:
+![CurrentOothamreservation](../Images/GRIC.png?sanitize=true)
+(Williams, 2015)
 
 Portrait of an O'otham man from 1900:
 ![Oothamman1900](../Images/Oothamman1900.jpg?sanitize=true)
-
+(Curtis E.S., Kaviu - Pima 1907)
 
 Portrait of an O'otham woman:
 ![Oothamwoman](../Images/Oothamwoman.jpg?sanitize=true)
-
+(Gila River Indian Community, 2015)
 
 Photograph of O'otham men:
 ![Ootham](../Images/Ootham.png?sanitize=true)
 
-
 O'otham bowls and baskets:
 ![Oothambaskets](../Images/Oothambaskets.jpg?sanitize=true)
-
+(Curtis E.S., Pima Baskets 1907)
 
 Traditional O'otham house:
 ![Oothamhouse](../Images/Oothamhouse.jpg?sanitize=true)
-
+(Gila River Indian Community, 2015)
 
 Another example of a traditional O'otham house with some bowls shown:
 ![Oothamhouse2](../Images/Oothamhouse2.jpg?sanitize=true)
-
+(Gila River Indian Community, 2015)
 
 Overall parameters of the data set:
 ![Akimel_Dataset](../Images/data_set.png?sanitize=true)
@@ -64,19 +63,33 @@ Citations: </h2>
  
 Bock, E. (2020, July 23). Medical history matters in Era of Big Data. National Institutes of Health. Retrieved March 12, 2022, from https://nihrecord.nih.gov/2020/07/24/medical-history-matters-era-big-data
 
+Butt, U. M., Letchmunan, S., Ali, M., Hassan, F. H., Baqir, A., & Sherazi, H. (2021). Machine Learning Based Diabetes Classification and Prediction for Healthcare Applications. Journal of healthcare engineering, 2021, 9930985. https://doi.org/10.1155/2021/9930985
+
+Curtis, E. S. (1907). Kaviu - Pima. Library of Congress. Library of Congress. Retrieved March 16, 2022, from http://memory.loc.gov/award/iencurt/cp02/cp02003v.jpg.
+
+Curtis, E. S. (1907). Pima Baskets. Library of Congress. Library of Congress. Retrieved March 16, 2022, from http://memory.loc.gov/award/iencurt/cp02/cp02002v.jpg.
+
+Gila River Indian Community. (2015). History. Gila River Indian Community. Retrieved March 12, 2022, from https://www.gilariver.org/index.php/about/history#0
+
+Trapido-Lurie, B., &amp; Minnis, D. (1996). Pima Territory, 1700. Arizona Geographic Alliance. Arizona State University. Retrieved March 16, 2022, from http://geoalliance.asu.edu/sites/default/files/maps/PIMA.pdf. 
+
 Waldman, C. (2006). Akimel O'odham (Pima). In Encyclopedia of Native American tribes (pp. 4–6). section, Checkmark Books.
   
-Gila River Indian Community. (n.d.). History. Gila River Indian Community. Retrieved March 12, 2022, from https://www.gilariver.org/index.php/about/history#0
-  
+Williams, L. (2015). Map of Ambient Air Monitoring Stations on Gila River Indian Community. Gila River Indian Community Department of Environmental Quality. Retrieved March 16, 2022, from https://www.gricdeq.org/view/download.php/air-quality-program/monitoring/2014-ambient-air-monitoring-network-review. 
+
+Schulz, L. O., & Chaudhari, L. S. (2015). High-Risk Populations: The Pimas of Arizona and Mexico. Current obesity reports, 4(1), 92–98. https://doi.org/10.1007/s13679-014-0132-9
+
+Smith, J. W., Everhart, J. E., Dickson, W. C., Knowler, W. C., & Johannes, R. S. (1988). Using the ADAP Learning Algorithm to Forecast the Onset of Diabetes Mellitus. Proceedings of the Annual Symposium on Computer Application in Medical Care, 261–265.
+
 
 <h2> Further reading: </h2>
 
-Nabhan, G. P. (1985). Gathering the Desert. University of Arizona Press. 
+DeJong, D. H. (2011). Forced to Abandon Our Fields: The 1914 Clay Southworth Gila River Pima Interviews. University of Utah Press.
+
+Nabhan, G. P. (1985). Gathering the Desert. University of Arizona Press.
   
-DeJong, D. H. (2011). Forced to Abandon Our Fields: The 1914 Clay Southworth Gila River Pima Interviews. University of Utah Press. 
+Shaw, A. M. (1994). A Pima Past. The University of Arizona Press.
   
-Shaw, A. M. (1994). A Pima Past. The University of Arizona Press. 
-  
-Smith-Morris, C. (2007). Diabetes among the Pima: Stories of survival. University of Arizona Press. 
+Smith-Morris, C. (2007). Diabetes among the Pima: Stories of survival. University of Arizona Press.
 
 
