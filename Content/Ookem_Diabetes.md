@@ -41,7 +41,10 @@ Using this data set we tested and trained various machine learning algorithms. U
 %matplotlib inline
 import seaborn as sns; sns.set()
 sns.pairplot(iris, hue='species', size=1.5);
+```
 
+```
+df.plot.scatter(x ='BMI', y = 'Tri Fold Thick')
 ```
 
 | Overall parameters of the data set: | Scatter plot matrix showing each data points relation to eachother: |
@@ -49,6 +52,28 @@ sns.pairplot(iris, hue='species', size=1.5);
 | ![Akimel_Dataset](../Images/data_set.png?sanitize=true) | ![Scatterplot_Matrix](../Images/scatterplot_matrix.png?sanitize=true) |
 
 
+```
+## Linear Regression
+
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+model = LinearRegression(fit_intercept=True)
+
+x = df['BMI']
+y = df['Tri Fold Thick']
+
+model.fit(x[:, np.newaxis], y)
+
+xfit = np.linspace(5, 70)
+yfit = model.predict(xfit[:, np.newaxis])
+```
+
+```
+plt.scatter(x, y, c = "red", s = 15)
+plt.plot(xfit, yfit, color='black');
+plt.xlabel("BMI")
+plt.ylabel("Tricep Fold Thickness (cm)")
+```
 Graph showcasing the linear relationship between BMI and tricep fold thickness levels with a line of best fit:
 ![BMITrifoldFitted](../Images/bmitrifoldfitted.PNG?sanitize=true) </h2>
   
