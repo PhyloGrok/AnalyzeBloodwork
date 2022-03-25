@@ -43,14 +43,13 @@ import seaborn as sns; sns.set()
 sns.pairplot(iris, hue='species', size=1.5);
 ```
 
-```
-df.plot.scatter(x ='BMI', y = 'Tri Fold Thick')
-```
-
 | Overall parameters of the data set: | Scatter plot matrix showing each data points relation to eachother: |
 | --- | --- |
 | ![Akimel_Dataset](../Images/data_set.png?sanitize=true) | ![Scatterplot_Matrix](../Images/scatterplot_matrix.png?sanitize=true) |
 
+```
+df.plot.scatter(x ='BMI', y = 'Tri Fold Thick')
+```
 
 ```
 ## Linear Regression
@@ -74,8 +73,9 @@ plt.plot(xfit, yfit, color='black');
 plt.xlabel("BMI")
 plt.ylabel("Tricep Fold Thickness (cm)")
 ```
-Graph showcasing the linear relationship between BMI and tricep fold thickness levels with a line of best fit:
-![BMITrifoldFitted](../Images/bmitrifoldfitted.PNG?sanitize=true) </h2>
+| Graph showcasing the linear relationship between BMI and tricep fold thickness levels with a line of best fit: | Scatterplot of BMI and Tri Fold Thickness |
+| --- | --- |
+| ![BMITrifoldFitted](../Images/bmitrifoldfitted.PNG?sanitize=true) | ![BMI_Trifold](../Images/bmi_trifold.png?sanitize=true) </h2>
   
 
 <h2> 
