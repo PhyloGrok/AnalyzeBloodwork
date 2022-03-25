@@ -22,30 +22,20 @@ Using this data set we tested and trained various machine learning algorithms. U
 |  (Trapido-Lurie & Minnis, 1996) | (Williams, 2015) |
 
 
-Portrait of an O'otham man from 1900:
-![Oothamman1900](../Images/Oothamman1900.jpg?sanitize=true)
-(Curtis E.S., Kaviu - Pima 1907)
+| Portrait of an O'otham man from 1900: | Portrait of an O'otham woman: |
+| --- | --- |
+| ![Oothamman1900](../Images/Oothamman1900.jpg?sanitize=true) | ![Oothamwoman](../Images/Oothamwoman.jpg?sanitize=true) |
+| (Curtis E.S., Kaviu - Pima 1907) | (Gila River Indian Community, 2015) |
 
-Portrait of an O'otham woman:
-![Oothamwoman](../Images/Oothamwoman.jpg?sanitize=true)
-(Gila River Indian Community, 2015)
+| Photograph of O'otham men: | O'otham bowls and baskets: |
+| --- | --- |
+|![Ootham](../Images/Ootham.png?sanitize=true) | ![Oothambaskets](../Images/Oothambaskets.jpg?sanitize=true) |
+| (Hall, 2015) | (Curtis E.S., Pima Baskets 1907) |
 
-Photograph of O'otham men:
-![Ootham](../Images/Ootham.png?sanitize=true)
-
-http://www.historyadventuring.com/2015/06/indian-wars-in-phoenix-arizona.html
-
-O'otham bowls and baskets:
-![Oothambaskets](../Images/Oothambaskets.jpg?sanitize=true)
-(Curtis E.S., Pima Baskets 1907)
-
-Traditional O'otham house:
-![Oothamhouse](../Images/Oothamhouse.jpg?sanitize=true)
-(Gila River Indian Community, 2015)
-
-Another example of a traditional O'otham house with some bowls shown:
-![Oothamhouse2](../Images/Oothamhouse2.jpg?sanitize=true)
-(Gila River Indian Community, 2015)
+| Traditional O'otham house: | Another example of a traditional O'otham house with some bowls shown: |
+| --- | --- |
+| ![Oothamhouse](../Images/Oothamhouse.jpg?sanitize=true) | ![Oothamhouse2](../Images/Oothamhouse2.jpg?sanitize=true) |
+| (Gila River Indian Community, 2015) | (Gila River Indian Community, 2015) |
 
 ```
 %matplotlib inline
@@ -54,16 +44,13 @@ sns.pairplot(iris, hue='species', size=1.5);
 
 ```
 
-Overall parameters of the data set:
-![Akimel_Dataset](../Images/data_set.png?sanitize=true)
-
-
-Scatter plot matrix showing each data points relation to eachother:
-![Scatterplot_Matrix](../Images/scatterplot_matrix.png?sanitize=true)
+| Overall parameters of the data set: | Scatter plot matrix showing each data points relation to eachother: |
+| --- | --- |
+| ![Akimel_Dataset](../Images/data_set.png?sanitize=true) | ![Scatterplot_Matrix](../Images/scatterplot_matrix.png?sanitize=true) |
 
 
 Graph showcasing the linear relationship between BMI and tricep fold thickness levels with a line of best fit:
-![BMITrifoldFitted](../Images/bmitrifoldfitted.png?sanitize=true) </h2>
+![BMITrifoldFitted](../Images/bmitrifoldfitted.PNG?sanitize=true) </h2>
   
 
 <h2> 
@@ -78,6 +65,8 @@ Curtis, E. S. (1907). Kaviu - Pima. Library of Congress. Library of Congress. Re
 Curtis, E. S. (1907). Pima Baskets. Library of Congress. Library of Congress. Retrieved March 16, 2022, from http://memory.loc.gov/award/iencurt/cp02/cp02002v.jpg.
 
 Gila River Indian Community. (2015). History. Gila River Indian Community. Retrieved March 12, 2022, from https://www.gilariver.org/index.php/about/history#0
+
+Hall, B. (2015, June 15). Indian wars in Phoenix, Arizona. History Adventuring. Retrieved March 25, 2022, from http://www.historyadventuring.com/2015/06/indian-wars-in-phoenix-arizona.html 
 
 Trapido-Lurie, B., &amp; Minnis, D. (1996). Pima Territory, 1700. Arizona Geographic Alliance. Arizona State University. Retrieved March 16, 2022, from http://geoalliance.asu.edu/sites/default/files/maps/PIMA.pdf. 
 
