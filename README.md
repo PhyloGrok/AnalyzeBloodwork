@@ -6,7 +6,13 @@ Detecting biomarkers and predictive diagnostics from CBC and RNA expression data
 [![DOI](https://zenodo.org/badge/203414088.svg)](https://zenodo.org/badge/latestdoi/203414088)
 
 ## 0. Intro
-The project is an continuing development of automated statistical analyses for CBC (Complete Blood Count) test results and RNA expression profiles.  The research leg of this project develops and applies machine learning methods to generate predictive diagnostics, and the educational leg of this project provides a framework for undergraduate students learning beginner-level R programming.  The project was developed and is run by Dr. Jeffrey Robinson at University of Maryland, Baltimore County (UMBC), and used for the courses BTEC330 (Software Applications in Translational Science) and BTEC395 (Bioinformatics).  Work is supported by NSF Extreme Science and Engineering Discovery Environment (XSEDE) through an educational allocation awarded to Robinson: “Bioinformatics Training for Applications in Translational and Molecular Biosciences”, under NSF grant number ACI-1548562.  BTEC495 research interns include Daniel Gidron (Summer 2021). 
+The repository contains workflows and example analysis for statistical and machine learning for biomarker discovery approaches.  The analyses investigate clinical and molecular data associated with obesity, chronic inflammation, and immune response pathways.
+
+The repository has also provided a framework for undergraduate students learning R and Python programming, and biostatistics taught by Dr. Jeffrey Robinson at University of Maryland, Baltimore County (UMBC).  Courses have included BTEC330 (Software Applications in Translational Science), BTEC395 (Bioinformatics), and BTEC423 (Machine Learning with Applications in Bioinformatics), and BTEC495 (Undergraduate Research Internship).  UMBC BTEC495 research interns have included Daniel Gidron (Summer 2021) and Brandon Lamotte (Spring 2022).
+
+Computational resources have been provided by NSF Extreme Science and Engineering Discovery Environment (XSEDE) through an educational allocation awarded to Robinson: “Bioinformatics Training for Applications in Translational and Molecular Biosciences”, under NSF grant number ACI-1548562.  
+
+[Analysis of Akimel O'otham (NIDDK Pima Diabetes dataset)](Content/Ookem_Diabetes.md), with *Python, Scikit-learn, and Jupyter Notebooks*.  Brandon Lamotte (Spring 2022)
 
 ## A. Usage
 #### Current functionality: ([AnalyzeBloodwork.R](scripts/AnalyzeBloodwork.R); [IBSclassification.R](scripts/IBSclassification.R)) 
@@ -18,7 +24,10 @@ The project is an continuing development of automated statistical analyses for C
 6) Generates box-and-whisker and scatterplot-matrix plots for WBC distributions,
 7) Tests the performance of machine learning classification algorithms for IBS diagnosis using CBC-WBC count data.
 
-## B. Description of the Sample Dataset:
+## B. Description of the Sample Datasets:
+
+### NIH IBS dataset
+
 Data from the sample dataset was collected during an NIH natural history clinical study of the relationship between obesity, inflammation, stress, and gastrointestinal disorders and is fully open-sourced (citations and links below).  
 
 The <em>standard CBC parameters</em> provide point-of-care physicians with powerful diagnostic capabilities using: 
@@ -36,6 +45,10 @@ Additional sample data in the context of obesity, inflammation, and gastrointest
 This dataset and analyses are used by Robinson in teaching for UMBC's BTEC330 (Software Applications) and BTEC350 (Biostatistics) classes, students are trained in R programming language, GitHub practices, and analysis of clinical and molecular expression data by forking this repository and modifying it according to their skill level and assignment specifics.
 
 The long-term research goal of this project is the automation of Machine Learning and regression models for biomarker discovery from CBC and gene-expression data. The repository is under continuous development, versions will be incremented with each new functional feature. 
+
+### Akimel O'otham (NIDDK Pima Indians Diabetes) data set:
+Data from the Akimel O'otham dataset was collected from an NIH clinical study of the relationships between obesity, BMI, blood glucose, diastolic blood pressure, tricep fold thickness, serum insulin levels, family history of diabetes, number of times pregnant, age, and whether a person is diagnosed with type 2 diabetes or not. This data set is from a study of Akimel O'otham people on the Gila River Indian Reservation in Arizona. The study was conducted between the early 1960s and mid 1990s. These parameters can then be used to train a machine learning algorithm to diagnose a patient with diabetes using these data points.
+
 
 ## C. Linear regression examples: 
 #### a. Linear model with Body Mass Index (BMI), Serum Cortisol and C-Reactive Protein (CRP) (stress & inflammation biomarkers).
@@ -231,8 +244,7 @@ Post-balancing with up-sampling to 100 rows for each group:
 ```
 ![Dotplot_ClassificationAccuracy](../master/fig_output/ClassificationSelection.png?sanitize=true)
 
-## D. Description of the Akimel O'otham (NIDDK Pima Indians Diabetes) data set:
-Data from the Akimel O'otham dataset was collected from an NIH clinical study of the relationships between obesity, BMI, blood glucose, diastolic blood pressure, tricep fold thickness, serum insulin levels, family history of diabetes, number of times pregnant, age, and whether a person is diagnosed with type 2 diabetes or not. This data set is from a study of Akimel O'otham people on the Gila River Indian Reservation in Arizona. The study was conducted between the early 1960s and mid 1990s. These parameters can then be used to train a machine learning algorithm to diagnose a patient with diabetes using these data points.
+
 
 ### Literature Citations
 Robinson, J. 2021. Predictive Classification of IBS-subtype: Performance of a 250-gene RNA expression panel vs. Complete Blood Count (CBC) profiles under a Random Forest model. medRxiv. doi: https://doi.org/10.1101/2021.08.31.21262766. 
