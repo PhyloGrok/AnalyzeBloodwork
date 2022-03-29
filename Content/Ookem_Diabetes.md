@@ -3,11 +3,11 @@ Analysis of Akimel O'otham (NIDDK Pima Diabetes dataset)
 </h1>  
 <h2 align=center>with Python/Tensorflow</h2>
 
-Brandon Lamotte
-
+Brandon Lamotte<br>
 BTEC495, Spring 2022
 
-[O'otham Diabetes Dataset Analysis with Machine Learning Classification and Regression](../scripts/DiabetesML.ipynb) Jupyter Notebook .ipynb file for this analysis
+Jupyter Notebook .ipynb file for this analysis:
+[O'otham Diabetes Dataset Analysis with Machine Learning Classification and Regression](../scripts/DiabetesML.ipynb) 
 
 Data from the Akimel O'otham dataset was collected from an NIH clinical study of the relationships between obesity, BMI, blood glucose, diastolic blood pressure, tricep fold thickness, serum insulin levels, family history of diabetes, number of times pregnant, age, and whether a person is diagnosed with type 2 diabetes or not. (Smith, et al. 1988) The study was conducted between 1965 and mid 1990s. These parameters can then be used to train a machine learning algorithm to diagnose a patient with diabetes using these data points.
 
