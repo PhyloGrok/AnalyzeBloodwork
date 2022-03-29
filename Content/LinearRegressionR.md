@@ -3,7 +3,7 @@
 #### b. Linear model with BMI and White Blood Cells (absolute counts WBCs, Neutrophils, Monocytes, Lymphocytes, Eosinophils, Basophils)
 
 Regressions follow the canonical form:
-![BMI_Cortisol](../master/Images/linearmodel.png?sanitize=true)
+![BMI_Cortisol](../Images/linearmodel.png?sanitize=true)
 
 In R language this is expressed as:
 <em>lm(y ~ x1 + x2 + xn, data=dataframe)</em>
@@ -31,7 +31,7 @@ ggplot(IBS1, aes(x=BMI, y=SerumCortisol)) +
   geom_point() +    
   geom_smooth(method=lm) 
 ```
-![BMI_Cortisol](../master/Images/CORTxBMI.png?sanitize=true)
+![BMI_Cortisol](../Images/CORTxBMI.png?sanitize=true)
 ##
 
 ### 2. Multiple linear regression: (BMI ~ Serum Cortisol + C-Reactive Protein), with 3d-scatterplot. 
@@ -64,7 +64,7 @@ F-statistic: 16.01 on 2 and 106 DF,  p-value: 8.388e-07
 > fit <- lm(SerumCortisol ~ BMI + CRP, data=IBS1)
 > s3d$plane3d(fit)
 ```
-![BMI_Cortisol_CRP_3d-scatterplot](../master/Images/MultipleRegression_3way.png?sanitize=true)
+![BMI_Cortisol_CRP_3d-scatterplot](../Images/MultipleRegression_3way.png?sanitize=true)
 
 ### 3. Multiple linear regression for BMI and White Blood Cells (WBCs): 
 #### (BMI ~ Monocytes + Lymphocytes + Neutrophils + Basophils + Eosinophils). 
@@ -94,4 +94,4 @@ Eosinophils   1.8739     5.4544   0.344   0.7319
 > plot(fit)
 ```
 
-![BMI_vs White Blood Cells model fitting diagnostic plots](../master/fig_output/BMI_CBC_fit.png?sanitize=true)
+![BMI_vs White Blood Cells model fitting diagnostic plots](../fig_output/BMI_CBC_fit.png?sanitize=true)
