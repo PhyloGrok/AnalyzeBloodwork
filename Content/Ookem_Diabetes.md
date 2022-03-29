@@ -2,6 +2,7 @@
 Analysis of Akimel O'otham (ie NIDDK dataset) 
 </h1>  
 <h2 align=center>with Python/Tensorflow</h2>
+
 Brandon Lamotte
 BTEC495, Spring 2022
 
