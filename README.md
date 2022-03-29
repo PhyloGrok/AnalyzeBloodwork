@@ -231,17 +231,8 @@ Post-balancing with up-sampling to 100 rows for each group:
 ```
 ![Dotplot_ClassificationAccuracy](../master/fig_output/ClassificationSelection.png?sanitize=true)
 
-## D. Description of the Akimel O'otham data set:
+## D. Description of the Akimel O'otham (NIDDK Pima Indians Diabetes) data set:
 Data from the Akimel O'otham dataset was collected from an NIH clinical study of the relationships between obesity, BMI, blood glucose, diastolic blood pressure, tricep fold thickness, serum insulin levels, family history of diabetes, number of times pregnant, age, and whether a person is diagnosed with type 2 diabetes or not. This data set is from a study of Akimel O'otham people on the Gila River Indian Reservation in Arizona. The study was conducted between the early 1960s and mid 1990s. These parameters can then be used to train a machine learning algorithm to diagnose a patient with diabetes using these data points.
-
-Overall parameters of the data set:
-![Akimel_Dataset](../master/Images/data_set.png?sanitize=true)
-
-Scatter plot matrix showing each data points relation to eachother:
-![Scatterplot_Matrix](../master/Images/scatterplot_matrix.png?sanitize=true)
-
-Graph showcasing the linear relationship between BMI and tricep fold thickness levels
-![BMI_Trifold](../master/Images/bmi_trifold.png?sanitize=true)
 
 ### Literature Citations
 Robinson, J. 2021. Predictive Classification of IBS-subtype: Performance of a 250-gene RNA expression panel vs. Complete Blood Count (CBC) profiles under a Random Forest model. medRxiv. doi: https://doi.org/10.1101/2021.08.31.21262766. 
