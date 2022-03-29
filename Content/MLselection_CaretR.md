@@ -92,4 +92,4 @@ Post-balancing with up-sampling to 100 rows for each group:
 > # compare accuracy of models
 > dotplot(results)
 ```
-![Dotplot_ClassificationAccuracy](../master/fig_output/ClassificationSelection.png?sanitize=true)
+![Dotplot_ClassificationAccuracy](../fig_output/ClassificationSelection.png?sanitize=true)
