@@ -1,6 +1,24 @@
 ## Algorithm selection for predictive classification (Machine Learning with R and caret package)
 ### WBC counts as classifiers for IBS-subtype; which algorithms generate the best predictive model?
 
+
+### 0. NIH Complete Blood Count with RNA expression in IBS dataset
+
+Data from the sample dataset was collected during an NIH natural history clinical study of the relationship between obesity, inflammation, stress, and gastrointestinal disorders and is fully open-sourced (citations and links below).  
+
+The <em>standard CBC parameters</em> provide point-of-care physicians with powerful diagnostic capabilities using: 
+1) White Blood Cell counts (absolute and relative counts for Monocytes, Lymphocytes, Neutrophils, Basophils, and Eosinophils), 
+2) Red blood cell and hemoglobin parameters (RBC count, Hematocrit (HCT), Mean Corpuscular Hemoglobin (MCH), Erythrocyte Sedimentation Rate (ESR)), 
+3) Platelet parameters (Platelet Counts, Mean Platelet Volume (MPV))
+
+Additional parameters for obesity, inflammation, and GI-associated pain:
+1) Body Mass Index (BMI), 
+2) Stress hormones: Cortisol and ACTH,
+3) Inflammation markers: C-Reactive Protein (CRP), sCD14, Lipopolysaccharide Binding Protein (LBP),
+4) Clinical diagnoses of subtypes of Irritable Bowel Syndrome (IBS)
+5) Nanostring White Blood Cell RNA expression data: an associated 250-gene panel of Nanostring RNA expression data (links in citations below).
+
+
 #### 1. Impute missing values by replacing 'NA' with column mean. 
 ```
 > ## Generate list of columns with NA values
