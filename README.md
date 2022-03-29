@@ -5,7 +5,7 @@ Biomarker discovery and predictive diagnostics with Machine Learning in R and Py
 
 [![DOI](https://zenodo.org/badge/203414088.svg)](https://zenodo.org/badge/latestdoi/203414088)
 
-## 0. Intro
+## A. Intro
 The repository contains workflows and example analysis for statistical and machine learning for biomarker discovery approaches.  The analyses investigate clinical and molecular data associated with obesity, chronic inflammation, and immune response pathways.
 
 The repository has also provided a framework for undergraduate students learning R and Python programming, and biostatistics taught by Dr. Jeffrey Robinson at University of Maryland, Baltimore County (UMBC).  
@@ -21,7 +21,7 @@ Computational resources have been provided by NSF Extreme Science and Engineerin
 [Algorithm selection for predictive classification (ML)](Content/MLselection_CaretR.md). Compare performance of Machine Learning algorithms with R and Caret package.
 
 
-## A. Use the code
+## B. Use the code
 
 The repository contains scripts with functional R and Python code, intended to use as example code and teaching templates.  Functionality currently includes:
 
@@ -38,7 +38,7 @@ The repository contains scripts with functional R and Python code, intended to u
 3) Generates box-and-whisker and scatterplot-matrix plots for WBC distributions,
 4) Tests the performance of machine learning classification algorithms for IBS diagnosis using CBC-WBC count data.
 
-## B. Description of the Sample Datasets:
+## C. Description of the Sample Datasets:
 
 ### 1. Akimel O'otham (NIDDK Pima Indians Diabetes) data set:
 Data from the Akimel O'otham dataset was collected from an NIH clinical study of the relationships between obesity, BMI, blood glucose, diastolic blood pressure, tricep fold thickness, serum insulin levels, family history of diabetes, number of times pregnant, age, and whether a person is diagnosed with type 2 diabetes or not. This data set is from a study of Akimel O'otham people on the Gila River Indian Reservation in Arizona. The study was conducted between the early 1960s and mid 1990s. These parameters can then be used to train a machine learning algorithm to diagnose a patient with diabetes using these data points.
