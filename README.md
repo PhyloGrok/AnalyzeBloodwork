@@ -21,11 +21,17 @@ Computational resources have been provided by NSF Extreme Science and Engineerin
 [Algorithm selection for predictive classification (ML)](Content/MLselection_CaretR.md). Compare performance of Machine Learning algorithms with R and Caret package.
 
 
-## A. Usage
-#### Current functionality: ([AnalyzeBloodwork.R](scripts/AnalyzeBloodwork.R); [IBSclassification.R](scripts/IBSclassification.R)) 
+## A. Use the code
+
+The repository contains scripts with functional R and Python code, intended to use as example code and teaching templates.  Functionality currently includes:
+
+#### Scripts: 
+[AnalyzeBloodwork.R](scripts/AnalyzeBloodwork.R) 
 1) Loads required packages and sample data,
 2) Generates histograms for all variables, 
 3) Generates linear regression models and diagnostic plots for single and multiple regressions for BMI, Complete Blood Count (CBC), and inflammation markers,  
+
+[IBSclassification.R](scripts/IBSclassification.R)
 4) Imputes data for columns with missing (NA) values, 
 5) Balances unequally-sized sample groups, 
 6) Generates box-and-whisker and scatterplot-matrix plots for WBC distributions,
