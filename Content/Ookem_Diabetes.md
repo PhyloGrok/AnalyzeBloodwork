@@ -136,7 +136,7 @@ Schulz, L. O., & Chaudhari, L. S. (2015). High-Risk Populations: The Pimas of Ar
 
 Smith, J. W., Everhart, J. E., Dickson, W. C., Knowler, W. C., & Johannes, R. S. (1988). Using the ADAP Learning Algorithm to Forecast the Onset of Diabetes Mellitus. Proceedings of the Annual Symposium on Computer Application in Medical Care, 261–265.
 
-VanderPlas, J. T. (2017). Machine Learning. In Python Data Science Handbook: Essential Tools for working with data. chapter, O'Reilly Media, Inc. https://jakevdp.github.io/PythonDataScienceHandbook/ 
+VanderPlas, J. T. (2017). Machine Learning. In *Python Data Science Handbook: Essential Tools for working with data.* Chapter, O'Reilly Media, Inc. https://jakevdp.github.io/PythonDataScienceHandbook/ 
 
 <h2> Further reading: </h2>
 
