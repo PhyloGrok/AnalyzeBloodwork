@@ -1,4 +1,4 @@
-## D. Algorithm selection for predictive classification (machine learning)
+## Algorithm selection for predictive classification (Machine Learning with R and caret package)
 ### WBC counts as classifiers for IBS-subtype; which algorithms generate the best predictive model?
 
 #### 1. Impute missing values by replacing 'NA' with column mean. 
