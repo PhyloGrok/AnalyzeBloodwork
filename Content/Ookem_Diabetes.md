@@ -6,13 +6,13 @@ Analysis of Akimel O'otham (NIDDK Pima Diabetes dataset)
 Brandon Lamotte
 BTEC495, Spring 2022
 
-Data from the Akimel O'otham dataset was collected from an NIH clinical study of the relationships between obesity, BMI, blood glucose, diastolic blood pressure, tricep fold thickness, serum insulin levels, family history of diabetes, number of times pregnant, age, and whether a person is diagnosed with type 2 diabetes or not. The study was conducted between 1965 and mid 1990s. These parameters can then be used to train a machine learning algorithm to diagnose a patient with diabetes using these data points.
+Data from the Akimel O'otham dataset was collected from an NIH clinical study of the relationships between obesity, BMI, blood glucose, diastolic blood pressure, tricep fold thickness, serum insulin levels, family history of diabetes, number of times pregnant, age, and whether a person is diagnosed with type 2 diabetes or not. (Smith, et al. 1988) The study was conducted between 1965 and mid 1990s. These parameters can then be used to train a machine learning algorithm to diagnose a patient with diabetes using these data points.
 
 
-This data set is from a study of Akimel O'otham people on the Gila River Indian Reservation in Arizona. Akimel O'otham means ("River People") and they are an indigenous people that used to live along the Gila, Salt, and Santa Cruz Rivers. The Pima name comes from the phrase "pi-nyi-match" which means "I don't know" and early Spanish colonists named the tribe this after the O'otham used it to answer the colonists questions. The O'otham mostly practiced communal living, farmed crops such as corn, squash, pumpkins, kindey beans, tobacco, cotton, and more with extensive agrcultural knowledge and irrigation and 500 miles of canal systems using the rivers as sources of water, and practiced hunting fishing and gathering. This meant they had a relatively low-calorie diet and because of the physical activity through farming, fishing, hunting, and gathering they were extremely fit. O'otham are also known for their intricate basket weaving even today which they used to hold various gathered crops. O'otham familial groups were also extended families and matrilocal so a daughter and her husband would live with the daughters' mother.
+This data set is from a study of Akimel O'otham people on the Gila River Indian Reservation in Arizona. Akimel O'otham means ("River People") and they are an indigenous people that used to live along the Gila, Salt, and Santa Cruz Rivers. The Pima name comes from the phrase "pi-nyi-match" which means "I don't know" and early Spanish colonists named the tribe this after the O'otham used it to answer the colonists questions. The O'otham mostly practiced communal living, farmed crops such as corn, squash, pumpkins, kindey beans, tobacco, cotton, and more with extensive agrcultural knowledge and irrigation and 500 miles of canal systems using the rivers as sources of water, and practiced hunting fishing and gathering. This meant they had a relatively low-calorie diet and because of the physical activity through farming, fishing, hunting, and gathering they were extremely fit. O'otham are also known for their intricate basket weaving even today which they used to hold various gathered crops. O'otham familial groups were also extended families and matrilocal so a daughter and her husband would live with the daughters' mother. (Waldman, 2006) (Gila River Indian Community, 2015)
 
 
-O'otham land started to be encroached on by Euro-American settlers after the Civil War which lead to the Gila River water being dammed and diverted for the settlers benefit and drying up the O'otham farmland which lead to mass famine and starvation. The US government then came in and gave out canned and processed foods and forced them from their ancestral lands to what is now the Gila River Indian Reservation just south of Phoenix, where today around 20,000 O'otham live. However, this is a mere sliver of thier original land which encompassed all of modern Phoenix and extended down to near what is now Tucson. This encroachment and forcible removal to reservation lead to their lives being dramatically altered and their diets and lifestyles changing dramatically from fresh crops to high-calorie processed foods and from hunting and gathering and active lifestyles to sedentary isolated lifestyles on the reservation. All of this lead to the O'otham developing extremely high type-2 diabetes and obesity levels. When compared to O'otham in Mexico for example, the Mexican O'otham only have slightly higher type-2 diabetes levels compared to non-O'otham in Mexico. This in stark contrast with the O'otham in America who have much higher levels compared to non-O'otham.
+O'otham land started to be encroached on by Euro-American settlers after the Civil War which lead to the Gila River water being dammed and diverted for the settlers benefit and drying up the O'otham farmland which lead to mass famine and starvation. The US government then came in and gave out canned and processed foods and forced them from their ancestral lands to what is now the Gila River Indian Reservation just south of Phoenix, where today around 20,000 O'otham live. (Waldman, 2006) (DeJong, 2011) However, this is a mere sliver of thier original land which encompassed all of modern Phoenix and extended down to near what is now Tucson. (Trapido-Lurie, et al. 1996) This encroachment and forcible removal to reservation lead to their lives being dramatically altered and their diets and lifestyles changing dramatically from fresh crops to high-calorie processed foods and from hunting and gathering and active lifestyles to sedentary isolated lifestyles on the reservation. All of this lead to the O'otham developing extremely high type-2 diabetes and obesity levels. When compared to O'otham in Mexico for example, the Mexican O'otham only have slightly higher type-2 diabetes levels compared to non-O'otham in Mexico. This in stark contrast with the O'otham in America who have much higher levels compared to non-O'otham. (Schulz, et al. 2015)
   
 Using this data set we tested and trained various machine learning algorithms. Using linear regression, which is a supervised method we fitted BMI and trifold thickness data to a scatter plot. We then used Principal Component Analysis which is an unsupervised method to visualize the differences between people with a diabetes diagnosis and people without the diabetes diagnosis. Finally, we used Gausian Mixture Modeling an unsupervised method and imported the PCA data to cluster it to have a better understanding of the breakdown of people with diabetes vs without diabetes. 
 
@@ -76,8 +76,40 @@ plt.ylabel("Tricep Fold Thickness (cm)")
 ```
 | Graph showcasing the linear relationship between BMI and tricep fold thickness levels with a line of best fit: | Scatterplot of BMI and Tri Fold Thickness |
 | --- | --- |
-| ![BMITrifoldFitted](../Images/bmitrifoldfitted.PNG?sanitize=true) | ![BMI_Trifold](../Images/bmi_trifold.png?sanitize=true) </h2>
+| ![BMITrifoldFitted](../Images/bmitrifoldfitted.PNG?sanitize=true) | ![BMI_Trifold](../Images/bmi_trifold.png?sanitize=true) | </h2>
   
+```
+# PCA unsupervized learning generate model
+from sklearn.decomposition import PCA  # 1. Choose the model class
+model = PCA(n_components=2)            # 2. Instantiate the model with hyperparameters
+model.fit(X_diabetes)                      # 3. Fit to data. Notice y is not specified!
+X_2D = model.transform(X_diabetes)         # 4. Transform the data to two dimensions
+```
+```
+## visualize PCA results by generating a PC1 and PC2 scatterplot
+df['PCA1'] = X_2D[:, 0]
+df['PCA2'] = X_2D[:, 1]
+sns.lmplot("PCA1", "PCA2", hue='Diabetes', data=df, fit_reg=False);
+```
+
+```
+#unsupervized learning gaussian mixture model clustering using GMM to fit the model
+from sklearn.mixture import GMM      # 1. Choose the model class
+model = GMM(n_components=3,
+            covariance_type='full')  # 2. Instantiate the model with hyperparameters
+model.fit(X_diabetes)                    # 3. Fit to data. Notice y is not specified!
+y_gmm = model.predict(X_diabetes)        # 4. Determine cluster labels
+```
+```
+#split datapoints based on which cluster they were assigned 
+#generate PCA scatterplots based on the clustered subsets
+df['cluster'] = y_gmm
+sns.lmplot("PCA1", "PCA2", data=df, hue='Diabetes',
+           col='cluster', fit_reg=False);
+```
+| PCA graph: | GMM clustering graph using PCA data: |
+| --- | ---|
+| ![PCA.PNG](../Images/PCA.PNG?sanitize=true) | ![GMM.PNG](../Images/GMM.PNG?sanitize=true) |
 
 <h2> 
 Citations: </h2>
@@ -94,7 +126,7 @@ Gila River Indian Community. (2015). History. Gila River Indian Community. Retri
 
 Hall, B. (2015, June 15). Indian wars in Phoenix, Arizona. History Adventuring. Retrieved March 25, 2022, from http://www.historyadventuring.com/2015/06/indian-wars-in-phoenix-arizona.html 
 
-Trapido-Lurie, B., &amp; Minnis, D. (1996). Pima Territory, 1700. Arizona Geographic Alliance. Arizona State University. Retrieved March 16, 2022, from http://geoalliance.asu.edu/sites/default/files/maps/PIMA.pdf. 
+Trapido-Lurie, B., Minnis, D. (1996). Pima Territory, 1700. Arizona Geographic Alliance. Arizona State University. Retrieved March 16, 2022, from http://geoalliance.asu.edu/sites/default/files/maps/PIMA.pdf. 
 
 Waldman, C. (2006). Akimel O'odham (Pima). In Encyclopedia of Native American tribes (pp. 4–6). section, Checkmark Books.
   
