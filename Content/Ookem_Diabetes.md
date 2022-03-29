@@ -1,5 +1,5 @@
 <h1 align=center> 
-Analysis of Akimel O'otham (ie NIDDK dataset) 
+Analysis of Akimel O'otham (NIDDK Pima Diabetes dataset) 
 </h1>  
 <h2 align=center>with Python/Tensorflow</h2>
 
