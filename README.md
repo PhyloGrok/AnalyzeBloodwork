@@ -1,7 +1,7 @@
 <h1 align="center">
 AnalyzeBloodwork '1.5'</h1>
 <h2 align="center">
-Biomarker discovery and predictive diagnostic workflows with Machine Learning in R and Python</h2>
+Biomarker discovery and predictive diagnostics with Machine Learning in R and Python</h2>
 
 [![DOI](https://zenodo.org/badge/203414088.svg)](https://zenodo.org/badge/latestdoi/203414088)
 
