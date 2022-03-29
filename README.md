@@ -16,6 +16,8 @@ Computational resources have been provided by NSF Extreme Science and Engineerin
 
 [Analysis of Akimel O'otham (NIDDK Pima Diabetes dataset)](Content/Ookem_Diabetes.md), with *Python, Scikit-learn, and Jupyter Notebooks*.  Brandon Lamotte (Spring 2022)
 
+[Linear Regression in R with Examples](Content/LinearRegressionR.md). R-script and examples for single and multiple linear regressions.
+
 ## A. Usage
 #### Current functionality: ([AnalyzeBloodwork.R](scripts/AnalyzeBloodwork.R); [IBSclassification.R](scripts/IBSclassification.R)) 
 1) Loads required packages and sample data,
