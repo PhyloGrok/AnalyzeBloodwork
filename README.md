@@ -8,7 +8,9 @@ Detecting biomarkers and predictive diagnostics from CBC and RNA expression data
 ## 0. Intro
 The repository contains workflows and example analysis for statistical and machine learning for biomarker discovery approaches.  The analyses investigate clinical and molecular data associated with obesity, chronic inflammation, and immune response pathways.
 
-The repository has also provided a framework for undergraduate students learning R and Python programming, and biostatistics taught by Dr. Jeffrey Robinson at University of Maryland, Baltimore County (UMBC).  Courses have included BTEC330 (Software Applications in Translational Science), BTEC395 (Bioinformatics), and BTEC423 (Machine Learning with Applications in Bioinformatics), and BTEC495 (Undergraduate Research Internship).  UMBC BTEC495 research interns have included Daniel Gidron (Summer 2021) and Brandon Lamotte (Spring 2022).
+The repository has also provided a framework for undergraduate students learning R and Python programming, and biostatistics taught by Dr. Jeffrey Robinson at University of Maryland, Baltimore County (UMBC).  
+
+Courses have included BTEC330 (Software Applications in Translational Science), BTEC395 (Bioinformatics), and BTEC423 (Machine Learning with Applications in Bioinformatics), and BTEC495 (Undergraduate Research Internship).  UMBC BTEC495 research interns have included Daniel Gidron (Summer 2021) and Brandon Lamotte (Spring 2022).
 
 Computational resources have been provided by NSF Extreme Science and Engineering Discovery Environment (XSEDE) through an educational allocation awarded to Robinson: “Bioinformatics Training for Applications in Translational and Molecular Biosciences”, under NSF grant number ACI-1548562.  
 
