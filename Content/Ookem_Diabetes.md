@@ -7,7 +7,7 @@ Brandon Lamotte
 
 BTEC495, Spring 2022
 
-[O'otham data analysis](../scripts/DiabetesML.ipynb) This is the Python Jupyter Notebook with all the code we used
+[O'otham Diabetes Dataset Analysis with Machine Learning Classification and Regression](../scripts/DiabetesML.ipynb) Jupyter Notebook .ipynb file for this analysis
 
 Data from the Akimel O'otham dataset was collected from an NIH clinical study of the relationships between obesity, BMI, blood glucose, diastolic blood pressure, tricep fold thickness, serum insulin levels, family history of diabetes, number of times pregnant, age, and whether a person is diagnosed with type 2 diabetes or not. (Smith, et al. 1988) The study was conducted between 1965 and mid 1990s. These parameters can then be used to train a machine learning algorithm to diagnose a patient with diabetes using these data points.
 
