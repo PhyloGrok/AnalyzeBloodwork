@@ -14,7 +14,7 @@ This data set is from a study of Akimel O'otham people on the Gila River Indian 
 
 O'otham land started to be encroached on by Euro-American settlers after the Civil War which lead to the Gila River water being dammed and diverted for the settlers benefit and drying up the O'otham farmland which lead to mass famine and starvation. The US government then came in and gave out canned and processed foods and forced them from their ancestral lands to what is now the Gila River Indian Reservation just south of Phoenix, where today around 20,000 O'otham live. (Waldman, 2006) (DeJong, 2011) However, this is a mere sliver of thier original land which encompassed all of modern Phoenix and extended down to near what is now Tucson. (Trapido-Lurie, et al. 1996) This encroachment and forcible removal to reservation lead to their lives being dramatically altered and their diets and lifestyles changing dramatically from fresh crops to high-calorie processed foods and from hunting and gathering and active lifestyles to sedentary isolated lifestyles on the reservation. All of this lead to the O'otham developing extremely high type-2 diabetes and obesity levels. When compared to O'otham in Mexico for example, the Mexican O'otham only have slightly higher type-2 diabetes levels compared to non-O'otham in Mexico. This in stark contrast with the O'otham in America who have much higher levels compared to non-O'otham. (Schulz, et al. 2015)
   
-Using this data set we tested and trained various machine learning algorithms. Using linear regression, which is a supervised method we fitted BMI and trifold thickness data to a scatter plot. We then used Principal Component Analysis which is an unsupervised method to visualize the differences between people with a diabetes diagnosis and people without the diabetes diagnosis. Finally, we used Gausian Mixture Modeling an unsupervised method and imported the PCA data to cluster it to have a better understanding of the breakdown of people with diabetes vs without diabetes. 
+Using this data set we tested and trained various machine learning algorithms. Using linear regression, which is a supervised method we fitted BMI and trifold thickness data to a scatter plot. We then used Principal Component Analysis which is an unsupervised method to visualize the differences between people with a diabetes diagnosis and people without the diabetes diagnosis. Finally, we used Gausian Mixture Modeling an unsupervised method and imported the PCA data to cluster it to have a better understanding of the breakdown of people with diabetes vs without diabetes. Much of this code was primarily adapted from Jacob VanderPlas' Python Data Science Handbook (VanderPlas, 2017)
 
 
 | O'otham territory in 1700: |  Current O'otham territory: |  
@@ -136,6 +136,7 @@ Schulz, L. O., & Chaudhari, L. S. (2015). High-Risk Populations: The Pimas of Ar
 
 Smith, J. W., Everhart, J. E., Dickson, W. C., Knowler, W. C., & Johannes, R. S. (1988). Using the ADAP Learning Algorithm to Forecast the Onset of Diabetes Mellitus. Proceedings of the Annual Symposium on Computer Application in Medical Care, 261–265.
 
+VanderPlas, J. T. (2017). Machine Learning. In Python Data Science Handbook: Essential Tools for working with data. chapter, O'Reilly Media, Inc. https://jakevdp.github.io/PythonDataScienceHandbook/ 
 
 <h2> Further reading: </h2>
 
