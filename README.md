@@ -38,6 +38,8 @@ The repository contains scripts with functional R and Python code, intended to u
 3) Generates box-and-whisker and scatterplot-matrix plots for WBC distributions,
 4) Tests the performance of machine learning classification algorithms for IBS diagnosis using CBC-WBC count data.
 
+[DiabetesClassification]
+
 ## C. Description of the Sample Datasets:
 
 ### 1. Akimel O'otham (NIDDK Pima Indians Diabetes) data set:
