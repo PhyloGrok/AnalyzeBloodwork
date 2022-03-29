@@ -52,14 +52,13 @@ The <em>standard CBC parameters</em> provide point-of-care physicians with power
 2) Red blood cell and hemoglobin parameters (RBC count, Hematocrit (HCT), Mean Corpuscular Hemoglobin (MCH), Erythrocyte Sedimentation Rate (ESR)), 
 3) Platelet parameters (Platelet Counts, Mean Platelet Volume (MPV))
 
-Additional sample data in the context of obesity, inflammation, and gastrointestinal disorders includes:
+Additional parameters for obesity, inflammation, and GI-associated pain:
 1) Body Mass Index (BMI), 
 2) Stress hormones: Cortisol and ACTH,
 3) Inflammation markers: C-Reactive Protein (CRP), sCD14, Lipopolysaccharide Binding Protein (LBP),
 4) Clinical diagnoses of subtypes of Irritable Bowel Syndrome (IBS)
 5) Nanostring White Blood Cell RNA expression data: an associated 250-gene panel of Nanostring RNA expression data (links in citations below).
 
-This dataset and analyses are used by Robinson in teaching for UMBC's BTEC330 (Software Applications) and BTEC350 (Biostatistics) classes, students are trained in R programming language, GitHub practices, and analysis of clinical and molecular expression data by forking this repository and modifying it according to their skill level and assignment specifics.
 
 ### Literature Citations
 Robinson, J. 2021. Predictive Classification of IBS-subtype: Performance of a 250-gene RNA expression panel vs. Complete Blood Count (CBC) profiles under a Random Forest model. medRxiv. doi: https://doi.org/10.1101/2021.08.31.21262766. 
