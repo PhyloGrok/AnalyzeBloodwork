@@ -14,11 +14,11 @@ Datasets and analyses focus on clinical and molecular data associated with metab
 
 Computational resources have been provided by NSF Extreme Science and Engineering Discovery Environment (XSEDE) through an educational allocation awarded to Robinson: “Bioinformatics Training for Applications in Translational and Molecular Biosciences”, under NSF grant number ACI-1548562.  
 
-[Analysis of Akimel O'otham (NIDDK Pima Diabetes dataset)](Content/Ookem_Diabetes.md), with *Python, Scikit-learn, and Jupyter Notebooks*.  Brandon Lamotte (BTEC423, Spring 2022)
+[Predicitive Diagnosis for Diabetes with Machine Learning Approach - Akimel O'otham (NIDDK Pima Diabetes dataset)](Content/Ookem_Diabetes.md), with *Python, Scikit-learn, and Jupyter Notebooks*.  Brandon Lamotte (BTEC423, Spring 2022)
 
 [Linear Regression in R with Examples](Content/LinearRegressionR.md). R-script and examples for single and multiple linear regressions. (initially with BTEC330, Fall 2019)
 
-[Algorithm selection for predictive classification (ML)](Content/MLselection_CaretR.md). Compare performance of Machine Learning algorithms with R and Caret package. (Acknowledgements to Daniel Gidron, BTEC495, Summer 2021) 
+[Algorithm selection for Biomarker Discovery from clinical and molecular expression data (ML) - NIH IBS dataset](Content/MLselection_CaretR.md). Compare performance of Machine Learning algorithms with R and Caret package. (Acknowledgements to Daniel Gidron, BTEC495, Summer 2021) 
 
 
 ## B. Use the code
