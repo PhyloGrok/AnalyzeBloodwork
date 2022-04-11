@@ -1,6 +1,6 @@
 ## 1. Import the data
 
-dfCardio <- read.csv(../Data/Cardio.csv)
+dfCardio <- read.csv(../data/Cardio.csv)
 
 read.table()
 read.excel()
