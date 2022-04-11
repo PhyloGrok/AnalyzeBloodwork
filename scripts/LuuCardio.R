@@ -1,3 +1,5 @@
+## Reference code: http://www.sthda.com/english/wiki/descriptive-statistics-and-graphics
+
 ## 1. Import the data
 
 dfCardio <- read.csv(../data/Cardio.csv)
