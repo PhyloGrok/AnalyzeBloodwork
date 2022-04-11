@@ -3,14 +3,14 @@ AnalyzeBloodwork '1.5'</h1>
 <h2 align="center">
 Biomarker discovery and predictive diagnostics with Machine Learning in R and Python</h2>
 
+PI: Jeffrey Robinson, MS, PhD
+
 [![DOI](https://zenodo.org/badge/203414088.svg)](https://zenodo.org/badge/latestdoi/203414088)
 
 ## A. Intro
-The repository contains workflows and example analysis for statistical and machine learning for biomarker discovery approaches.  The analyses investigate clinical and molecular data associated with obesity, chronic inflammation, and immune response pathways.
+The repository includes scripts, datasets, and demonstration analysis of biomedical datasets.  The repository has been used as a teaching environment for statistics, R- and Python- coding, and machine learning in UMBC's BTEC350, (Biostatistics), BTEC330 (Software Applications in Biotechnology), BTEC 423 (Machine Learning with Bioinformatics Applications) and BTEC495 (Independent Student Research) courses taught by Robinson (Fall 2019 - Spring 2022). 
 
-The repository has also provided a framework for undergraduate students learning R and Python programming, and biostatistics taught by Dr. Jeffrey Robinson at University of Maryland, Baltimore County (UMBC).  
-
-Courses have included BTEC330 (Software Applications in Translational Science), BTEC395 (Bioinformatics), and BTEC423 (Machine Learning with Applications in Bioinformatics), and BTEC495 (Undergraduate Research Internship).  UMBC BTEC495 research interns have included Daniel Gidron (Summer 2021) and Brandon Lamotte (Spring 2022).
+Datasets and analyses focus on clinical and molecular data associated with metabolic syndrome, chronic inflammation, and immune response.  Datasets include the Akimel O'otham (Pima Indians) diabetes dataset, cardiology dataset, and an NIH IBS/gastrointestinal disorders dataset that includes Nanostring experession data.
 
 Computational resources have been provided by NSF Extreme Science and Engineering Discovery Environment (XSEDE) through an educational allocation awarded to Robinson: “Bioinformatics Training for Applications in Translational and Molecular Biosciences”, under NSF grant number ACI-1548562.  
 
