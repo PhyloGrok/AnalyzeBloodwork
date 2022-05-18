@@ -8,24 +8,24 @@ PI: Jeffrey Robinson, MS, PhD
 [![DOI](https://zenodo.org/badge/203414088.svg)](https://zenodo.org/badge/latestdoi/203414088)
 
 ## A. Intro
-The repository includes scripts, datasets, and demonstration analysis of biomedical datasets.  The repository has been used as a teaching environment for statistics, R- and Python- coding, and machine learning in UMBC's BTEC350, (Biostatistics), BTEC330 (Software Applications in Biotechnology), BTEC 423 (Machine Learning with Bioinformatics Applications) and BTEC495 (Independent Student Research) courses taught by Robinson (Fall 2019 - Spring 2022). 
+The repository includes scripts with analysis of biomedical datasets from Robinson's research.  The repository is a codebase for undergraduate courses in bio-statistics, R- and Python- coding, and machine learning in UMBC's TLST program.  Courses have include BTEC350, (Biostatistics), BTEC330 (Software Applications in Biotechnology), BTEC 423 (Machine Learning with Bioinformatics Applications) and BTEC495 (Independent Student Research) courses taught by Robinson (Fall 2019 - Spring 2022). 
 
-Datasets and analyses focus on clinical and molecular data associated with metabolic syndrome, chronic inflammation, and immune response.  Datasets include the Akimel O'otham (Pima Indians) diabetes dataset, cardiology dataset, and an NIH IBS/gastrointestinal disorders dataset that includes Nanostring experession data.
+Datasets and analyses address clinical and molecular data associated with metabolic syndrome, chronic inflammation, and immune responses, and currently include the Akimel O'otham (Pima Indians) diabetes dataset, Kaggle cardiology dataset, and an NIH IBS/gastrointestinal disorders dataset that includes Nanostring experession data.
 
-Computational resources have been provided by NSF Extreme Science and Engineering Discovery Environment (XSEDE) through an educational allocation awarded to Robinson: “Bioinformatics Training for Applications in Translational and Molecular Biosciences”, under NSF grant number ACI-1548562.  
+Additional computational resources are provided by NSF Extreme Science and Engineering Discovery Environment (XSEDE) through an educational allocation awarded to Robinson: “Bioinformatics Training for Applications in Translational and Molecular Biosciences”, under NSF grant number ACI-1548562.  
+
+## Student projects
 
 [Predicitive Diagnosis for Diabetes with Machine Learning Approach - Akimel O'otham (NIDDK Pima Diabetes dataset)](Content/Ookem_Diabetes.md), with *Python, Scikit-learn, and Jupyter Notebooks*.  Brandon Lamotte (BTEC423, Spring 2022)
 
-[Linear Regression in R with Examples](Content/LinearRegressionR.md). R-script and examples for single and multiple linear regressions. (initially with BTEC330, Fall 2019)
+[Linear Regression in R with Examples](Content/LinearRegressionR.md). R-script and examples for single and multiple linear regressions. (BTEC330 Biostatistics, Fall 2019)
 
-[Algorithm selection for Biomarker Discovery from clinical and molecular expression data (ML) - NIH IBS dataset](Content/MLselection_CaretR.md). Compare performance of Machine Learning algorithms with R and Caret package. (Acknowledgements to Daniel Gidron, BTEC495, Summer 2021) 
+[Algorithm selection for Biomarker Discovery from clinical and molecular expression data (ML) - NIH IBS dataset](Content/MLselection_CaretR.md). Compare performance of Machine Learning algorithms with R and Caret package. (Acknowledgements to Daniel Gidron, BTEC495 intern, Summer 2021) 
 
 
 ## B. Use the code
 
-The repository contains scripts with functional R and Python code, intended to use as example code and teaching templates.  Functionality currently includes:
-
-#### Scripts: 
+#### Current Scripts and template analyses): 
 [AnalyzeBloodwork.R](scripts/AnalyzeBloodwork.R) 
 1) Loads required packages and sample data,
 2) Generates histograms for all variables, 
@@ -40,7 +40,7 @@ The repository contains scripts with functional R and Python code, intended to u
 
 [DiabetesClassification]
 
-## C. Description of the Sample Datasets:
+## C. Sample Datasets:
 
 ### 1. Akimel O'otham (NIDDK Pima Indians Diabetes) data set:
 Data from the Akimel O'otham dataset was collected from an NIH clinical study of the relationships between obesity, BMI, blood glucose, diastolic blood pressure, tricep fold thickness, serum insulin levels, family history of diabetes, number of times pregnant, age, and whether a person is diagnosed with type 2 diabetes or not. This data set is from a study of Akimel O'otham people on the Gila River Indian Reservation in Arizona. The study was conducted between the early 1960s and mid 1990s. These parameters can then be used to train a machine learning algorithm to diagnose a patient with diabetes using these data points.
@@ -61,8 +61,10 @@ Additional parameters for obesity, inflammation, and GI-associated pain:
 4) Clinical diagnoses of subtypes of Irritable Bowel Syndrome (IBS)
 5) Nanostring White Blood Cell RNA expression data: an associated 250-gene panel of Nanostring RNA expression data (links in citations below).
 
+### 3. Kaggle Cardiology Dataset
 
-### Literature Citations
+
+### D. Literature Citations
 Robinson, J. 2021. Predictive Classification of IBS-subtype: Performance of a 250-gene RNA expression panel vs. Complete Blood Count (CBC) profiles under a Random Forest model. medRxiv. doi: https://doi.org/10.1101/2021.08.31.21262766. 
 
 Robinson, JM. et al. 2019. Complete blood count with differential: An effective diagnostic for IBS subtype in the context of BMI? BioRxiv. doi: https://doi.org/10.1101/608208.
