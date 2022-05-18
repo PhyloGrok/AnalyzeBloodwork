@@ -78,7 +78,7 @@ ImmunoGC custom Nanostring probe panel. 2019.  https://www.ncbi.nlm.nih.gov/geo/
 Human buffy coat gene expression, custom 250-plex Nanostring panel. GSE124549. 2019. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE124549.  
 
 ### Funding sources:
-This project was partially funded from NSF XSEDE Educational Allocation to Jeffrey Robinson:  “Bioinformatics Training for Applications in Translational and Molecular
+NSF XSEDE Educational Allocation: PI Dr. Jeffrey Robinson  “Bioinformatics Training for Applications in Translational and Molecular
 Biosciences”. Extreme Science and Engineering Discovery Environment (XSEDE), supported by National Science
 Foundation grant number ACI-1548562.
 
