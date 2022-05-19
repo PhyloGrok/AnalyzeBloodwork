@@ -73,7 +73,8 @@ Additional parameters for obesity, inflammation, and GI-associated pain:
 https://archive.ics.uci.edu/ml/datasets/Heart+Disease. (Detrano et al. 1989)
 
 
-### D. Dataset Citations (See project pages for project-specific citations)
+## D. Dataset Citations (See project pages for project-specific citations)
+
 Detrano, R. 1989. International application of a new probability algorithm for the diagnosis of coronary artery disease. Am J Cardiol. 64(5):304-10.. DOI: https://doi.org/10.1016/0002-9149(89)90524-9
 
 Robinson, J. 2021. Predictive Classification of IBS-subtype: Performance of a 250-gene RNA expression panel vs. Complete Blood Count (CBC) profiles under a Random Forest model. medRxiv. doi: https://doi.org/10.1101/2021.08.31.21262766. 
