@@ -48,7 +48,7 @@ UCI Kaggle repository: https://www.kaggle.com/datasets/uciml/pima-indians-diabet
 Data from the Akimel O'otham dataset was collected from an NIH clinical study of the relationships between obesity, BMI, blood glucose, diastolic blood pressure, tricep fold thickness, serum insulin levels, family history of diabetes, number of times pregnant, age, and whether a person is diagnosed with type 2 diabetes or not. This data set is from a study of Akimel O'otham people on the Gila River Indian Reservation in Arizona. The study was conducted between the early 1960s and mid 1990s, and is a popular dataset for demonstration of ML-based predicitive diagnostics. (Smith et al. 1988)
 
 
-### 2. NIH Complete Blood Count with RNA expression in IBS dataset:
+### 2. NIH CBC with WBC RNA expression in IBS dataset:
 
 Human buffy coat gene expression, custom 250-plex Nanostring panel. GSE124549. 2019. <br>
 https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE124549.  
