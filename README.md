@@ -43,11 +43,13 @@ Additional computational resources are provided by NSF Extreme Science and Engin
 ## C. Sample Datasets:
 
 ### 1. Akimel O'otham (NIDDK Pima Indians Diabetes) data set:
-Data from the Akimel O'otham dataset was collected from an NIH clinical study of the relationships between obesity, BMI, blood glucose, diastolic blood pressure, tricep fold thickness, serum insulin levels, family history of diabetes, number of times pregnant, age, and whether a person is diagnosed with type 2 diabetes or not. This data set is from a study of Akimel O'otham people on the Gila River Indian Reservation in Arizona. The study was conducted between the early 1960s and mid 1990s. These parameters can then be used to train a machine learning algorithm to diagnose a patient with diabetes using these data points.
+Data from the Akimel O'otham dataset was collected from an NIH clinical study of the relationships between obesity, BMI, blood glucose, diastolic blood pressure, tricep fold thickness, serum insulin levels, family history of diabetes, number of times pregnant, age, and whether a person is diagnosed with type 2 diabetes or not. This data set is from a study of Akimel O'otham people on the Gila River Indian Reservation in Arizona. The study was conducted between the early 1960s and mid 1990s, and is a popular dataset for demonstration of ML-based predicitive diagnostics. (Smith et al. 1988)
+
+UCI Kaggle repository: https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database
 
 ### 2. NIH Complete Blood Count with RNA expression in IBS dataset:
 
-Data from the sample dataset was collected during an NIH natural history clinical study of the relationship between obesity, inflammation, stress, and gastrointestinal disorders and is fully open-sourced (citations and links below).  
+Data from the sample dataset was collected during an NIH natural history clinical study of the relationship between obesity, inflammation, stress, and gastrointestinal disorders, data and probe panels are fully open-sourced in the NCBI GEO database (citations and links below).  
 
 The <em>standard CBC parameters</em> provide point-of-care physicians with powerful diagnostic capabilities using: 
 1) White Blood Cell counts (absolute and relative counts for Monocytes, Lymphocytes, Neutrophils, Basophils, and Eosinophils), 
@@ -74,6 +76,7 @@ Robinson, JM. et al. 2019. Complete blood count with differential: An effective 
 
 Robinson, J. 2019. Differential Gene Expression Associated with BMI, Gender, and IBS-subtype in Human White Blood Cells: Results from a Custom 250-plex Nanostring Probe Panel. Preprints. 2019120180 (doi: 10.20944/preprints201912.0180.v1).
 
+Smith, JW., et al. 1988. Using the ADAP Learning Algorithm to Forecast the Onset of Diabetes Mellitus. Proceedings of the Annual Symposium on Computer Application in Medical Care, 261–265.
 
 ### Sample Nanostring dataset: 
 ImmunoGC custom Nanostring probe panel. 2019.  https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL25996. 
