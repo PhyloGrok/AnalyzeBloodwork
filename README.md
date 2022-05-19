@@ -16,7 +16,7 @@ Additional computational resources are provided by NSF Extreme Science and Engin
 
 ## Student projects
 
-[Predicitive Diagnosis for Diabetes with Machine Learning Approach - Akimel O'otham (NIDDK Pima Diabetes dataset)](Content/Ookem_Diabetes.md), with *Python, Scikit-learn, and Jupyter Notebooks*.  Brandon Lamotte (BTEC423, Spring 2022)
+[Predicitive Diagnosis for Diabetes with Machine Learning Approach - Akimel O'otham (NIDDK Pima Diabetes dataset)](Content/Ookem_Diabetes.md), with *Python, Scikit-learn, and Jupyter Notebooks*.  Brandon Lamotte (BTEC423. Machine Learning with Bioinformatics Applications, Spring 2022)
 
 [Linear Regression in R with Examples](Content/LinearRegressionR.md). R-script and examples for single and multiple linear regressions. (BTEC330 Biostatistics, Fall 2019)
 
