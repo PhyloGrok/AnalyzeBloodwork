@@ -61,15 +61,18 @@ Additional parameters for obesity, inflammation, and GI-associated pain:
 4) Clinical diagnoses of subtypes of Irritable Bowel Syndrome (IBS)
 5) Nanostring White Blood Cell RNA expression data: an associated 250-gene panel of Nanostring RNA expression data (links in citations below).
 
-### 3. Kaggle Cardiology Dataset
+### 3. Heart Disease Data Set, UC Irvine Machine Learning Repository. 
+https://archive.ics.uci.edu/ml/datasets/Heart+Disease. (Detrano et al. 1989)
 
 
 ### D. Literature Citations
+Detrano, R. 1989. International application of a new probability algorithm for the diagnosis of coronary artery disease. Am J Cardiol. 64(5):304-10.. DOI: https://doi.org/10.1016/0002-9149(89)90524-9
+
 Robinson, J. 2021. Predictive Classification of IBS-subtype: Performance of a 250-gene RNA expression panel vs. Complete Blood Count (CBC) profiles under a Random Forest model. medRxiv. doi: https://doi.org/10.1101/2021.08.31.21262766. 
 
 Robinson, JM. et al. 2019. Complete blood count with differential: An effective diagnostic for IBS subtype in the context of BMI? BioRxiv. doi: https://doi.org/10.1101/608208.
 
-Robinson, J. Differential Gene Expression Associated with BMI, Gender, and IBS-subtype in Human White Blood Cells: Results from a Custom 250-plex Nanostring Probe Panel. Preprints 2019, 2019120180 (doi: 10.20944/preprints201912.0180.v1).
+Robinson, J. 2019. Differential Gene Expression Associated with BMI, Gender, and IBS-subtype in Human White Blood Cells: Results from a Custom 250-plex Nanostring Probe Panel. Preprints. 2019120180 (doi: 10.20944/preprints201912.0180.v1).
 
 
 ### Sample Nanostring dataset: 
