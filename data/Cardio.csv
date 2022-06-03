@@ -1,0 +1,304 @@
+age,sex,chest_pain_type,BP,cholesterol,PG_fasting,ECG_rest,maxHR,angina,peak,slope,ColoredVesselsNum,thal,class
+39,Female,NoTang,94,199,FALSE,Normal,179,FALSE,0,Up,0,Normal,Healthy
+51,Male,NoTang,94,227,FALSE,Normal,154,TRUE,0,Up,1,Rev,Healthy
+51,Male,NoTang,100,222,FALSE,Normal,143,TRUE,1.2,Flat,0,Normal,Healthy
+58,Female, Asymptomatic,100,248,FALSE,Hyp,122,FALSE,1,Flat,0,Normal,Healthy
+46,Male,Abnormal Angina,101,197,TRUE,Normal,156,FALSE,0,Up,0,Rev,Healthy
+60,Female,NoTang,102,318,FALSE,Normal,160,FALSE,0,Up,1,Normal,Healthy
+42,Female, Asymptomatic,102,265,FALSE,Hyp,122,FALSE,0.6,Flat,0,Normal,Healthy
+45,Male, Asymptomatic,104,208,FALSE,Hyp,148,TRUE,3,Flat,0,Normal,Healthy
+41,Female,Abnormal Angina,105,198,FALSE,Normal,168,FALSE,0,Up,1,Normal,Healthy
+58,Male,NoTang,105,240,FALSE,Hyp,154,TRUE,0.6,Flat,0,Rev,Healthy
+46,Female,Abnormal Angina,105,204,FALSE,Normal,172,FALSE,0,Up,0,Normal,Healthy
+67,Female, Asymptomatic,106,223,FALSE,Normal,142,FALSE,0.3,Up,2,Normal,Healthy
+44,Female,NoTang,108,141,FALSE,Normal,175,FALSE,0.6,Flat,0,Normal,Healthy
+52,Male, Asymptomatic,108,233,TRUE,Normal,147,FALSE,0.1,Up,3,Rev,Healthy
+54,Female,NoTang,108,267,FALSE,Hyp,167,FALSE,0,Up,0,Normal,Healthy
+54,Male,Abnormal Angina,108,309,FALSE,Normal,156,FALSE,0,Up,0,Rev,Healthy
+64,Male,Angina,110,211,FALSE,Hyp,144,TRUE,1.8,Flat,0,Normal,Healthy
+51,Male,NoTang,110,175,FALSE,Normal,123,FALSE,0.6,Up,0,Normal,Healthy
+50,Female, Asymptomatic,110,254,FALSE,Hyp,159,FALSE,0,Up,0,Normal,Healthy
+43,Male, Asymptomatic,110,211,FALSE,Normal,161,FALSE,0,Up,0,Rev,Healthy
+41,Male,Abnormal Angina,110,235,FALSE,Normal,153,FALSE,0,Up,0,Normal,Healthy
+57,Male, Asymptomatic,110,201,FALSE,Normal,126,TRUE,1.5,Flat,0,Fix,Healthy
+71,Female,NoTang,110,265,TRUE,Hyp,130,FALSE,0,Up,1,Normal,Healthy
+54,Female,NoTang,110,214,FALSE,Normal,158,FALSE,1.6,Flat,0,Normal,Healthy
+41,Male,NoTang,112,250,FALSE,Normal,179,FALSE,0,Up,0,Normal,Healthy
+45,Female,Abnormal Angina,112,160,FALSE,Normal,138,FALSE,0,Flat,0,Normal,Healthy
+41,Female,NoTang,112,268,FALSE,Hyp,172,TRUE,0,Up,0,Normal,Healthy
+47,Male, Asymptomatic,112,204,FALSE,Normal,143,FALSE,0.1,Up,0,Normal,Healthy
+71,Female, Asymptomatic,112,149,FALSE,Normal,125,FALSE,1.6,Flat,0,Normal,Healthy
+45,Male, Asymptomatic,115,260,FALSE,Hyp,185,FALSE,0,Up,0,Normal,Healthy
+67,Female,NoTang,115,564,FALSE,Hyp,160,FALSE,1.6,Flat,0,Rev,Healthy
+43,Male, Asymptomatic,115,303,FALSE,Normal,181,FALSE,1.2,Flat,0,Normal,Healthy
+52,Male,Angina,118,186,FALSE,Hyp,190,FALSE,0,Flat,0,Fix,Healthy
+34,Female,Abnormal Angina,118,210,FALSE,Normal,192,FALSE,0.7,Up,0,Normal,Healthy
+34,Male,Angina,118,182,FALSE,Hyp,174,FALSE,0,Up,0,Normal,Healthy
+44,Female,NoTang,118,242,FALSE,Normal,149,FALSE,0.3,Flat,1,Normal,Healthy
+68,Male,NoTang,118,277,FALSE,Normal,151,FALSE,1,Up,1,Rev,Healthy
+56,Male,Abnormal Angina,120,236,FALSE,Normal,178,FALSE,0.8,Up,0,Normal,Healthy
+57,Female, Asymptomatic,120,354,FALSE,Normal,163,TRUE,0.6,Up,0,Normal,Healthy
+44,Male,Abnormal Angina,120,263,FALSE,Normal,173,FALSE,0,Up,0,Rev,Healthy
+50,Female,NoTang,120,219,FALSE,Normal,158,FALSE,1.6,Flat,0,Normal,Healthy
+58,Female,NoTang,120,340,FALSE,Normal,172,FALSE,0,Up,0,Normal,Healthy
+65,Male, Asymptomatic,120,177,FALSE,Normal,140,FALSE,0.4,Up,0,Rev,Healthy
+52,Male,Abnormal Angina,120,325,FALSE,Normal,172,FALSE,0.2,Up,0,Normal,Healthy
+66,Male, Asymptomatic,120,302,FALSE,Hyp,151,FALSE,0.4,Flat,0,Normal,Healthy
+42,Male,NoTang,120,240,TRUE,Normal,194,FALSE,0.8,Down,0,Rev,Healthy
+68,Female,NoTang,120,211,FALSE,Hyp,115,FALSE,1.5,Flat,0,Normal,Healthy
+50,Female,Abnormal Angina,120,244,FALSE,Normal,162,FALSE,1.1,Up,0,Normal,Healthy
+37,Female,NoTang,120,215,FALSE,Normal,170,FALSE,0,Up,0,Normal,Healthy
+56,Male,Angina,120,193,FALSE,Hyp,162,FALSE,1.9,Flat,0,Rev,Healthy
+42,Male,Abnormal Angina,120,295,FALSE,Normal,162,FALSE,0,Up,0,Normal,Healthy
+60,Female,NoTang,120,178,TRUE,Normal,96,FALSE,0,Up,0,Normal,Healthy
+51,Female,NoTang,120,295,FALSE,Hyp,157,FALSE,0.6,Up,0,Normal,Healthy
+42,Female,NoTang,120,209,FALSE,Normal,173,FALSE,0,Flat,0,Normal,Healthy
+41,Male,Abnormal Angina,120,157,FALSE,Normal,182,FALSE,0,Up,0,Normal,Healthy
+56,Male,Abnormal Angina,120,240,FALSE,Normal,169,FALSE,0,Down,0,Normal,Healthy
+44,Male,Abnormal Angina,120,220,FALSE,Normal,170,FALSE,0,Up,0,Normal,Healthy
+54,Male,NoTang,120,258,FALSE,Hyp,147,FALSE,0.4,Flat,0,Rev,Healthy
+44,Male,NoTang,120,226,FALSE,Normal,169,FALSE,0,Up,0,Normal,Healthy
+74,Female,Abnormal Angina,120,269,FALSE,Hyp,121,TRUE,0.2,Up,1,Normal,Healthy
+48,Male, Asymptomatic,122,222,FALSE,Hyp,186,FALSE,0,Up,0,Normal,Healthy
+43,Female,NoTang,122,213,FALSE,Normal,165,FALSE,0.2,Flat,0,Normal,Healthy
+35,Male,Abnormal Angina,122,192,FALSE,Normal,174,FALSE,0,Up,0,Normal,Healthy
+62,Female, Asymptomatic,124,209,FALSE,Normal,163,FALSE,0,Up,0,Normal,Healthy
+48,Male,NoTang,124,255,TRUE,Normal,175,FALSE,0,Up,2,Normal,Healthy
+54,Male,NoTang,125,273,FALSE,Hyp,152,FALSE,0.5,Down,1,Normal,Healthy
+51,Male,Angina,125,213,FALSE,Hyp,125,TRUE,1.4,Up,1,Normal,Healthy
+51,Male,NoTang,125,245,TRUE,Hyp,166,FALSE,2.4,Flat,0,Normal,Healthy
+58,Male,Abnormal Angina,125,220,FALSE,Normal,144,FALSE,0.4,Flat,0,Rev,Healthy
+41,Female,Abnormal Angina,126,306,FALSE,Normal,163,FALSE,0,Up,0,Normal,Healthy
+53,Female,NoTang,128,216,FALSE,Hyp,115,FALSE,0,Up,0,Normal,Healthy
+52,Male,Abnormal Angina,128,205,TRUE,Normal,184,FALSE,0,Up,0,Normal,Healthy
+45,Male,Abnormal Angina,128,308,FALSE,Hyp,170,FALSE,0,Up,0,Normal,Healthy
+62,Male,Abnormal Angina,128,208,TRUE,Hyp,140,FALSE,0,Up,0,Normal,Healthy
+64,Male, Asymptomatic,128,263,FALSE,Normal,105,TRUE,0.2,Flat,1,Rev,Healthy
+57,Female, Asymptomatic,128,303,FALSE,Hyp,159,FALSE,0,Up,1,Normal,Healthy
+50,Male,NoTang,129,196,FALSE,Normal,163,FALSE,0,Up,0,Normal,Healthy
+49,Male,Abnormal Angina,130,266,FALSE,Normal,171,FALSE,0.6,Up,0,Normal,Healthy
+37,Male,NoTang,130,250,FALSE,Normal,187,FALSE,3.5,Down,0,Normal,Healthy
+41,Female,Abnormal Angina,130,204,FALSE,Hyp,172,FALSE,1.4,Up,0,Normal,Healthy
+44,Male,NoTang,130,233,FALSE,Normal,179,TRUE,0.4,Up,0,Normal,Healthy
+53,Male,NoTang,130,197,TRUE,Hyp,152,FALSE,1.2,Down,0,Normal,Healthy
+44,Male,Abnormal Angina,130,219,FALSE,Hyp,188,FALSE,0,Up,0,Normal,Healthy
+48,Male,Abnormal Angina,130,245,FALSE,Hyp,180,FALSE,0.2,Flat,0,Normal,Healthy
+53,Female, Asymptomatic,130,264,FALSE,Hyp,143,FALSE,0.4,Flat,0,Normal,Healthy
+51,Female,NoTang,130,256,FALSE,Hyp,149,FALSE,0.5,Up,0,Normal,Healthy
+62,Male,NoTang,130,231,FALSE,Normal,146,FALSE,1.8,Flat,3,Rev,Healthy
+29,Male,Abnormal Angina,130,204,FALSE,Hyp,202,FALSE,0,Up,0,Normal,Healthy
+43,Male,NoTang,130,315,FALSE,Normal,162,FALSE,1.9,Up,1,Normal,Healthy
+53,Male,NoTang,130,246,TRUE,Hyp,173,FALSE,0,Up,3,Normal,Healthy
+55,Male,Abnormal Angina,130,262,FALSE,Normal,155,FALSE,0,Up,0,Normal,Healthy
+41,Male,NoTang,130,214,FALSE,Hyp,168,FALSE,2,Flat,0,Normal,Healthy
+64,Female, Asymptomatic,130,303,FALSE,Normal,122,FALSE,2,Flat,2,Normal,Healthy
+49,Female, Asymptomatic,130,269,FALSE,Normal,163,FALSE,0,Up,0,Normal,Healthy
+42,Male,NoTang,130,180,FALSE,Normal,150,FALSE,0,Up,0,Normal,Healthy
+58,Female, Asymptomatic,130,197,FALSE,Normal,131,FALSE,0.6,Flat,0,Normal,Healthy
+47,Male,NoTang,130,253,FALSE,Normal,179,FALSE,0,Up,0,Normal,Healthy
+56,Male,Abnormal Angina,130,221,FALSE,Hyp,163,FALSE,0,Up,0,Rev,Healthy
+48,Female,NoTang,130,275,FALSE,Normal,139,FALSE,0.2,Up,0,Normal,Healthy
+45,Female,Abnormal Angina,130,234,FALSE,Hyp,175,FALSE,0.6,Flat,0,Normal,Healthy
+54,Female,Abnormal Angina,132,288,TRUE,Hyp,159,TRUE,0,Up,1,Normal,Healthy
+55,Female,Abnormal Angina,132,342,FALSE,Normal,166,FALSE,1.2,Up,0,Normal,Healthy
+57,Male, Asymptomatic,132,207,FALSE,Normal,168,TRUE,0,Up,0,Rev,Healthy
+52,Male,Abnormal Angina,134,201,FALSE,Normal,158,FALSE,0.8,Up,1,Normal,Healthy
+49,Female,Abnormal Angina,134,271,FALSE,Normal,162,FALSE,0,Flat,0,Normal,Healthy
+59,Male, Asymptomatic,135,234,FALSE,Normal,161,FALSE,0.5,Flat,0,Rev,Healthy
+54,Female,NoTang,135,304,TRUE,Normal,170,FALSE,0,Up,0,Normal,Healthy
+63,Female,NoTang,135,252,FALSE,Hyp,172,FALSE,0,Up,0,Normal,Healthy
+41,Male,Abnormal Angina,135,203,FALSE,Normal,132,FALSE,0,Flat,0,Fix,Healthy
+55,Female,Abnormal Angina,135,250,FALSE,Hyp,161,FALSE,1.4,Flat,0,Normal,Healthy
+52,Female,NoTang,136,196,FALSE,Hyp,169,FALSE,0.1,Flat,0,Normal,Healthy
+47,Male,NoTang,138,257,FALSE,Hyp,156,FALSE,0,Up,0,Normal,Healthy
+53,Female, Asymptomatic,138,234,FALSE,Hyp,160,FALSE,0,Up,0,Normal,Healthy
+35,Female, Asymptomatic,138,183,FALSE,Normal,182,FALSE,1.4,Up,0,Normal,Healthy
+52,Male,NoTang,138,223,FALSE,Normal,169,FALSE,0,Up,0,Normal,Healthy
+38,Male,NoTang,138,175,FALSE,Normal,173,FALSE,0,Up,0,Normal,Healthy
+45,Female, Asymptomatic,138,236,FALSE,Hyp,152,TRUE,0.2,Flat,0,Normal,Healthy
+46,Female, Asymptomatic,138,243,FALSE,Hyp,152,TRUE,0,Flat,0,Normal,Healthy
+59,Male, Asymptomatic,138,271,FALSE,Hyp,182,FALSE,0,Up,0,Normal,Healthy
+39,Female,NoTang,138,220,FALSE,Normal,152,FALSE,0,Flat,0,Normal,Healthy
+38,Male,NoTang,138,175,FALSE,Normal,173,FALSE,0,Up,0,Normal,Healthy
+57,Male, Asymptomatic,140,192,FALSE,Normal,148,FALSE,0.4,Flat,0,Fix,Healthy
+56,Female,Abnormal Angina,140,294,FALSE,Hyp,153,FALSE,1.3,Flat,0,Normal,Healthy
+69,Female,Angina,140,239,FALSE,Normal,151,FALSE,1.8,Up,2,Normal,Healthy
+42,Male, Asymptomatic,140,226,FALSE,Normal,178,FALSE,0,Up,0,Normal,Healthy
+40,Male,Angina,140,199,FALSE,Normal,178,TRUE,1.4,Up,0,Rev,Healthy
+65,Female,NoTang,140,417,TRUE,Hyp,157,FALSE,0.8,Up,1,Normal,Healthy
+51,Female,NoTang,140,308,FALSE,Hyp,142,FALSE,1.5,Up,1,Normal,Healthy
+39,Male,NoTang,140,321,FALSE,Hyp,182,FALSE,0,Up,0,Normal,Healthy
+44,Male,NoTang,140,235,FALSE,Hyp,180,FALSE,0,Up,0,Normal,Healthy
+58,Male,NoTang,140,211,TRUE,Hyp,165,FALSE,0,Up,0,Normal,Healthy
+51,Male, Asymptomatic,140,261,FALSE,Hyp,186,TRUE,0,Up,0,Normal,Healthy
+59,Male,Abnormal Angina,140,221,FALSE,Normal,164,TRUE,0,Up,0,Normal,Healthy
+62,Female, Asymptomatic,140,394,FALSE,Hyp,157,FALSE,1.2,Flat,0,Normal,Healthy
+63,Female,Abnormal Angina,140,195,FALSE,Normal,179,FALSE,0,Up,2,Normal,Healthy
+64,Female,NoTang,140,313,FALSE,Normal,133,FALSE,0.2,Up,0,Rev,Healthy
+76,Female,NoTang,140,197,FALSE,Abnormal,116,FALSE,1.1,Flat,0,Normal,Healthy
+54,Male, Asymptomatic,140,239,FALSE,Normal,160,FALSE,1.2,Up,0,Normal,Healthy
+46,Female,NoTang,142,177,FALSE,Hyp,160,TRUE,1.4,Down,0,Normal,Healthy
+53,Male, Asymptomatic,142,226,FALSE,Hyp,111,TRUE,0,Up,0,Rev,Healthy
+63,Male,Angina,145,233,TRUE,Hyp,150,FALSE,2.3,Down,0,Fix,Healthy
+66,Female,NoTang,146,278,FALSE,Hyp,152,FALSE,0,Flat,1,Normal,Healthy
+42,Male,Angina,148,244,FALSE,Hyp,178,FALSE,0.8,Up,2,Normal,Healthy
+58,Female,Angina,150,283,TRUE,Hyp,162,FALSE,1,Up,0,Normal,Healthy
+66,Female,Angina,150,226,FALSE,Normal,114,FALSE,2.6,Down,0,Normal,Healthy
+43,Male, Asymptomatic,150,247,FALSE,Normal,171,FALSE,1.5,Up,0,Normal,Healthy
+61,Male,NoTang,150,243,TRUE,Normal,137,TRUE,1,Flat,0,Normal,Healthy
+59,Male,NoTang,150,212,TRUE,Normal,157,FALSE,1.6,Up,0,Normal,Healthy
+54,Male,NoTang,150,232,FALSE,Hyp,165,FALSE,1.6,Up,0,Rev,Healthy
+57,Male,NoTang,150,126,TRUE,Normal,173,FALSE,0.2,Up,1,Rev,Healthy
+57,Male,NoTang,150,168,FALSE,Normal,174,FALSE,1.6,Up,0,Normal,Healthy
+60,Female,Angina,150,240,FALSE,Normal,171,FALSE,0.9,Up,0,Normal,Healthy
+52,Male,Angina,152,298,TRUE,Normal,178,FALSE,1.2,Flat,0,Rev,Healthy
+67,Female,NoTang,152,277,FALSE,Normal,172,FALSE,0,Up,1,Normal,Healthy
+65,Female,NoTang,155,269,FALSE,Normal,148,FALSE,0.8,Up,0,Normal,Healthy
+70,Male,Abnormal Angina,156,245,FALSE,Hyp,143,FALSE,0,Up,0,Normal,Healthy
+71,Female,Abnormal Angina,160,302,FALSE,Normal,162,FALSE,0.4,Up,2,Normal,Healthy
+65,Female,NoTang,160,360,FALSE,Hyp,151,FALSE,0.8,Up,0,Normal,Healthy
+69,Male,Angina,160,234,TRUE,Hyp,131,FALSE,0.1,Flat,1,Normal,Healthy
+66,Male, Asymptomatic,160,228,FALSE,Hyp,138,FALSE,2.3,Up,0,Fix,Healthy
+54,Female,NoTang,160,201,FALSE,Normal,163,FALSE,0,Up,1,Normal,Healthy
+64,Male,Angina,170,227,FALSE,Hyp,155,FALSE,0.6,Flat,0,Rev,Healthy
+52,Male,NoTang,172,199,TRUE,Normal,162,FALSE,0.5,Up,0,Rev,Healthy
+59,Male,Angina,178,270,FALSE,Hyp,145,FALSE,4.2,Down,0,Rev,Healthy
+64,Female, Asymptomatic,180,325,FALSE,Normal,154,TRUE,0,Up,0,Normal,Healthy
+67,Male, Asymptomatic,100,299,FALSE,Hyp,125,TRUE,0.9,Flat,2,Normal,Sick
+58,Male, Asymptomatic,100,234,FALSE,Normal,156,FALSE,0.1,Up,1,Rev,Sick
+47,Male,NoTang,108,243,FALSE,Normal,152,FALSE,0,Up,0,Normal,Sick
+63,Female, Asymptomatic,108,269,FALSE,Normal,169,TRUE,1.8,Flat,2,Normal,Sick
+40,Male, Asymptomatic,110,167,FALSE,Hyp,114,TRUE,2,Flat,0,Rev,Sick
+41,Male, Asymptomatic,110,172,FALSE,Hyp,158,FALSE,0,Up,0,Rev,Sick
+65,Male, Asymptomatic,110,248,FALSE,Hyp,158,FALSE,0.6,Up,2,Fix,Sick
+44,Male, Asymptomatic,110,197,FALSE,Hyp,177,FALSE,0,Up,1,Normal,Sick
+59,Male, Asymptomatic,110,239,FALSE,Hyp,142,TRUE,1.2,Flat,1,Rev,Sick
+54,Male, Asymptomatic,110,206,FALSE,Hyp,108,TRUE,0,Flat,1,Normal,Sick
+47,Male, Asymptomatic,110,275,FALSE,Hyp,118,TRUE,1,Flat,1,Normal,Sick
+57,Male, Asymptomatic,110,335,FALSE,Normal,143,TRUE,3,Flat,1,Rev,Sick
+45,Male,Angina,110,264,FALSE,Normal,132,FALSE,1.2,Flat,0,Rev,Sick
+48,Male,Abnormal Angina,110,229,FALSE,Normal,168,FALSE,1,Down,0,Rev,Sick
+54,Male, Asymptomatic,110,239,FALSE,Normal,126,TRUE,2.8,Flat,1,Rev,Sick
+58,Male,NoTang,112,230,FALSE,Hyp,165,FALSE,2.5,Flat,1,Rev,Sick
+44,Male, Asymptomatic,112,290,FALSE,Hyp,153,FALSE,0,Up,1,Normal,Sick
+52,Male, Asymptomatic,112,230,FALSE,Normal,160,FALSE,0,Up,1,Normal,Sick
+66,Male, Asymptomatic,112,212,FALSE,Hyp,132,TRUE,0.1,Up,1,Normal,Sick
+58,Male, Asymptomatic,114,318,FALSE,Abnormal,140,FALSE,4.4,Down,3,Fix,Sick
+60,Male, Asymptomatic,117,230,TRUE,Normal,160,TRUE,1.4,Up,2,Rev,Sick
+39,Male, Asymptomatic,118,219,FALSE,Normal,140,FALSE,1.2,Flat,0,Rev,Sick
+49,Male,NoTang,118,149,FALSE,Hyp,126,FALSE,0.8,Up,3,Normal,Sick
+58,Male,Abnormal Angina,120,284,FALSE,Hyp,160,FALSE,1.8,Flat,0,Normal,Sick
+67,Male, Asymptomatic,120,229,FALSE,Hyp,129,TRUE,2.6,Flat,2,Rev,Sick
+43,Male, Asymptomatic,120,177,FALSE,Hyp,120,TRUE,2.5,Flat,0,Rev,Sick
+54,Male, Asymptomatic,120,188,FALSE,Normal,113,FALSE,1.4,Flat,1,Rev,Sick
+62,Male, Asymptomatic,120,267,FALSE,Normal,99,TRUE,1.8,Flat,2,Rev,Sick
+61,Male, Asymptomatic,120,260,FALSE,Normal,140,TRUE,3.6,Flat,1,Rev,Sick
+62,Male,Abnormal Angina,120,281,FALSE,Hyp,103,FALSE,1.4,Flat,1,Rev,Sick
+35,Male, Asymptomatic,120,198,FALSE,Normal,130,TRUE,1.6,Flat,0,Rev,Sick
+64,Male, Asymptomatic,120,246,FALSE,Hyp,96,TRUE,2.2,Down,1,Normal,Sick
+38,Male,Angina,120,231,FALSE,Normal,182,TRUE,3.8,Flat,0,Rev,Sick
+46,Male, Asymptomatic,120,249,FALSE,Hyp,144,FALSE,0.8,Up,0,Rev,Sick
+67,Male, Asymptomatic,120,237,FALSE,Normal,71,FALSE,1,Flat,0,Normal,Sick
+44,Male, Asymptomatic,120,169,FALSE,Normal,144,TRUE,2.8,Down,0,Fix,Sick
+49,Male,NoTang,120,188,FALSE,Normal,139,FALSE,2,Flat,3,Rev,Sick
+54,Male, Asymptomatic,122,286,FALSE,Hyp,116,TRUE,3.2,Flat,2,Normal,Sick
+53,Male, Asymptomatic,123,282,FALSE,Normal,95,TRUE,2,Flat,2,Rev,Sick
+54,Male, Asymptomatic,124,266,FALSE,Hyp,109,TRUE,2.2,Flat,1,Rev,Sick
+48,Male, Asymptomatic,124,274,FALSE,Hyp,166,FALSE,0.5,Flat,0,Rev,Sick
+57,Male,Abnormal Angina,124,261,FALSE,Normal,141,FALSE,0.3,Up,0,Rev,Sick
+63,Female, Asymptomatic,124,197,FALSE,Normal,136,TRUE,0,Flat,0,Normal,Sick
+67,Male, Asymptomatic,125,254,TRUE,Normal,163,FALSE,0.2,Flat,2,Rev,Sick
+60,Male, Asymptomatic,125,258,FALSE,Hyp,141,TRUE,2.8,Flat,1,Rev,Sick
+56,Male, Asymptomatic,125,249,TRUE,Hyp,144,TRUE,1.2,Flat,1,Normal,Sick
+64,Male,NoTang,125,309,FALSE,Normal,131,TRUE,1.8,Flat,0,Rev,Sick
+58,Male, Asymptomatic,125,300,FALSE,Hyp,171,FALSE,0,Up,2,Rev,Sick
+52,Male, Asymptomatic,125,212,FALSE,Normal,168,FALSE,1,Up,2,Rev,Sick
+77,Male, Asymptomatic,125,304,FALSE,Hyp,162,TRUE,0,Up,3,Normal,Sick
+35,Male, Asymptomatic,126,282,FALSE,Hyp,156,TRUE,0,Up,0,Rev,Sick
+59,Male,NoTang,126,218,TRUE,Normal,134,FALSE,2.2,Flat,1,Fix,Sick
+58,Male, Asymptomatic,128,216,FALSE,Hyp,131,TRUE,2.2,Flat,3,Rev,Sick
+52,Male, Asymptomatic,128,255,FALSE,Normal,161,TRUE,0,Up,1,Rev,Sick
+58,Male, Asymptomatic,128,259,FALSE,Hyp,130,TRUE,3,Flat,2,Rev,Sick
+52,Male, Asymptomatic,128,204,TRUE,Normal,156,TRUE,1,Flat,0,Rev,Sick
+55,Female, Asymptomatic,128,205,FALSE,Abnormal,130,TRUE,2,Flat,1,Rev,Sick
+57,Male,NoTang,128,229,FALSE,Hyp,150,FALSE,0.4,Flat,1,Rev,Sick
+60,Male, Asymptomatic,130,206,FALSE,Hyp,132,TRUE,2.4,Flat,2,Rev,Sick
+63,Male, Asymptomatic,130,254,FALSE,Hyp,147,FALSE,1.4,Flat,1,Rev,Sick
+56,Male,NoTang,130,256,TRUE,Hyp,142,TRUE,0.6,Flat,1,Fix,Sick
+61,Female, Asymptomatic,130,330,FALSE,Hyp,169,FALSE,0,Up,0,Normal,Sick
+60,Male, Asymptomatic,130,253,FALSE,Normal,144,TRUE,1.4,Up,1,Rev,Sick
+51,Female, Asymptomatic,130,305,FALSE,Normal,142,TRUE,1.2,Flat,0,Rev,Sick
+62,Female,NoTang,130,263,FALSE,Normal,97,FALSE,1.2,Flat,1,Rev,Sick
+63,Male, Asymptomatic,130,330,TRUE,Hyp,132,TRUE,1.8,Up,3,Rev,Sick
+48,Male, Asymptomatic,130,256,TRUE,Hyp,150,TRUE,0,Up,2,Rev,Sick
+70,Male, Asymptomatic,130,322,FALSE,Hyp,109,FALSE,2.4,Flat,3,Normal,Sick
+56,Male, Asymptomatic,130,283,TRUE,Hyp,103,TRUE,1.6,Down,0,Rev,Sick
+57,Male, Asymptomatic,130,131,FALSE,Normal,115,TRUE,1.2,Flat,1,Rev,Sick
+57,Female,Abnormal Angina,130,236,FALSE,Hyp,174,FALSE,0,Flat,1,Normal,Sick
+58,Male,NoTang,132,224,FALSE,Hyp,173,FALSE,3.2,Up,2,Rev,Sick
+55,Male, Asymptomatic,132,353,FALSE,Normal,132,TRUE,1.2,Flat,1,Rev,Sick
+43,Female, Asymptomatic,132,341,TRUE,Hyp,136,TRUE,3,Flat,0,Rev,Sick
+56,Male, Asymptomatic,132,184,FALSE,Hyp,105,TRUE,2.1,Flat,1,Fix,Sick
+43,Male, Asymptomatic,132,247,TRUE,Hyp,143,TRUE,0.1,Flat,1,Rev,Sick
+56,Female, Asymptomatic,134,409,FALSE,Hyp,150,TRUE,1.9,Flat,2,Rev,Sick
+61,Male,Angina,134,234,FALSE,Normal,145,FALSE,2.6,Flat,2,Normal,Sick
+59,Male,Angina,134,204,FALSE,Normal,162,FALSE,0.8,Up,2,Normal,Sick
+65,Male, Asymptomatic,135,254,FALSE,Hyp,127,FALSE,2.8,Flat,1,Rev,Sick
+58,Female,Abnormal Angina,136,319,TRUE,Hyp,152,FALSE,0,Up,2,Normal,Sick
+42,Male, Asymptomatic,136,315,FALSE,Normal,125,TRUE,1.8,Flat,0,Fix,Sick
+62,Female, Asymptomatic,138,294,TRUE,Normal,106,FALSE,1.9,Flat,3,Normal,Sick
+65,Male,Angina,138,282,TRUE,Hyp,174,FALSE,1.4,Flat,1,Normal,Sick
+61,Male, Asymptomatic,138,166,FALSE,Hyp,125,TRUE,3.6,Flat,1,Normal,Sick
+53,Male, Asymptomatic,140,203,TRUE,Hyp,155,TRUE,3.1,Down,0,Rev,Sick
+62,Female, Asymptomatic,140,268,FALSE,Hyp,160,FALSE,3.6,Down,2,Normal,Sick
+64,Male,NoTang,140,335,FALSE,Normal,158,FALSE,0,Up,0,Normal,Sick
+50,Male,NoTang,140,233,FALSE,Normal,163,FALSE,0.6,Flat,1,Rev,Sick
+60,Male,NoTang,140,185,FALSE,Hyp,155,FALSE,3,Flat,0,Normal,Sick
+55,Male, Asymptomatic,140,217,FALSE,Normal,111,TRUE,5.6,Down,0,Rev,Sick
+51,Male, Asymptomatic,140,299,FALSE,Normal,173,TRUE,1.6,Up,0,Rev,Sick
+60,Male, Asymptomatic,140,293,FALSE,Hyp,170,FALSE,1.2,Flat,2,Rev,Sick
+69,Male,NoTang,140,254,FALSE,Hyp,146,FALSE,2,Flat,3,Rev,Sick
+51,Male, Asymptomatic,140,298,FALSE,Normal,122,TRUE,4.2,Flat,3,Rev,Sick
+61,Male, Asymptomatic,140,207,FALSE,Hyp,138,TRUE,1.9,Up,1,Rev,Sick
+46,Male, Asymptomatic,140,311,FALSE,Normal,120,TRUE,1.8,Flat,2,Rev,Sick
+63,Male, Asymptomatic,140,187,FALSE,Hyp,144,TRUE,4,Up,2,Rev,Sick
+57,Female, Asymptomatic,140,241,FALSE,Normal,123,TRUE,0.2,Flat,0,Rev,Sick
+59,Male, Asymptomatic,140,177,FALSE,Normal,162,TRUE,0,Up,1,Rev,Sick
+45,Male, Asymptomatic,142,309,FALSE,Hyp,147,TRUE,0,Flat,3,Rev,Sick
+50,Male, Asymptomatic,144,200,FALSE,Hyp,126,TRUE,0.9,Flat,0,Rev,Sick
+68,Male, Asymptomatic,144,193,TRUE,Normal,141,FALSE,3.4,Flat,2,Rev,Sick
+60,Male, Asymptomatic,145,282,FALSE,Hyp,142,TRUE,2.8,Flat,2,Rev,Sick
+61,Female, Asymptomatic,145,307,FALSE,Hyp,146,TRUE,1,Flat,0,Rev,Sick
+70,Male, Asymptomatic,145,174,FALSE,Normal,125,TRUE,2.6,Down,0,Rev,Sick
+64,Male, Asymptomatic,145,212,FALSE,Hyp,132,FALSE,2,Flat,2,Fix,Sick
+58,Male, Asymptomatic,146,218,FALSE,Normal,105,FALSE,2,Flat,1,Rev,Sick
+61,Male, Asymptomatic,148,203,FALSE,Normal,161,FALSE,0,Up,1,Rev,Sick
+57,Male, Asymptomatic,150,276,FALSE,Hyp,112,TRUE,0.6,Flat,1,Fix,Sick
+65,Female, Asymptomatic,150,225,FALSE,Hyp,114,FALSE,1,Flat,3,Rev,Sick
+50,Male, Asymptomatic,150,243,FALSE,Hyp,128,FALSE,2.6,Flat,0,Rev,Sick
+46,Male,NoTang,150,231,FALSE,Normal,147,FALSE,3.6,Flat,0,Normal,Sick
+58,Male, Asymptomatic,150,270,FALSE,Hyp,111,TRUE,0.8,Up,0,Rev,Sick
+60,Female, Asymptomatic,150,258,FALSE,Hyp,157,FALSE,2.6,Flat,2,Rev,Sick
+63,Female, Asymptomatic,150,407,FALSE,Hyp,154,FALSE,4,Flat,3,Rev,Sick
+62,Female, Asymptomatic,150,244,FALSE,Normal,154,TRUE,1.4,Flat,0,Normal,Sick
+57,Male, Asymptomatic,152,274,FALSE,Normal,88,TRUE,1.2,Flat,1,Rev,Sick
+40,Male, Asymptomatic,152,223,FALSE,Normal,181,FALSE,0,Up,0,Rev,Sick
+67,Male,NoTang,152,212,FALSE,Hyp,150,FALSE,0.8,Flat,0,Rev,Sick
+57,Male,Abnormal Angina,154,232,FALSE,Hyp,164,FALSE,0,Up,1,Normal,Sick
+67,Male, Asymptomatic,160,286,FALSE,Hyp,108,TRUE,1.5,Flat,3,Normal,Sick
+62,Female, Asymptomatic,160,164,FALSE,Hyp,145,FALSE,6.2,Down,3,Rev,Sick
+55,Male, Asymptomatic,160,289,FALSE,Hyp,145,TRUE,0.8,Flat,1,Rev,Sick
+70,Male,NoTang,160,269,FALSE,Normal,112,TRUE,2.9,Flat,1,Rev,Sick
+66,Male,Abnormal Angina,160,246,FALSE,Normal,120,TRUE,0,Flat,3,Fix,Sick
+59,Male,Angina,160,273,FALSE,Hyp,125,FALSE,0,Up,0,Normal,Sick
+59,Male, Asymptomatic,164,176,TRUE,Hyp,90,FALSE,1,Flat,2,Fix,Sick
+57,Male, Asymptomatic,165,289,TRUE,Hyp,124,FALSE,1,Flat,3,Rev,Sick
+59,Male, Asymptomatic,170,326,FALSE,Hyp,140,TRUE,3.4,Down,0,Rev,Sick
+59,Male,Angina,170,288,FALSE,Hyp,159,FALSE,0.2,Flat,0,Rev,Sick
+58,Female, Asymptomatic,170,225,TRUE,Hyp,146,TRUE,2.8,Flat,2,Fix,Sick
+59,Female, Asymptomatic,174,249,FALSE,Normal,143,TRUE,0,Flat,0,Normal,Sick
+66,Female, Asymptomatic,178,228,TRUE,Normal,165,TRUE,1,Flat,2,Rev,Sick
+68,Male,NoTang,180,274,TRUE,Hyp,150,TRUE,1.6,Flat,0,Rev,Sick
+55,Female, Asymptomatic,180,327,FALSE,Abnormal,117,TRUE,3.4,Flat,0,Normal,Sick
+54,Male,Abnormal Angina,192,283,FALSE,Hyp,195,FALSE,0,Up,1,Rev,Sick
+56,Female, Asymptomatic,200,288,TRUE,Hyp,133,TRUE,4,Down,2,Rev,Sick
