@@ -30,7 +30,7 @@ cardio_data$class <- as.factor(cardio_data$class)
 levels(cardio_data$sex) <- c("Female", "Male")
 levels(cardio_data$chest_pain_type) <- c("Asymptomatic", "Abnormal Angina", "Angina", "NoTang")
 levels(cardio_data$PG_fasting) <- c("No", "Yes")
-levels(cardio_data$ECG_rest) <- c("Adnormal", "Hyp", "Normal")
+levels(cardio_data$ECG_rest) <- c("Abnormal", "Hyp", "Normal")
 levels(cardio_data$angina) <- c("No", "Yes")
 levels(cardio_data$slope) <- c("Down", "Flat", "Up")
 levels(cardio_data$thal) <- c("Fix", "Normal", "Rev")
@@ -148,16 +148,21 @@ cp_bar <- ggplot(cardio_data, aes(chest_pain_type, fill=chest_pain_type)) +
 print(cp_bar)
 
 #chest pain type vs Class (Healthy/Sick)
-ggplot(cardio_data, aes(chest_pain_type, fill=class)) + 
+CPvD <- ggplot(cardio_data, aes(chest_pain_type, fill=class)) + 
   geom_bar() +
   labs(fill="Disease", x="Age", y="Number of patients",
-       title = "Chest paint type vs. Class (Healthy/Sick)")
+       title = "Chest Pain type by disease")
 
 #chest pain type vs Class (Healthy/Sick)
-ggplot(cardio_data, aes(ECG_rest, fill=class)) + 
+ECGvD <- ggplot(cardio_data, aes(ECG_rest, fill=class)) + 
   geom_bar() +
-  labs(fill="Disease", x="ECG Rest", y="Number of patients",
-       title = "Electrocardiogram on rest vs. Class (Healthy/Sick)")
+  labs(fill="Disease", x="ECG Rest", y="subjects",
+       title = "ECG by disease status")
+print(ECGvD)
+
+ggarrange(ang_bar, cp_bar, CPvD, ECGvD + rremove("x.text"), 
+          labels = c("A", "B", "C", "D"),
+          ncol = 2, nrow = 2)
 
 ## Other parameters
 
@@ -182,6 +187,8 @@ thal_bar <- ggplot(cardio_data, aes(thal, fill=thal)) +
        title = "Maximum heart rate achieved (thalach)") +
   scale_fill_discrete(name = "Thalach")
 
+
+
 #slope
 slope_bar <- ggplot(cardio_data, aes(slope, fill=slope)) + 
   geom_bar() +
@@ -189,9 +196,16 @@ slope_bar <- ggplot(cardio_data, aes(slope, fill=slope)) +
        title = "Slope of ST Segment") +
   scale_fill_discrete(name = "Slope")
 
+
 ggarrange(hvs_bar, gender_bar, cp_bar, PGfast_bar, ECG_bar, thal_bar, ang_bar, slope_bar + rremove("x.text"), 
           labels = c("A", "B", "C", "D", "E", "F", "G", "H"),
           ncol = 3, nrow = 4)
+
+##Essentially, we do not want to just look at each categorical data, but we want to compare them
+##Here, I will compare data with Healthy/Sick status
+
+######Add ' position = "fill" ' in geom_bar() if want to see 2 column for each, otherwise they are stacked
+
 
 #thalach vs Class (Healthy/Sick)
 ggplot(cardio_data, aes(thal, fill=class)) + 
@@ -211,5 +225,7 @@ ggplot(cardio_data, aes(x=slope, y=peak, fill=class)) +
 
 
 ## Hypothesis testing (T-tests)
+#in process
+
 
 
