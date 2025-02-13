@@ -6,7 +6,7 @@ Li Lan Fang
 
 Ketsia Pierelus
 
-Aimee Icaza
-I am a TLST Bioinformatics UMBC major student. An acdemica goal is to 
+##Aimee Icaza
+I am a TLST Bioinformatics UMBC major student. An acdemica goal is to complete a 
 
 Academic goal, research ideas, career goals, future onlook. 
