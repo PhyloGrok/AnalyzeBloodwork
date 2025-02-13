@@ -12,4 +12,5 @@ I am a TLST Bioinformatics major at UMBC. My academic goal is to complete my bac
 
 ## Li Lan Fang 
 Driven by a strong academic foundation in Translational Life Science and Technology (TLST) with a Bioinformatics track (B.S.), I am pursuing a Master of Science degree in either Data Science or Business Administration (MBA).  My professional objective is to expand my knowledge of machine learning beyond the laboratory setting and contribute to an intellectually stimulating environment where I can continuously learn and engage in challenging work.  Currently, I am focused on enhancing my programming proficiency, particularly in Python.
+
 Academic goal, research ideas, career goals, future onlook. 
