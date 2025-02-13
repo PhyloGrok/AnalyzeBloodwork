@@ -1,6 +1,6 @@
-BTEC 423 Machine Learning Bioinformatics Applications
+# BTEC 423 Machine Learning Bioinformatics Applications
 
-Professor - Dr. Jeffrey Robinson
+## Professor - Dr. Jeffrey Robinson
 
 ## Li Lan Fang 
 
